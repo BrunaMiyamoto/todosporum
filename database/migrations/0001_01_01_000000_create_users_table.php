@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string("cep", 15)->nullable();
             $table->string("rua", 100)->nullable();
             $table->string("bairro", 100)->nullable();
-            $table->integer("numero", 11)->nullable();
+            $table->string("numero")->nullable();
             $table->string("cidade", 100)->nullable();
             $table->rememberToken();
             $table->timestamps();
