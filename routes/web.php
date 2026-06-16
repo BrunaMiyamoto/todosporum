@@ -3,9 +3,5 @@
 use App\Http\Controllers\homeController;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-//Route::get("/", [homeController::class, "home"]);
-Route::get("/", [homeController::class, "forumDuvidas"]);
+Route::get("/", [homeController::class, "home"]);
+Route::get("/forumduvidas", [homeController::class, "forumDuvidas"]);

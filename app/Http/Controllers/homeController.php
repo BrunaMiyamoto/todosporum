@@ -12,7 +12,6 @@ class homeController extends Controller
         return view("index");
     }
 
-
     public function forumDuvidas()
     {
 
