@@ -12,32 +12,42 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    @vite('resources/css/app.css')
+    @vite(['resources/css/app.css'])
 </head>
 
 <body class="">
-    <header>
+    <header class="">
         <img src="assets/img/logo.png" alt="Logo do projeto" width="100" height="60" />
-        <div class="menu-container">
-            <nav class="menu" id="menu">
-                <a href="javascript:;" id="fechar-menu">
-                    <i class="fa-solid fa-xmark"></i>
+        <div class="menu-container" class="flex justify-end py-8 px-50 in-w-screen items-center  max-w-7xl">
+            <nav class="menu" id="menu" class="">
+                <a href="javascript:;" id="fechar-menu" class="hidden">
+                    <i class="fa-solid fa-xmark "></i>
                 </a>
-                <ul id="menu">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="forum-projetos.html">Fórum</a></li>
-                    <li><a href="sobre-nos.html">Sobre Nós</a></li>
-                    <li><a href="aprendasobre.html">Aprenda Sobre</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+                <ul id="menu" class="flex gap-20">
+                    <li><a href="{{ route('home') }} "
+                            class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Inicio</a>
+                    </li>
+                    <li><a
+                            href="forum-projetos.html"class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Fórum</a>
+                    </li>
+                    <li><a href="sobre-nos.html"class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Sobre
+                            Nós</a></li>
+                    <li><a href="aprendasobre.html"class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Aprenda
+                            Sobre</a></li>
+                    <li><a
+                            href="contato.html"class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Contato</a>
+                    </li>
                 </ul>
-                <a href="login.html" class="btn-login"><i
+                <a href="{{ route('login') }}" class="btn-login"
+                    class="bg-orange-500 text-blue-50 py-7 px-14 rounded-s text-xs font-bold hidden"><i
                         class="fa-solid fa-right-from-bracket"></i>Login/Registre-se</a>
             </nav>
         </div>
-        <div class="btn-desk">
-            <a href="login.html" class="btn-login"><i class="fa-solid fa-right-from-bracket"></i>Login/Registre-se</a>
+        <div class="btn-desk" class="hover:text-sky-700">
+            <a href="{{ route('login') }}" class="btn-login"><i
+                    class="fa-solid fa-right-from-bracket"></i>Login/Registre-se</a>
         </div>
-        <button class="hamburguer" id="btn-menu">
+        <button class="hamburguer" id="btn-menu" class="hidden">
             <i class="fa-solid fa-bars"></i>
         </button>
     </header>
