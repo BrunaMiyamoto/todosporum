@@ -75,14 +75,14 @@
     <section class="entendarapido">
         <h2>ENTENDA RÁPIDO</h2>
         <div id="videocentro">
-            <video class="video" poster="img/capa1.png" controls>
-                <source src="img/gato-teste.mp4" type="video/mp4" />
+            <video class="video" poster="assets/img/capa2.png" controls>
+                <source src="assets/img/gato-teste.mp4" type="video/mp4" />
             </video>
-            <video class="video" poster="img/capa2.png" controls>
-                <source src="img/gato-teste.mp4" type="video/mp4" />
+            <video class="video" poster="assets/img/capa2.png" controls>
+                <source src="assets/img/gato-teste.mp4" type="video/mp4" />
             </video>
-            <video class="video" poster="img/capa3.png" controls>
-                <source src="img/gato-teste.mp4" type="video/mp4" />
+            <video class="video" poster="assets/img/capa2.png" controls>
+                <source src="assets/img/gato-teste.mp4" type="video/mp4" />
             </video>
         </div>
         <br />
@@ -117,8 +117,8 @@
             <a href="contato.html" class="sobrenosbotao">Entre em contato conosco</a>
         </div>
         <div id="imagemsobrenos">
-            <img src="img/pexels-polina-tankilevitch-8203158-scaled.jpg" alt="Mulher gritando em um megafone" width="600"
-                height="400" />
+            <img src="assets/img/pexels-polina-tankilevitch-8203158-scaled.jpg" alt="Mulher gritando em um megafone"
+                width="600" height="400" />
         </div>
     </section>
 @endsection

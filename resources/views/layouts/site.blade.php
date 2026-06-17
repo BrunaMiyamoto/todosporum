@@ -28,7 +28,7 @@
                             class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Inicio</a>
                     </li>
                     <li><a
-                            href="forum-projetos.html"class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Fórum</a>
+                            href="{{ route('forumProjetos') }}"class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Fórum</a>
                     </li>
                     <li><a href="sobre-nos.html"class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Sobre
                             Nós</a></li>

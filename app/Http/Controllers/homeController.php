@@ -17,4 +17,39 @@ class homeController extends Controller
 
         return view("forum-duvidas");
     }
+
+    public function forumProjetos()
+    {
+
+        return view("forum-projetos");
+    }
+
+    public function forumReclamacoes()
+    {
+
+        return view("forum-reclamacoes");
+    }
+
+    public function aprendaSobre()
+    {
+
+        return view("aprenda-sobre");
+    }
+
+    public function aprendaVideos()
+    {
+
+        return view("aprenda-videos");
+    }
+
+    public function paginaArtigo()
+    {
+
+        return view("pagina-artigo");
+    }
+    public function paginaVideo()
+    {
+
+        return view("pagina-video");
+    }
 }
