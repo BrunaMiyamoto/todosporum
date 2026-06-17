@@ -7,7 +7,7 @@
 
 /* MENU RESPONSIVO MENU RESPONSIVO MENU RESPONSIVO  */
 
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -32,23 +32,23 @@ header {
     width: 100%;
     z-index: 100;
     top: 0;
-  } 
-#fechar-menu {
+  }  */
+/* #fechar-menu {
   display: none;
-}
-
+} */
+/* 
 .menu-container {
   display: flex;
   justify-content: flex-end;
   padding: 10px 50px;
   flex: 1;
-}
+} */
 
-.menu :hover {
+/* .menu :hover {
   color: #05668d;
-}
+} */
 
-.menu ul {
+/* .menu ul {
   display: flex;
   list-style: none;
   gap: 20px;
@@ -58,8 +58,8 @@ header {
   font-weight: bold;
   text-decoration: none;
   font-size: 12px;
-}
-.btn-login {
+} */
+/* .btn-login {
   background-color: #e9702a;
   color: #ebf2fa;
   padding: 7px 14px;
@@ -67,7 +67,7 @@ header {
   text-decoration: none;
   font-size: 12px;
   font-weight: bold;
-}
+} */
 
 .btn-desk :hover {
   color: #05668d;
