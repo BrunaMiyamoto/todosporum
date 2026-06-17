@@ -1,8 +1,8 @@
 @extends('layouts.site')
 
 @section('conteudo')
-    <div id="texto">
-        <h1 class="azul">SOBRE O PROJETO</h1>
+    <div class="max-w-screen-md text-justify pt-10 pr-5">
+        <h1 class="text-sky-700 text-start pb-10 mt-24">SOBRE O PROJETO</h1>
         <p>
             O Todos Por Um nasceu como uma iniciativa de estudantes de um curso
             técnico em tecnologia, fomos desafiados a criar uma solução que
@@ -33,11 +33,11 @@
             seu poder transformador.
         </p>
     </div>
-    <img src="img/pexels-joey-lu-49400-186537.jpg" alt="Avenida movimentada" />
-    <section class="objetivos">
+    <img src="assets/img/pexels-joey-lu-49400-186537.jpg" alt="Avenida movimentada" />
+    <section class="text-center p-10">
         <h2>NOSSOS OBJETIVOS</h2>
 
-        <div class="cards">
+        <div class="grid grid-cols-3 gap-7 justify-items-center max-w-5xl m-0">
             <div class="card">
                 <h3>Estimular</h3>
                 <p>a participação política ativa dos moradores</p>
