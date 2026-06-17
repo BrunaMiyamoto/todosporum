@@ -12,6 +12,18 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
     @vite(['resources/css/app.css'])
 </head>
 
@@ -30,12 +42,14 @@
                     <li><a
                             href="{{ route('forumProjetos') }}"class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Fórum</a>
                     </li>
-                    <li><a href="sobre-nos.html"class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Sobre
+                    <li><a
+                            href="{{ route('sobreNos') }}"class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Sobre
                             Nós</a></li>
-                    <li><a href="aprendasobre.html"class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Aprenda
+                    <li><a
+                            href="{{ route('aprendaSobre') }}"class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Aprenda
                             Sobre</a></li>
                     <li><a
-                            href="contato.html"class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Contato</a>
+                            href="{{ route('contato') }}"class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Contato</a>
                     </li>
                 </ul>
                 <a href="{{ route('login') }}" class="btn-login"
@@ -68,7 +82,7 @@
                 <ul>
                     <li class="rodapetitulo">Fórum</li>
                     <li>
-                        <a href="forum-projetos.html">Posts em destaque</a>
+                        <a href="{{ route('forumProjetos') }}">Posts em destaque</a>
                     </li>
                 </ul>
 
@@ -81,7 +95,7 @@
                         <a href="suas-postagens.html">Suas postagens</a>
                     </li>
                     <li>
-                        <a href="seguranca-privacidade.html">Segurança e privacidade</a>
+                        <a href="{{ route('segurancaPrivacidade') }}">Segurança e privacidade</a>
                     </li>
                     <li>
                         <a href="acessibilidade.html">Acessibilidade</a>
@@ -91,40 +105,40 @@
                 <ul>
                     <li class="rodapetitulo">Sobre nós</li>
                     <li>
-                        <a href="sobre-nos.html">Sobre o projeto</a>
+                        <a href="{{ route('sobreNos') }}">Sobre o projeto</a>
                     </li>
                     <li>
-                        <a href="sobre-nos.html">Nossos objetivos</a>
+                        <a href="{{ route('sobreNos') }}">Nossos objetivos</a>
                     </li>
                 </ul>
 
                 <ul>
                     <li class="rodapetitulo">Contato</li>
                     <li>
-                        <a href="contato.html">Entre em contato</a>
+                        <a href="{{ route('contato') }}">Entre em contato</a>
                     </li>
                 </ul>
 
                 <ul>
                     <li class="rodapetitulo">Aprenda Sobre</li>
                     <li>
-                        <a href="aprenda-videos.html">Vídeos</a>
+                        <a href="{{ route('aprendaVideos') }}">Vídeos</a>
                     </li>
                     <li>
-                        <a href="aprendasobre.html">Artigos</a>
+                        <a href="{{ route('aprendaSobre') }}">Artigos</a>
                     </li>
                 </ul>
 
                 <ul>
                     <li class="rodapetitulo">Nossas políticas</li>
                     <li>
-                        <a href="politica-privacidade.html">Políticas de privacidade</a>
+                        <a href="{{ route('politicaPrivacidade') }}">Políticas de privacidade</a>
                     </li>
                     <li>
-                        <a href="cookies.html">Políticas de cookies</a>
+                        <a href="{{ route('politicaCookies') }}">Políticas de cookies</a>
                     </li>
                     <li>
-                        <a href="termos-uso.html">Termos de Uso</a>
+                        <a href="{{ route('termosUso') }}">Termos de Uso</a>
                     </li>
                 </ul>
             </div>

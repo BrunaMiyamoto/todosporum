@@ -52,4 +52,37 @@ class homeController extends Controller
 
         return view("pagina-video");
     }
+
+    public function sobreNos()
+    {
+
+        return view("sobre-nos");
+    }
+
+    public function contato()
+    {
+
+        return view("contato");
+    }
+    public function politicaCookies()
+    {
+
+        return view("politica-de-cookies");
+    }
+    public function politicaPrivacidade()
+    {
+
+        return view("politica-privacidade");
+    }
+    public function segurancaPrivacidade()
+    {
+
+        return view("seguranca-privacidade");
+    }
+
+    public function termosUso()
+    {
+
+        return view("termos-uso");
+    }
 }

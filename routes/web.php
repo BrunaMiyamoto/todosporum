@@ -5,11 +5,32 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get("/", [homeController::class, "home"])->name("home");
+
 Route::get("/forumduvidas", [homeController::class, "forumDuvidas"])->name("forumDuvidas");
+
 Route::get("/forumprojetos", [homeController::class, "forumProjetos"])->name("forumProjetos");
+
 Route::get("/forumreclamacoes", [homeController::class, "forumReclamacoes"])->name("forumReclamacoes");
-Route::get("/forumduvidas", [homeController::class, "forumDuvidas"])->name("forumDuvidas");
-Route::get("/forumreclamacoes", [homeController::class, "forumReclamacoes"])->name("forumReclamacoes");
+
+Route::get("/aprendavideos", [homeController::class, "aprendaVideos"])->name("aprendaVideos");
+
+Route::get("/aprendasobre", [homeController::class, "aprendaSobre"])->name("aprendaSobre");
+
+Route::get("/paginaartigo", [homeController::class, "paginaArtigo"])->name("paginaArtigo");
+
+Route::get("/paginavideo", [homeController::class, "paginaVideo"])->name("paginaVideo");
+
+Route::get("/sobrenos", [homeController::class, "sobreNos"])->name("sobreNos");
+
+Route::get("/contato", [homeController::class, "contato"])->name("contato");
+
+Route::get("/politicacookies", [homeController::class, "politicaCookies"])->name("politicaCookies");
+
+Route::get("/politicaprivacidade", [homeController::class, "politicaPrivacidade"])->name("politicaPrivacidade");
+
+Route::get("/segurancaprivacidade", [homeController::class, "segurancaPrivacidade"])->name("segurancaPrivacidade");
+
+Route::get("/termosdeuso", [homeController::class, "termosUso"])->name("termosUso");
 
 
 
