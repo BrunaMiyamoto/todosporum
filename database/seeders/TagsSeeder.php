@@ -14,15 +14,56 @@ class TagsSeeder extends Seeder
      */
     public function run(): void
     {
-      DB::table('comentarios')->insert([
+      DB::table('comentarios')->insert([ 
         [
-            'id'=> 1,
-            'nome'=>' Teste User'
+            'nome'=>' Educação'
         ],
         [
-            'id'=> 2,
-            'nome'=> 'Usuario Teste'
-        ]
+            'nome'=> 'Infraestrutura'
+        ],
+        [
+            'nome'=> 'Sutentaabilidade'
+        ],
+        [
+            'nome'=> 'Política'
+        ],
+        [
+            'nome'=> 'Tecnologia'
+        ],
+        [
+            'nome'=> 'Cidadania'
+        ],
+        [
+            'nome'=> 'Saude'
+        ],
+        [
+            
+            'nome'=> 'Lazer'
+        ],
+        [
+            'nome'=> 'Seguranca'
+        ],
+        [
+            'nome'=> 'Empregabilidade'
+        ],
+        [
+            'nome'=> 'Administração'
+        ],
+        [
+            'nome'=>'Transporte'
+        ],
+        [
+            'nome'=> 'DireitosHumanos'
+        ],
+        [
+            'nome'=>'Planejamento',    
+        ],
+        [
+           'nome'=> 'MaisVotos'
+        ],
+        [
+            'nome'=> 'MaisComentados'
+        ],
         ]);
     }
 }

@@ -27,43 +27,48 @@
     @vite(['resources/css/app.css'])
 </head>
 
-<body class="">
-    <header class="">
-        <img src="assets/img/logo.png" alt="Logo do projeto" width="100" height="60" />
-        <div class="menu-container" class="flex justify-end py-8 px-50 in-w-screen items-center  max-w-7xl">
-            <nav class="menu" id="menu" class="">
-                <a href="javascript:;" id="fechar-menu" class="hidden">
-                    <i class="fa-solid fa-xmark "></i>
-                </a>
-                <ul id="menu" class="flex gap-20">
-                    <li><a href="{{ route('home') }} "
-                            class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Inicio</a>
-                    </li>
-                    <li><a
-                            href="{{ route('forumProjetos') }}"class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Fórum</a>
-                    </li>
-                    <li><a
-                            href="{{ route('sobreNos') }}"class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Sobre
-                            Nós</a></li>
-                    <li><a
-                            href="{{ route('aprendaSobre') }}"class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Aprenda
-                            Sobre</a></li>
-                    <li><a
-                            href="{{ route('contato') }}"class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Contato</a>
-                    </li>
-                </ul>
-                <a href="{{ route('login') }}" class="btn-login"
-                    class="bg-orange-500 text-blue-50 py-7 px-14 rounded-s text-xs font-bold hidden"><i
+<body class="bg-blue-50 text-neutral-800">
+    <header class="shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between p-2 items-center">
+            <div class="font-bold text-xl"><img src="assets/img/logo.png" alt="Logo do projeto" width="100"
+                    height="60" /></div>
+
+            <div class="menu-container" class="flex justify-end py-8 px-50 in-w-screen items-center max-w-7xl">
+                <nav class="menu" id="menu" class="hover:text-blue-700 justify-end">
+                    <a href="javascript:;" id="fechar-menu" class="hidden">
+                        <i class="fa-solid fa-xmark "></i>
+                    </a>
+                    <ul id="menu" class="flex gap-10">
+                        <li><a href="{{ route('home') }} "
+                                class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2 ">Inicio</a>
+                        </li>
+                        <li><a
+                                href="{{ route('forumProjetos') }}"class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Fórum</a>
+                        </li>
+                        <li><a
+                                href="{{ route('sobreNos') }}"class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Sobre
+                                Nós</a></li>
+                        <li><a
+                                href="{{ route('aprendaSobre') }}"class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Aprenda
+                                Sobre</a></li>
+                        <li><a
+                                href="{{ route('contato') }}"class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Contato</a>
+                        </li>
+                    </ul>
+                    <a href="{{ route('login') }}" class="btn-login"
+                        class="bg-orange-500 text-blue-50 py-7 px-8 rounded-s text-xs font-bold hidden"><i
+                            class="fa-solid fa-right-from-bracket"></i>Login/Registre-se</a>
+                </nav>
+            </div>
+            <div class="btn-desk" class="hover:text-sky-700 bg-orange-500">
+                <a href="{{ route('login') }}" class="btn-login"><i
                         class="fa-solid fa-right-from-bracket"></i>Login/Registre-se</a>
-            </nav>
+            </div>
+
+            <button class="hamburguer" id="btn-menu" class="hidden">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
-        <div class="btn-desk" class="hover:text-sky-700">
-            <a href="{{ route('login') }}" class="btn-login"><i
-                    class="fa-solid fa-right-from-bracket"></i>Login/Registre-se</a>
-        </div>
-        <button class="hamburguer" id="btn-menu" class="hidden">
-            <i class="fa-solid fa-bars"></i>
-        </button>
     </header>
 
     <main>
