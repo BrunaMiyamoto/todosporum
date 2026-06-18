@@ -27,7 +27,7 @@
     @vite(['resources/css/app.css'])
 </head>
 
-<body class="bg-blue-50 text-neutral-800">
+<body class="bg-[#ebf2fa] text-neutral-800">
     <header class="shadow-md">
         <div class="max-w-7xl mx-auto flex justify-between p-2 items-center">
             <div class="font-bold text-xl"><img src="assets/img/logo.png" alt="Logo do projeto" width="100"
