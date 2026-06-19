@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string("videos");
             $table->string("tipo", 45);
 
-            $table->foreignId("usuario_id")->constrained();
+            $table->foreignId("usuario_id")->constrained("usuarios");
         });
     }
 

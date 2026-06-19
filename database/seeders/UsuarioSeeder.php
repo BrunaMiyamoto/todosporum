@@ -20,7 +20,7 @@ class UsuarioSeeder extends Seeder
                 "email" => "bruna@senac.com",
                 "password" => Hash::make("12345678"),
                 "cpf" => "449.054.968-70",
-                "dt_nasc" => "1998 - 03 - 01",
+                "dt_nasc" => "1998-03-01",
 
                 "perfil" => "usuário",
                 "cep" => "13214-120",

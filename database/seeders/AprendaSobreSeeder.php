@@ -13,7 +13,7 @@ class AprendaSobreSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('aprendasobre')->insert([
+        DB::table('aprenda_sobre')->insert([
             [
                 "dt_publi" => now(),
                 "autor" => "Ana Martins",
