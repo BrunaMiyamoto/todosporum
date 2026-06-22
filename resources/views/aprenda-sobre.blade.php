@@ -3,7 +3,7 @@
 @section('conteudo')
     <div id="banner"
         class="min-w-screen bg-[#05668D] text-center p-24 bg-cover shadow-[0px_0px_10px_rgba(0, 0, 0, 0.2)] text-white">
-        <h1 class="py-3 px-5">APRENDA SOBRE</h1>
+        <h1 class="py-3 px-5 font-bold text-3xl">APRENDA SOBRE</h1>
         <p class="max-w-900 text-xs font-normal">
             Compreenda o cenário político de forma clara e acessível. Explore a
             página e tenha acesso a vídeos e artigos que auxiliam na sua
