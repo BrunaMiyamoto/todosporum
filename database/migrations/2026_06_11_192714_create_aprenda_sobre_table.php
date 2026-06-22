@@ -21,6 +21,7 @@ return new class extends Migration
             $table->text("resumo");
             $table->string("videos");
             $table->string("tipo", 45);
+            $table->timestamps();
 
             $table->foreignId("usuario_id")->constrained("usuarios");
         });

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('postagens_has_tags', function (Blueprint $table) {
 
             $table->foreignId("tag_id")->constrained();
-            $table->foreignId("postagem_id")->constrained();
+            $table->foreignId("postagem_id")->constrained("postagens");
         });
     }
 

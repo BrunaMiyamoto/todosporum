@@ -3,16 +3,20 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Postagem;
 use Illuminate\Http\Request;
 
-class UsuarioController extends Controller
+class PostagemController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view("admin.conta.index");
+        $postagens = Postagem::all();
+        return view("admin.postagem.index", [
+            "postagens" => $postagens
+        ]);
     }
 
     /**

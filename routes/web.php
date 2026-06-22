@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\PostagemController;
 use App\Http\Controllers\Admin\UsuarioController;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\ProfileController;
@@ -48,7 +49,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get("/dashboard/conta", [UsuarioController::class, "index"])->name("admin.conta.index");
+    Route::get("/dashboard/postagem", [PostagemController::class, "index"])->name("admin.postagem.index");
 });
 
 require __DIR__ . '/auth.php';

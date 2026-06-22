@@ -30,8 +30,8 @@
 <body class="bg-[#ebf2fa] text-neutral-800">
     <header class="shadow-md">
         <div class="max-w-7xl mx-auto flex justify-between p-2 items-center">
-            <div class="font-bold text-xl"><img src="assets/img/logo.png" alt="Logo do projeto" width="100"
-                    height="60" /></div>
+            <div class="font-bold text-xl"> <img class="max-w-14" src="{{ asset('assets/img/fundo transparente.png') }}"
+                    alt="Logo do projeto" width="100" height="60" /></div>
 
             <div class="menu-container" class="flex justify-end py-8 px-50 in-w-screen items-center max-w-7xl">
                 <nav class="menu" id="menu" class="hover:text-blue-700 justify-end">
@@ -80,8 +80,8 @@
     <footer>
         <div class="rodape">
             <div id="logorodape">
-                <img id="logorodape" src="assets/img/logo branco.png" alt="Logo Todos por Um" width="170"
-                    height="90" />
+                <img id="logorodape" src="{{ asset('assets/img/fundo transparente.png') }}" alt="Logo Todos por Um"
+                    width="170" height="90" />
             </div>
             <div id="responsivoRodape">
                 <ul>
@@ -149,14 +149,19 @@
             </div>
         </div>
         <hr id="linharodape" />
-        <div class="rodapebaixo">
+        <div class="rodapebaixo" class="flex">
             <p>Todos os direitos reservados</p>
-            <div>
-                <img src="assets/img/youtube-circle.png" alt="Ícone Youtube" width="35" height="35" />
-                <img src="assets/img/twitter-alt-circle.png" alt="Ícone Twitter" width="35" height="35" />
-                <img src="assets/img/whatsapp-circle.png" alt="Ícone Whatsapp" width="35" height="35" />
-                <img src="assets/img/facebook (1).png" alt="Ícone Facebook" width="35" height="35" />
-                <img src="assets/img/instagram-circle.png" alt="Ícone Instagram" width="35" height="35" />
+            <div class="flex">
+                <img src="{{ asset('assets/img/youtube-circle.png') }}" alt="Ícone Youtube" width="35"
+                    height="35" />
+                <img src="{{ asset('assets/img/twitter-alt-circle.png') }}" alt="Ícone Twitter" width="35"
+                    height="35" />
+                <img src="{{ asset('assets/img/whatsapp-circle.png') }}" alt="Ícone Whatsapp" width="35"
+                    height="35" />
+                <img src="{{ asset('assets/img/facebook (1).png') }}" alt="Ícone Facebook" width="35"
+                    height="35" />
+                <img src="{{ asset('assets/img/instagram-circle.png') }}" alt="Ícone Instagram" width="35"
+                    height="35" />
             </div>
         </div>
     </footer>

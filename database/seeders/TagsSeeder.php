@@ -14,56 +14,56 @@ class TagsSeeder extends Seeder
      */
     public function run(): void
     {
-      DB::table('comentarios')->insert([ 
-        [
-            'nome'=>' Educação'
-        ],
-        [
-            'nome'=> 'Infraestrutura'
-        ],
-        [
-            'nome'=> 'Sutentaabilidade'
-        ],
-        [
-            'nome'=> 'Política'
-        ],
-        [
-            'nome'=> 'Tecnologia'
-        ],
-        [
-            'nome'=> 'Cidadania'
-        ],
-        [
-            'nome'=> 'Saude'
-        ],
-        [
-            
-            'nome'=> 'Lazer'
-        ],
-        [
-            'nome'=> 'Seguranca'
-        ],
-        [
-            'nome'=> 'Empregabilidade'
-        ],
-        [
-            'nome'=> 'Administração'
-        ],
-        [
-            'nome'=>'Transporte'
-        ],
-        [
-            'nome'=> 'DireitosHumanos'
-        ],
-        [
-            'nome'=>'Planejamento',    
-        ],
-        [
-           'nome'=> 'MaisVotos'
-        ],
-        [
-            'nome'=> 'MaisComentados'
-        ],
+        DB::table('tags')->insert([
+            [
+                'nome' => ' Educação'
+            ],
+            [
+                'nome' => 'Infraestrutura'
+            ],
+            [
+                'nome' => 'Sutentaabilidade'
+            ],
+            [
+                'nome' => 'Política'
+            ],
+            [
+                'nome' => 'Tecnologia'
+            ],
+            [
+                'nome' => 'Cidadania'
+            ],
+            [
+                'nome' => 'Saude'
+            ],
+            [
+
+                'nome' => 'Lazer'
+            ],
+            [
+                'nome' => 'Seguranca'
+            ],
+            [
+                'nome' => 'Empregabilidade'
+            ],
+            [
+                'nome' => 'Administração'
+            ],
+            [
+                'nome' => 'Transporte'
+            ],
+            [
+                'nome' => 'DireitosHumanos'
+            ],
+            [
+                'nome' => 'Planejamento',
+            ],
+            [
+                'nome' => 'MaisVotos'
+            ],
+            [
+                'nome' => 'MaisComentados'
+            ]
         ]);
     }
 }
