@@ -13,14 +13,16 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('admin.perfil.index')" :active="request()->routeIs('admin.perfil.index')">
-                        Sua Conta
-                    </x-nav-link>
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         Perfil
                     </x-nav-link>
+
                     <x-nav-link :href="route('admin.postagem.index')" :active="request()->routeIs('admin.postagem.index')">
                         Suas Postagens
                     </x-nav-link>
+                    <x-nav-link :href="route('admin.aprendaSobre.index')" :active="request()->routeIs('admin.aprendaSobre.index')">
+                        Aprenda Sobre
+                    </x-nav-link>
+
 
                 </div>
             </div>

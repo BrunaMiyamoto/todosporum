@@ -12,6 +12,7 @@
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg min-w-2 px-4">
 
                     <div id="blocos" class="flex py-4 px-6">
+
                         <div class="abasConfig">
                             <ul class="text-[#333333] font-bold ">
                                 <li class="flex gap-2 py-3">
@@ -44,7 +45,7 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-10">
 
                 @forelse ($aprendaPost as $ap)
-                    <p class="font-extrabold text-xl pb-3">SUAS POSTAGENS</p>
+                    <p class="font-extrabold text-xl pb-3">APRENDA SOBRE</p>
                     <p class="border-t-2"></p>
 
                     <div class="abaAberta">
@@ -90,10 +91,6 @@
                             </div>
                         </div>
                 @endforelse
-
-
-
-
 
 
             </div>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AprendaSobreController;
 use App\Http\Controllers\Admin\PostagemController;
 
 use App\Http\Controllers\Admin\PerfilController;
@@ -51,8 +52,8 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get("/dashboard/postagem", [PostagemController::class, "index"])->name("admin.postagem.index");
-    Route::get("/dashboard/conta", [UsuarioController::class, "index"])->name("admin.conta.index");
+    Route::get("/dashboard/postagens", [PostagemController::class, "index"])->name("admin.postagem.index");
+    Route::get("/dashboard/aprendasobre", [AprendaSobreController::class, "index"])->name("admin.aprendaSobre.index");
 
     Route::get("/dashboard/suaconta", [PerfilController::class, "index"])->name("admin.perfil.index");
 });
