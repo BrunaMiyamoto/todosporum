@@ -2,7 +2,7 @@
 
 @section('conteudo')
     <div class="max-w-screen-md text-justify pt-10 pr-5">
-        <h1 class="text-sky-700 text-start pb-10 mt-24">SOBRE O PROJETO</h1>
+        <h1 class="text-[#05668d] text-start pb-10 mt-24">SOBRE O PROJETO</h1>
         <p>
             O Todos Por Um nasceu como uma iniciativa de estudantes de um curso
             técnico em tecnologia, fomos desafiados a criar uma solução que
