@@ -1,9 +1,12 @@
 <?php
 
+use App\Http\Controllers\Admin\AcessibilidadeController;
 use App\Http\Controllers\Admin\AprendaSobreController;
 use App\Http\Controllers\Admin\PostagemController;
 
 use App\Http\Controllers\Admin\PerfilController;
+use App\Http\Controllers\Admin\PerfilPublicoController;
+use App\Http\Controllers\Admin\SegurPrivaController;
 use App\Http\Controllers\Admin\UsuarioController;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\ProfileController;
@@ -54,8 +57,10 @@ Route::middleware('auth')->group(function () {
 
     Route::get("/dashboard/postagens", [PostagemController::class, "index"])->name("admin.postagem.index");
     Route::get("/dashboard/aprendasobre", [AprendaSobreController::class, "index"])->name("admin.aprendaSobre.index");
-
     Route::get("/dashboard/suaconta", [PerfilController::class, "index"])->name("admin.perfil.index");
+    Route::get("/dashboard/perfilpublico", [PerfilPublicoController::class, "index"])->name("admin.perfilPublico.index");
+    Route::get("/dashboard/acessibilidade", [AcessibilidadeController::class, "index"])->name("admin.acessibilidade.index");
+    Route::get("/dashboard/segurancaprivacidade", [SegurPrivaController::class, "index"])->name("admin.segurPrivac.index");
 });
 
 require __DIR__ . '/auth.php';

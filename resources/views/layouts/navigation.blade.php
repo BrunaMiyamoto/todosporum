@@ -12,8 +12,11 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('admin.perfilPublico.index')" :active="request()->routeIs('admin.perfilPublico.index')">
+                        Perfil Publico
+                    </x-nav-link>
                     <x-nav-link :href="route('admin.perfil.index')" :active="request()->routeIs('admin.perfil.index')">
-                        Perfil
+                        Sua Conta
                     </x-nav-link>
 
                     <x-nav-link :href="route('admin.postagem.index')" :active="request()->routeIs('admin.postagem.index')">
@@ -22,6 +25,15 @@
                     <x-nav-link :href="route('admin.aprendaSobre.index')" :active="request()->routeIs('admin.aprendaSobre.index')">
                         Aprenda Sobre
                     </x-nav-link>
+
+                    <x-nav-link :href="route('admin.acessibilidade.index')" :active="request()->routeIs('admin.acessibilidade.index')">
+                        Acessibilidade
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('admin.segurPrivac.index')" :active="request()->routeIs('admin.segurPrivac.index')">
+                        Segurança e Privacidade
+                    </x-nav-link>
+
 
 
                 </div>
