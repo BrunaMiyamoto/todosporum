@@ -28,8 +28,8 @@
 </head>
 
 <body class="bg-[#ebf2fa] text-neutral-800">
-    <header class="shadow-md">
-        <div class="max-w-7xl mx-auto flex justify-between p-2 items-center">
+    <header class="border">
+        <div class="max-w-7xl mx-auto flex justify-between p-2 items-center ">
             <div class="font-bold text-xl"> <img class="max-w-14" src="{{ asset('assets/img/fundo transparente.png') }}"
                     alt="Logo do projeto" width="100" height="60" /></div>
 
@@ -80,7 +80,7 @@
     <footer>
         <div class="rodape">
             <div id="logorodape">
-                <img id="logorodape" src="{{ asset('assets/img/fundo transparente.png') }}" alt="Logo Todos por Um"
+                <img id="logorodape" src="{{ asset('assets/img/logo branco.png') }}" alt="Logo Todos por Um"
                     width="170" height="90" />
             </div>
             <div id="responsivoRodape">

@@ -371,5 +371,14 @@ footer {
   box-sizing: border-box;
   }
 
-  
+
+
 }
+
+  /* CSS CONTATO */
+.form-label{
+  @apply block text-sm font-semibold text-[#e9702a] mb-1.5;
+}
+.form-control{
+  @apply w-full px-4 border rounded-lg text-sm 
+}  

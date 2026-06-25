@@ -1,10 +1,10 @@
-{{-- @dd($postagens) --}}
-
+{{-- @dd($aprendaPost) --}}
 
 @extends('layouts.site')
 
 @section('conteudo')
     <x-app-layout>
+
 
         <div class=" bg-[#ebf2fa] py-12 flex max-w-7xl justify-center text-sm gap-9 mx-auto sm:px-6 lg:px-8">
 
@@ -42,59 +42,36 @@
             </div>
 
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-2xl sm:rounded-md py-10 px-14 w-full">
-                <p class="font-extrabold text-xl pb-3">SUAS POSTAGENS</p>
-                <p class="border-t border-slate-500 "></p>
+                <form action="#" method="post">
+                    <p class="font-extrabold text-xl pb-3">SEU PERFIL</p>
+                    <p class="border-t border-slate-500 "></p>
 
-                @forelse ($postagens as $p)
-                    <div class="abaAberta">
+                    <div class="items-center">
 
-                        <section class="destaque">
+                        <div class="py-6 grid">
+                            <label for="fotoperfil" class="pb-2">Sua foto de perfil:</label>
+                            <input class="" type="file" name="fotoperfil" id="fotoperfil" checked />
 
-                            <div class="cabeca">
-                                <div class="tagsDestaque">
-                                    <ul>
-                                        <li>Ensino</li>
-                                    </ul>
-                                </div>
-                                <div class="usuarioDestaque">
-                                    <ul class="flex gap-4">
-                                        <li><img src="{{ asset('assets/img/palm-of-hand.png') }}" width="20" />
-                                            {{ $p->likes }}
-                                        </li>
-                                        <li><img src="{{ asset('assets/img/chat (1).png') }}" width="20" /> 12
-                                        </li>
-                                        <li><img src="{{ asset('assets/img/edit.png') }}" width="20" /></li>
-                                        <li><img src="{{ asset('assets/img/trash-can.png') }}" width="20" />
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h3>
-                                {{ $p->titulo }}
-                            </h3>
-                            <p>
-                                <strong>Objetivo:</strong> {{ $p->conteudo }}
-                            </p>
-                        </section>
-
-                    @empty
+                        </div>
 
                         <div>
-                            <div class="text-center text-slate-400"colspan="6">
-                                <p>Nenhuma postagem cadastrada</p>
-                            </div>
+
+                            <a href="#" class="bg-[#629643] text-white py-1 rounded-md px-3 ">Remover</a>
                         </div>
-                @endforelse
+                    </div>
 
+                    <div class="pt-5 grid">
+                        <p class="border-t border-slate-500 pb-3"></p>
+                        <p>Suas informações Públicas:</p>
+                        <label for="nomeusuario" class="text-[#05668d] font-bold text-sm">Nome de usuário:</label>
+                        <input class="bg-[#ebf2fa] border-none rounded-md text-[#333333] " type="text" name="nomeusuario"
+                            id="nomeusuario" />
+                    </div>
+                    <div class="pt-5 grid">
+                        <label for="descricao" class="text-[#05668d] font-bold text-sm">Descrição:</label>
+                        <textarea class="bg-[#ebf2fa] border-none rounded-md text-[#333333] " name="descricao" id="descricao" rows="7"></textarea>
+                    </div>
+                </form>
 
-                </section>
-            </div>
-        </div>
-
-        </div>
-
-        </div>
-        </div>
-        </div>
     </x-app-layout>
 @endsection
