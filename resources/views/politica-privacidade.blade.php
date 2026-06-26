@@ -2,18 +2,20 @@
 
 @section('conteudo')
 
-<div id="menusPolitica">
+<div id="menusPolitica ">
+  <div class="container-botoes">
         <ul>
           <li>
-            <a href="politica-privacidade.html">Política de Privacidade</a>
+            <a href="politica-privacidade.html" class="btn-privacidade">Política de Privacidade</a>
           </li>
           <li>
-            <a href="cookies.html">Política de Cookies</a>
+            <a href="cookies.html" class="btn-cookies" >Política de Cookies</a>
           </li>
           <li>
-            <a href="termos-uso.html">Termos de Uso</a>
+            <a href="termos-uso.html" class="btn-termos de uso">Termos de Uso</a>
           </li>
         </ul>
+      </div>
       </div>
 
       <div class="politica">
@@ -22,7 +24,7 @@
         <br /><br />
         <hr />
         <br /><br />
-        <p id="politicaConteudo">
+        <p id="politicaConteudo" class="politicaPrivacidade">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis
           massa tempus, porttitor odio et, eleifend neque. Quisque convallis
           ipsum id nunc accumsan porta. Nam mattis euismod eros ut pellentesque.

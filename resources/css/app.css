@@ -371,9 +371,71 @@ footer {
   box-sizing: border-box;
   }
 
-
-
+  
 }
+.btn-privacidade {
+    display: flex;
+    display: inline-flex;
+    text-align: center;
+    text-decoration: none; 
+    padding: 1px 24px;
+    border-radius: 8px;
+    background-color: #629543; 
+    color: #FFFFFF; 
+    font-size: 16px;
+    font-weight: normal;
+    transition: background-color 0.3s ease;
+}
+.btn-privacidade:hover {
+    background-color: #537f39; 
+}
+
+.btn-cookies {
+   display: iinline-flex;
+    text-align: center;
+    text-decoration: none; 
+    padding: 1px 24px;
+    border-radius: 8px;
+    background-color: #629543; 
+    color: #FFFFFF; 
+    font-size: 16px;
+    font-weight: normal;
+    transition: background-color 0.3s ease;
+}
+.btn-cookies:hover {
+    background-color: #537f39; 
+}
+.btn-termos {
+    
+    display: inline-flex;
+    text-align: center;
+    text-decoration: none; 
+    padding: 
+    2px 24px;
+    border-radius: 8px;
+    background-color: #629543; 
+    color: #FFFFFF; 
+    font-size: 16px;
+    font-weight: normal;
+    transition: background-color 0.3s ease;
+    gap: 20px;  
+     width: 100%;    
+     align-items: center;  
+     justify-content: center; 
+}
+.btn-termos:hover {
+    background-color: #537f39; 
+}
+.container-botoes {
+  display: flex;          
+  justify-content: center; 
+  align-items: center;     
+  gap: 20px;              
+  padding: 40px;          
+  width: 100%;           
+}
+
+
 
   /* CSS CONTATO */
 .form-label{
