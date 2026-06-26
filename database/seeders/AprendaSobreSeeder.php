@@ -13,7 +13,7 @@ class AprendaSobreSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('aprendasobre')->insert([
+        DB::table('aprenda_sobres')->insert([
             [
                 "dt_publi" => now(),
                 "autor" => "Ana Martins",
@@ -23,6 +23,8 @@ class AprendaSobreSeeder extends Seeder
                 "resumo" => "Veja como a tecnologia pode aumentar a transparência na gestão pública.",
                 "videos" => "video.mp4",
                 "tipo" => "artigo",
+                "created_at" => now(),
+                "updated_at" => now(),
                 "usuario_id" => "1",
             ],
         ]);

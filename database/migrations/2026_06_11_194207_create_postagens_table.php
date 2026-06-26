@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string("categorias", 50);
             $table->mediumText("conteudo");
             $table->string("titulo", 100);
-            $table->timestamps("dt_post");
+            $table->timestamps();
+
 
             $table->foreignId("usuario_id")->constrained();
         });

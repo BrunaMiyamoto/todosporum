@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('comentarios', function (Blueprint $table) {
             $table->id();
             $table->text("conteudo");
-            $table->timestamps("dt_coment");
+            $table->timestamps();
 
             $table->foreignId("usuario_id")->constrained();
-            $table->foreignId("postagem_id")->constrained();
+            $table->foreignId("postagem_id")->constrained("postagens");
         });
     }
 

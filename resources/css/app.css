@@ -61,7 +61,7 @@ header {
   text-decoration: none;
   font-size: 12px;
 } */
-/* .btn-login {
+.btn-login {
   background-color: #e9702a;
   color: #ebf2fa;
   padding: 7px 14px;
@@ -69,7 +69,7 @@ header {
   text-decoration: none;
   font-size: 12px;
   font-weight: bold;
-} */
+}
 
 .btn-desk :hover {
   color: #05668d;
@@ -134,7 +134,7 @@ header {
   }
 }
 /* MENU RESPONSIVO MENU RESPONSIVO MENU RESPONSIVO  */
-#banner {
+/* #banner {
   background-image: linear-gradient(
       to right,
       rgba(5, 102, 141, 0.8),
@@ -144,7 +144,7 @@ header {
   background-size: cover;
   background-position: 30%;
   padding: 130px;
-}
+} */
 
 #tituloBanner {
   color: #ffffff;
@@ -436,3 +436,11 @@ footer {
 }
 
 
+
+  /* CSS CONTATO */
+.form-label{
+  @apply block text-sm font-semibold text-[#e9702a] mb-1.5;
+}
+.form-control{
+  @apply w-full px-4 border rounded-lg text-sm 
+}  

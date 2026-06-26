@@ -2,7 +2,7 @@
 
 @section('conteudo')
     <div class="max-w-screen-md text-justify pt-10 pr-5">
-        <h1 class="text-sky-700 text-start pb-10 mt-24">SOBRE O PROJETO</h1>
+        <h1 class="text-[#05668d] text-start pb-10 mt-24">SOBRE O PROJETO</h1>
         <p>
             O Todos Por Um nasceu como uma iniciativa de estudantes de um curso
             técnico em tecnologia, fomos desafiados a criar uma solução que
@@ -37,33 +37,40 @@
     <section class="text-center p-10">
         <h2>NOSSOS OBJETIVOS</h2>
 
-        <div class="grid grid-cols-3 gap-7 justify-items-center max-w-5xl m-0">
-            <div class="card">
+        <div class=" grid grid-cols-3 gap-7 max-w-4xl m-0 mx-auto text-center">
+
+            <div
+                class="bg-[ebf2fa] rounded-2xl px-7 py-4 shadow-sm hover:shadow-md border border-slate-200 overflow-hidden group max-w-60">
                 <h3>Estimular</h3>
                 <p>a participação política ativa dos moradores</p>
             </div>
 
-            <div class="card">
+            <div
+                class="bg-[ebf2fa] rounded-2xl px-7 py-4 shadow-sm hover:shadow-md border border-slate-200 overflow-hidden group max-w-60">
                 <h3>Aproximar</h3>
                 <p>a população das decisões da câmara e da prefeitura</p>
             </div>
 
-            <div class="card">
+            <div
+                class="bg-[ebf2fa] rounded-2xl px-7 py-4  shadow-sm hover:shadow-md border border-slate-200 overflow-hidden group max-w-60">
                 <h3>Promover</h3>
                 <p>a fiscalização dos representantes públicos</p>
             </div>
 
-            <div class="card">
+            <div
+                class="bg-[ebf2fa] rounded-2xl px-7 py-4  shadow-sm hover:shadow-md border border-slate-200 overflow-hidden group max-w-60">
                 <h3>Criar</h3>
                 <p>um espaço seguro para o debate e a troca de ideias</p>
             </div>
 
-            <div class="card">
+            <div
+                class="bg-[ebf2fa] rounded-2xl px-2 py-4  shadow-sm hover:shadow-md border border-slate-200 overflow-hidden group max-w-60">
                 <h3>Democratizar</h3>
                 <p>o conhecimento político de forma acessível e leve</p>
             </div>
 
-            <div class="card">
+            <div
+                class="bg-[ebf2fa] rounded-2xl px-2 py-4  shadow-sm hover:shadow-md border border-slate-200 overflow-hidden group max-w-60">
                 <h3>Fortalecer</h3>
                 <p>o sentimento de comunidade e pertencimento</p>
             </div>

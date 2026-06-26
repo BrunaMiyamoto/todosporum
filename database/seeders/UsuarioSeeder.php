@@ -14,20 +14,21 @@ class UsuarioSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('usuarios')->insert([
+        DB::table("usuarios")->insert([
             [
-                "nome" => "Mariana Alves Costa",
-                "email" => "mariana.costa98@email.com",
-                "password" => Hash::make("1234567"),
-                "cpf" => "572.747.848-03",
-                "dt_nasc" => "1998 - 03 - 01",
-
+                "nome" => "bruna Miyamoto",
+                "email" => "bruna@senac.com",
+                "password" => Hash::make("12345678"),
+                "cpf" => "449.054.968-70",
+                "dt_nasc" => "1998-03-01",
                 "perfil" => "usuário",
                 "cep" => "13214-120",
                 "rua" => "Rua das Palmeiras",
                 "bairro" => "Jardim Paulista",
                 "numero" => "245",
                 "cidade" => "Jundiaí",
+                "created_at" => now(),
+                "updated_at" => now(),
             ]
         ]);
     }

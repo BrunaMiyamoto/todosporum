@@ -1,32 +1,33 @@
 @extends('layouts.site')
 
 @section('conteudo')
-    <div id="banner">
-        <h1>APRENDA SOBRE</h1>
-        <p>
+    <div id="banner"
+        class="min-w-screen bg-[#05668D] text-center p-24 bg-cover shadow-[0px_0px_10px_rgba(0, 0, 0, 0.2)] text-white">
+        <h1 class="py-3 px-5 font-bold text-3xl">APRENDA SOBRE</h1>
+        <p class="max-w-900 text-xs font-normal">
             Compreenda o cenário político de forma clara e acessível. Explore a
             página e tenha acesso a vídeos e artigos que auxiliam na sua
             compreensão e posicionamento diante do contexto atual.
         </p>
     </div>
-    <div id="artigovideo">
-        <ul id="menu2">
+    <div id="artigovideo" class="max-w-3xl mx-auto">
+        <ul id="menu2" class="flex justify-center pt-7 pb-2 gap-7">
             <li>
-                <a href="aprendasobre.html">Artigos</a>
+                <a href="aprendasobre.html" class="text-orange-500 font-bold text-sl hover:text-sky-700">Artigos</a>
             </li>
             <li>
-                <a href="aprenda-videos.html">Videos</a>
+                <a href="aprenda-videos.html" class="text-orange-500 font-bold text-sl hover:text-sky-700">Videos</a>
             </li>
         </ul>
     </div>
     <div class="todoconteudo">
         <div class="titulosecao">
-            <h2>DESTAQUES</h2>
+            <h2 class="text-start text-[#05668D] py-7">DESTAQUES</h2>
         </div>
         <div class="campos">
             <!-- DESTAQUES ESQUERDA DESTAQUES ESQUERDA!!!!!!!!!!! -->
             <div class="destaqueesquerda">
-                <img src="img/pexels-pixabay-269077.jpg" class="imagemgrande" alt="Imagem de fachada de prédio" />
+                <img src="assets/img/pexels-pixabay-269077.jpg" class="imagemgrande" alt="Imagem de fachada de prédio" />
                 <h3>Destaque 1 Destaque 1 Destaque 1</h3>
                 <div class="paragrafo1">
                     In nec erat vel tellus accumsan rhoncus non eu ipsum. Donec
