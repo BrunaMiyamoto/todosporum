@@ -1,9 +1,11 @@
 @extends('layouts.site')
 
 @section('conteudo')
-    <div class=" bg-gradient-to-r from-sky-800 to-slate-900 min-h-44 " img src="assets/img/pexels-zen-chung-5745183.jpg">
-        <h1>ENTRE EM <strong>CONTATO</strong> CONOSCO</h1>
-        <p class="text-white m-0 text-center">Dúvidas, reclamações, sugestões etc.</p>
+    <div class=" bg-gradient-to-r from-sky-800 to-slate-900 min-h-72 font-bold " img
+        src="assets/img/pexels-zen-chung-5745183.jpg">
+        <h1 class="text-white m-0 text-center pt-28 text-[25px]">ENTRE EM <strong class="text-[#e9702a]">CONTATO</strong>
+            CONOSCO</h1>
+        <p class="text-white m-0 text-center text-[15px]">Dúvidas, reclamações, sugestões etc.</p>
     </div>
     <div class="flex justify-center items-center">
 
@@ -28,7 +30,7 @@
 
                             <div class="mb-5">
                                 <label for="email" class="form-label">E-mail</label>
-                                <input type="email" name="email" id="emial" class="form-control">
+                                <input type="email" name="email" id="email" class="form-control">
                             </div>
 
                             <div class="mb-5">

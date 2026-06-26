@@ -39,38 +39,32 @@
 
         <div class=" grid grid-cols-3 gap-7 max-w-4xl m-0 mx-auto text-center">
 
-            <div
-                class="bg-[ebf2fa] rounded-2xl px-7 py-4 shadow-sm hover:shadow-md border border-slate-200 overflow-hidden group max-w-60">
+            <div class="cards">
                 <h3>Estimular</h3>
                 <p>a participação política ativa dos moradores</p>
             </div>
 
-            <div
-                class="bg-[ebf2fa] rounded-2xl px-7 py-4 shadow-sm hover:shadow-md border border-slate-200 overflow-hidden group max-w-60">
+            <div class="cards">
                 <h3>Aproximar</h3>
                 <p>a população das decisões da câmara e da prefeitura</p>
             </div>
 
-            <div
-                class="bg-[ebf2fa] rounded-2xl px-7 py-4  shadow-sm hover:shadow-md border border-slate-200 overflow-hidden group max-w-60">
+            <div class="cards">
                 <h3>Promover</h3>
                 <p>a fiscalização dos representantes públicos</p>
             </div>
 
-            <div
-                class="bg-[ebf2fa] rounded-2xl px-7 py-4  shadow-sm hover:shadow-md border border-slate-200 overflow-hidden group max-w-60">
+            <div class="cards">
                 <h3>Criar</h3>
                 <p>um espaço seguro para o debate e a troca de ideias</p>
             </div>
 
-            <div
-                class="bg-[ebf2fa] rounded-2xl px-2 py-4  shadow-sm hover:shadow-md border border-slate-200 overflow-hidden group max-w-60">
+            <div class="cards">
                 <h3>Democratizar</h3>
                 <p>o conhecimento político de forma acessível e leve</p>
             </div>
 
-            <div
-                class="bg-[ebf2fa] rounded-2xl px-2 py-4  shadow-sm hover:shadow-md border border-slate-200 overflow-hidden group max-w-60">
+            <div class="cards">
                 <h3>Fortalecer</h3>
                 <p>o sentimento de comunidade e pertencimento</p>
             </div>

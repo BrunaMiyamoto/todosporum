@@ -380,5 +380,9 @@ footer {
   @apply block text-sm font-semibold text-[#e9702a] mb-1.5;
 }
 .form-control{
-  @apply w-full px-4 border rounded-lg text-sm 
+  @apply w-full px-4 border rounded-lg text-sm;
 }  
+
+.cards{
+  @apply rounded-2xl px-7 py-4 shadow-sm hover:shadow-md border border-slate-200 overflow-hidden max-w-60;
+}
