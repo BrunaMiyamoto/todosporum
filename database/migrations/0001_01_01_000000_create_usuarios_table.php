@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('cpf', 15)->unique();
             $table->date('dt_nasc');
             $table->string("nome_social", 100)->nullable();
+            $table->string("genero")->nullable();
             $table->string("perfil", 20);
             $table->string("cep", 15)->nullable();
             $table->string("rua", 100)->nullable();

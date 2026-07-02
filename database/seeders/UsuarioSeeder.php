@@ -16,11 +16,12 @@ class UsuarioSeeder extends Seeder
     {
         DB::table("usuarios")->insert([
             [
-                "nome" => "bruna Miyamoto",
+                "nome" => "Bruna Miyamoto",
                 "email" => "bruna@senac.com",
                 "password" => Hash::make("12345678"),
                 "cpf" => "449.054.968-70",
                 "dt_nasc" => "1998-03-01",
+                "genero" => "feminino",
                 "perfil" => "usuário",
                 "cep" => "13214-120",
                 "rua" => "Rua das Palmeiras",

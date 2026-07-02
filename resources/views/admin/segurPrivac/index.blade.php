@@ -6,12 +6,12 @@
     <x-app-layout>
 
 
-        <div class="py-12 flex max-w-7xl justify-center  gap-9 mx-auto sm:px-6 lg:px-8">
+        <div class=" bg-[#ebf2fa] py-12 flex max-w-7xl justify-center text-sm gap-9 mx-auto sm:px-6 lg:px-8">
 
             <div class="">
-                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg min-w-2 px-4">
+                <div class="bg-white overflow-hidden shadow-2xl sm:rounded-lg min-w-2 px-4">
 
-                    <div id="blocos" class="flex py-4 px-6">
+                    <div id="blocos" class="flex py-4 px-6 ">
                         <div class="abasConfig">
                             <ul class="text-[#333333] font-bold ">
                                 <li class="flex gap-2 py-3">
@@ -41,7 +41,7 @@
                 </div>
             </div>
 
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-2xl sm:rounded-md py-10 px-14 w-full">
+            <div class="bg-white overflow-hidden shadow-2xl sm:rounded-md py-10 px-14 w-full">
                 <p class="font-extrabold text-xl pb-3">SEGURANÇA E PRIVACIDADE</p>
                 <p class="border-t border-slate-500 pb-5"></p>
                 <p>Navegaçao pública</p>
