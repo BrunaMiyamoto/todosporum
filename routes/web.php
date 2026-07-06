@@ -57,10 +57,16 @@ Route::middleware('auth')->group(function () {
 
     Route::get("/dashboard/postagens", [PostagemController::class, "index"])->name("admin.postagem.index");
     Route::get("/dashboard/aprendasobre", [AprendaSobreController::class, "index"])->name("admin.aprendaSobre.index");
+
+
+
     Route::get("/dashboard/suaconta", [PerfilController::class, "index"])->name("admin.perfil.index");
-    Route::get("/dashboard/perfilpublico", [PerfilPublicoController::class, "index"])->name("admin.perfilPublico.index");
+    Route::get("/dashboard/suaconta/editar/{id}", [PerfilController::class, "edit"])->name("admin.perfil.editar");
+    Route::put("/dashboard/suaconta/atualizar/{id}", [PerfilController::class, "update"])->name("admin.perfil.atualizar");
+
+
+
     Route::get("/dashboard/acessibilidade", [AcessibilidadeController::class, "index"])->name("admin.acessibilidade.index");
-    Route::get("/dashboard/segurancaprivacidade", [SegurPrivaController::class, "index"])->name("admin.segurPrivac.index");
 });
 
 require __DIR__ . '/auth.php';

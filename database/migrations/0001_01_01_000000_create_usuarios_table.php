@@ -21,12 +21,16 @@ return new class extends Migration
             $table->date('dt_nasc');
             $table->string("nome_social", 100)->nullable();
             $table->string("genero")->nullable();
+            $table->string('contato', 20);
             $table->string("perfil", 20);
             $table->string("cep", 15)->nullable();
             $table->string("rua", 100)->nullable();
             $table->string("bairro", 100)->nullable();
             $table->string("numero")->nullable();
             $table->string("cidade", 100)->nullable();
+            $table->string("imagem")->nullable();
+            $table->string("nome_usuario");
+            $table->string("descricao")->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

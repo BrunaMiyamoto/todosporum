@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Pest\Support\View;
 
 class PerfilController extends Controller
 {
@@ -32,7 +34,43 @@ class PerfilController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            "nome" => "required",
+            'nome_social' => "nullable",
+            'genero' => "nullable",
+            'contato' => "required|min:10",
+            'cep' => "nullable",
+            'rua' => "nullable",
+            'bairro' => "nullable",
+            'numero' => "nullable",
+            'cidade' => "nullable",
+            "nome_usuario" => "required",
+            "descricao" => "nullable",
+            "imagem" => "image|mimes:jpge,jpg, png,webp|max:2048"
+
+        ]);
+
+
+        $perfil = new User();
+
+        $perfil->nome = $request->nome;
+        $perfil->nome_social = $request->nome_social;
+        $perfil->genero = $request->genero;
+        $perfil->contato = $request->contato;
+        $perfil->cep = $request->cep;
+        $perfil->rua = $request->rua;
+        $perfil->bairro = $request->bairro;
+        $perfil->numero = $request->numero;
+        $perfil->cidade = $request->cidade;
+        $perfil->nome_usuario = $request->nome_usuario;
+        $perfil->descricao = $request->descricao;
+
+        if ($request->hasFile("imagem")) {
+            $perfil->imagem = $request->file("imagem")->store("foto_perfil", "public");
+        }
+
+        $perfil->save();
+        return redirect()->route("admin.perfil.index");
     }
 
     /**
@@ -48,7 +86,12 @@ class PerfilController extends Controller
      */
     public function edit(string $id)
     {
-        //
+
+        $perfil = User::findOrFail($id);
+
+        return view("admin.perfil.editar", [
+            "perfil" => $perfil
+        ]);
     }
 
     /**
@@ -56,7 +99,48 @@ class PerfilController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            "nome" => "required",
+            'nome_social' => "nullable",
+            'genero' => "nullable",
+            'contato' => "required|min:10",
+            'cep' => "nullable",
+            'rua' => "nullable",
+            'bairro' => "nullable",
+            'numero' => "nullable",
+            'cidade' => "nullable",
+            "nome_usuario" => "required",
+            "descricao" => "nullable",
+            "imagem" => "image|mimes:jpge,jpg, png,webp|max:2048"
+
+        ]);
+
+
+        $perfil = User::findOrFail($id);
+
+        $perfil->nome = $request->nome;
+        $perfil->nome_social = $request->nome_social;
+        $perfil->genero = $request->genero;
+        $perfil->contato = $request->contato;
+        $perfil->cep = $request->cep;
+        $perfil->rua = $request->rua;
+        $perfil->bairro = $request->bairro;
+        $perfil->numero = $request->numero;
+        $perfil->cidade = $request->cidade;
+        $perfil->nome_usuario = $request->nome_usuario;
+        $perfil->descricao = $request->descricao;
+
+        if ($request->hasFile("imagem")) {
+
+            if ($perfil->imagem) {
+                Storage::disk("public")->delete($perfil->imagem);
+            }
+
+            $perfil->imagem = $request->file("imagem")->store("foto_perfil", "public");
+        }
+
+        $perfil->save();
+        return redirect()->route("admin.perfil.index");
     }
 
     /**

@@ -72,7 +72,6 @@
     </header>
 
     <main>
-
         @yield('conteudo')
     </main>
 
