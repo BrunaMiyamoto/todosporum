@@ -14,63 +14,69 @@
         <a href="forum-projetos.html" id="botaoExplore">Explore o Fórum</a>
     </div>
 
-    <h2>DESTAQUES DA COMUNIDADE</h2>
-    <section class="destaque">
-        <div class="cabeca">
-            <div class="tagsDestaque">
-                <ul>
-                    <li>Ensino</li>
-                </ul>
+    <h2 class="text-[#05668d] text-center mt-20 mb-8 font-bold text-3xl ">DESTAQUES DA COMUNIDADE</h2>
+
+    <div class=" flex-1">
+
+        <section class="destaque ">
+            <div class="cabeca">
+                <div class="tagsDestaque">
+                    <ul class="destaqueUl">
+                        <li class="destaqueLi">Ensino</li>
+                    </ul>
+                </div>
+                <div class="usuarioDestaque">Projeto por: Usuário00002</div>
             </div>
-            <div class="usuarioDestaque">Projeto por: Usuário00002</div>
-        </div>
-        <h3>
-            Projeto “Educação Política nas Escolas” - Formação de Jovens Cidadãos
-        </h3>
-        <p>
-            <strong>Objetivo:</strong> Implementar oficinas e palestras sobre
-            cidadania, política, direitos e deveres nas escolas públicas de
-            Marília, promovendo o engajamento político desde a juventude.
-        </p>
-    </section>
-    <section class="destaque">
-        <div class="cabeca">
-            <div class="tagsDestaque">
-                <ul>
-                    <li>Infraestrutura</li>
-                    <li>Natureza</li>
-                </ul>
+            <h3 class="linhalaranja">
+                Projeto “Educação Política nas Escolas” - Formação de Jovens Cidadãos
+            </h3>
+            <p>
+                <strong>Objetivo:</strong> Implementar oficinas e palestras sobre
+                cidadania, política, direitos e deveres nas escolas públicas de
+                Marília, promovendo o engajamento político desde a juventude.
+            </p>
+        </section>
+
+
+        <section class="destaque">
+            <div class="cabeca">
+                <div class="tagsDestaque">
+                    <ul class="destaqueUl">
+                        <li class="destaqueLi">Infraestrutura</li>
+                        <li class="destaqueLi">Natureza</li>
+                    </ul>
+                </div>
+                <div class="usuarioDestaque">Projeto por: Usuário00003</div>
             </div>
-            <div class="usuarioDestaque">Projeto por: Usuário00003</div>
-        </div>
-        <h3>Projeto “Praça Viva” - Revitalização de Espaços Públicos</h3>
-        <p>
-            <strong>Objetivo:</strong> Transformar praças abandonadas ou pouco
-            utilizadas em espaços comunitários ativos, com infraestrutura básica
-            (bancos, iluminação, lixeiras), área verde, brinquedos para crianças e
-            espaços para atividades culturais e esportivas.
-        </p>
-    </section>
-    <section class="destaque">
-        <div class="cabeca">
-            <div class="tagsDestaque">
-                <ul>
-                    <li>Comunicação</li>
-                    <li>Tecnologia</li>
-                </ul>
+            <h3 class="linhalaranja">Projeto “Praça Viva” - Revitalização de Espaços Públicos</h3>
+            <p>
+                <strong>Objetivo:</strong> Transformar praças abandonadas ou pouco
+                utilizadas em espaços comunitários ativos, com infraestrutura básica
+                (bancos, iluminação, lixeiras), área verde, brinquedos para crianças e
+                espaços para atividades culturais e esportivas.
+            </p>
+        </section>
+        <section class="destaque">
+            <div class="cabeca">
+                <div class="tagsDestaque">
+                    <ul class="destaqueUl">
+                        <li class="destaqueLi">Comunicação</li>
+                        <li class="destaqueLi">Tecnologia</li>
+                    </ul>
+                </div>
+                <div class="usuarioDestaque">Projeto por: Todos por Um</div>
             </div>
-            <div class="usuarioDestaque">Projeto por: Todos por Um</div>
-        </div>
-        <h3>
-            Projeto “Ouvidoria Cidadã Digital” - Plataforma de Escuta Popular
-        </h3>
-        <p>
-            <strong>Objetivo:</strong> Criar um canal digital oficial de escuta
-            permanente da população, onde qualquer cidadão possa registrar
-            sugestões, reclamações ou ideias diretamente vinculadas às secretarias
-            municipais e vereadores.
-        </p>
-    </section>
+            <h3 class="linhalaranja">
+                Projeto “Ouvidoria Cidadã Digital” - Plataforma de Escuta Popular
+            </h3>
+            <p>
+                <strong>Objetivo:</strong> Criar um canal digital oficial de escuta
+                permanente da população, onde qualquer cidadão possa registrar
+                sugestões, reclamações ou ideias diretamente vinculadas às secretarias
+                municipais e vereadores.
+            </p>
+        </section>
+    </div>
 
     <section class="entendarapido">
         <h2>ENTENDA RÁPIDO</h2>

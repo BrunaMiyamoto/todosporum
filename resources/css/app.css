@@ -177,7 +177,7 @@ header {
   color: #99cef3;
 }
 
-h2 {
+/* h2 {
   color: #05668d;
   text-align: center;
   margin-top: 80px;
@@ -185,47 +185,47 @@ h2 {
   font-family: "Prompt";
   font-weight: 600;
   font-size: 30px;
-}
+} */
 
-.destaque {
+/* .destaque {
   background-color: #ffffff;
   padding: 20px;
   max-width: 900px;
   margin: 30px auto;
   border-radius: 15px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
-}
+} */
 
-.destaque h3 {
+/* .destaque h3 {
   color: #e9702a;
   margin-top: 8px;
   margin-bottom: 8px;
-}
+} */
 
-.cabeca {
+/* .cabeca {
   display: flex;
   justify-content: space-between;
-}
+} */
 
-.tagsDestaque {
+/* .tagsDestaque {
   color: #ffffff;
   display: inline-block;
-}
+} */
 
-.tagsDestaque ul {
+/* .tagsDestaque ul {
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
   gap: 2px;
-}
+} */
 
-.tagsDestaque li {
+/* .tagsDestaque li {
   background-color: #629643;
   border-radius: 5px;
   margin-right: 10px;
   padding: 2px 8px 2px 8px;
-}
+} */
 
 .sobrenos {
   display: flex;
@@ -436,6 +436,29 @@ footer {
 }
 
 
+/* CSS INDEX */
+
+.destaque{
+  @apply bg-white p-5 max-w-4xl m-8 rounded-2xl shadow-[0_2px_6px_rgba(0,0,0,0.3)] ;
+}
+.cabeca{
+  @apply flex justify-between;
+}
+.tagsDestaque{
+  @apply text-white inline-block;
+}
+.destaqueUl{
+  @apply m-0 p-0 list-none flex gap-1;
+}
+.destaqueLi{
+  @apply bg-[#629643] rounded-md mr-2 py-1 px-2;
+}
+.linhalaranja{
+  @apply text-[#e9702a] mt-2 mb-2 font-bold;
+}
+
+/* testando se funciona */
+/* FIM CSS INDEX */
 
   /* CSS CONTATO */
 .form-label{
@@ -448,3 +471,5 @@ footer {
 .cards{
   @apply rounded-2xl px-7 py-4 shadow-sm hover:shadow-md border border-slate-200 overflow-hidden max-w-60;
 }
+
+/* FIM CSS CONTATO */

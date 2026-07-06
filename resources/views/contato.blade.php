@@ -1,17 +1,25 @@
 @extends('layouts.site')
 
 @section('conteudo')
-    <div class=" bg-gradient-to-r from-sky-800 to-slate-900 min-h-72 font-bold " img
-        src="assets/img/pexels-zen-chung-5745183.jpg">
-        <h1 class="text-white m-0 text-center pt-28 text-[25px]">ENTRE EM <strong class="text-[#e9702a]">CONTATO</strong>
-            CONOSCO</h1>
-        <p class="text-white m-0 text-center text-[15px]">Dúvidas, reclamações, sugestões etc.</p>
+    <div class=" relative bg-cover bg-no-repeat bg-center min-h-64 font-bold "
+        style="background-image: url('{{ asset('assets/img/pexels-zen-chung-5745183.jpg') }}')">
+
+
+        <div class="absolute inset-0 bg-gradient-to-r from-sky-800 to-slate-400 mix-blend-multiply"></div>
+        <div class="relative z-10 flex flex-col justify-center items-center py-12">
+            <h1 class="text-white m-0 text-center pt-10 text-[25px] tracking-wide">ENTRE EM <strong
+                    class="text-[#e9702a]">CONTATO</strong>
+                CONOSCO</h1>
+            <p class="text-white m-0 text-center text-[15px]">Dúvidas, reclamações, sugestões etc.</p>
+        </div>
+
+
     </div>
     <div class="flex justify-center items-center">
 
 
 
-        <div class="py-12 ">
+        <div class="py-12  ">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 flex  justify-center items-center  m-16">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm rounded-l-lg flex  ">
 
