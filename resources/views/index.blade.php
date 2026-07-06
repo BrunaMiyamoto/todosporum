@@ -3,20 +3,20 @@
 @section('conteudo')
     <div class="relative bg-cover bg-no-repeat bg-center min-h-64 "
         style="background-image: url('{{ asset('assets/img/pexels-cytonn-955389.jpg') }}')">
-        <div class="absolute inset-0 bg-gradient-to-r from-sky-800 to-slate-400 mix-blend-multiply"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-sky-900 to-slate-500 mix-blend-multiply"></div>
 
         <div class="relative z-10 flex flex-col justify-center items-center py-12">
-            <h1 class="text-white font-semibold text-center">ENVIE SUA IDEIA JÁ</h1>
-            <p class="text-white text-center p-6">
+            <h1 class="text-white font-semibold text-center text-3xl  ">ENVIE SUA IDEIA JÁ</h1>
+            <p class="text-white text-center p-6 ">
                 Participe ativamente do debate público: envie projetos, proponha
                 pautas, registre reclamações e interaja com outros cidadãos. <br />
                 Vote nas melhores iniciativas e ajude a transformar sua comunidade.
                 Exerça seu papel de cidadão e faça a diferença!
             </p>
-            <a href="login.html" class="text-[#e9702a] block text-center m-auto max-w-3xl bg-white p-3 rounded-xl">Escreva
+            <a href="login.html" class="text-[#e9702a] block text-center w-full max-w-3xl bg-white p-2 rounded-xl">Escreva
                 aqui...</a>
             <br />
-            <a href="forum-projetos.html" class="block text-center text-[#99cef3]">Explore o Fórum</a>
+            <a href="{{ route('forumProjetos') }}" class="block text-center text-[#99cef3] ">Explore o Fórum</a>
         </div>
     </div>
 
@@ -100,12 +100,14 @@
             </video>
         </div>
         <br />
-        <a href="aprenda-videos.html" class="bg-[#629643] text-white py-1 px-2 rounded-md block text-center m-8 w-64">Veja
+        <a href="aprenda-videos.html"
+            class="bg-[#629643] text-white py-1 px-2 rounded-md block text-center   m-auto w-64">Veja
             mais vídeos explicativos</a>
     </section>
 
-    <section class="flex flex-row items-center justify-center gap-10 py-14 px-5 max-w-6xl m-8 box-border">
-        <div class="flex-1 min-w-auto text-justify justify-center ">
+    <section class="flex flex-row items-center justify-center gap-10 py-14 px-5 max-w-6xl  box-border m-auto mt-7">
+
+        <div class="flex-1 min-w-auto text-justify justify-center  ">
             <h2 class="text-[#05668d] mb-2 font-bold text-3xl ">CONHEÇA MAIS SOBRE NÓS</h2>
             <p class="paragrafo">
                 O projeto “Todos Por Um” consiste em uma plataforma digital
@@ -131,9 +133,9 @@
             <a href="sobre-nos.html" class="sobrenosbotao">Saiba mais sobre Todos Por Um</a>
             <a href="contato.html" class="sobrenosbotao">Entre em contato conosco</a>
         </div>
-        <div class="rounded-2xl max-w-full h-auto">
+        <div class=" max-w-full h-auto">
             <img src="assets/img/pexels-polina-tankilevitch-8203158-scaled.jpg" alt="Mulher gritando em um megafone"
-                width="600" height="400" />
+                width="600" height="400" class="rounded-2xl" />
         </div>
     </section>
 @endsection
