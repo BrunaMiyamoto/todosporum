@@ -1,20 +1,20 @@
 @extends('layouts.site')
 
 @section('conteudo')
-    <div id="menusPolitica">
-        <ul>
-          <li>
+    <div class="mt-24">
+        <ul class="m-0 p-0 list-none flex justify-center align-items-center">
+          <li class="bg-[#629643] rounded m-8 mx-3- py-1 px-2">
             <a href="politica-privacidade.html">Política de Privacidade</a>
           </li>
-          <li><a href="cookies.html">Política de Cookies</a></li>
-          <li>
-            <a href="termos-uso.html">Termos de Uso</a>
+          <li class="bg-[#629643] rounded m-8 mx-3- py-1 px-2"><a href="cookies.html">Política de Cookies</a></li>
+          <li class="bg-[#629643] rounded m-8 mx-3- py-1 px-2">
+            <a href="termos-uso.html" >Termos de Uso</a>
           </li>
         </ul>
       </div>
 
-      <div class="politica">
-        <h1>POLÍTICA DE COOKIES</h1>
+      <div class="container-botoes ">
+        <h1 >POLÍTICA DE COOKIES</h1>
         <p id="dataPublicacao">Publicado em: 14/11/2025</p>
         <br /><br />
         <hr />
