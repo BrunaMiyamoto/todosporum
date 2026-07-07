@@ -64,7 +64,7 @@
             <div
                 class="bg-white overflow-hidden shadow-[0px_0px_6px_rgba(0,0,0,0.5)] rounded-lg sm:rounded-lg py-10 px-14 mx-auto">
 
-                <p class="font-extrabold text-xl pb-3">ACESSIBILIDADE</p>
+                <p class="font-bold text-xl pb-3">ACESSIBILIDADE</p>
                 <p class="border-t border-slate-500 pb-5"></p>
                 <p>Estilização de elementos</p>
 

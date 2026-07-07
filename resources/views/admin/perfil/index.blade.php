@@ -68,7 +68,7 @@
 
                 @foreach ($perfil as $per)
                     <div>
-                        <p class="font-extrabold text-xl pb-3">SEU PERFIL</p>
+                        <p class="font-bold text-xl pb-3">SEU PERFIL</p>
                         <p class="border-t border-slate-500 "></p>
 
                         <div class="items-center">
@@ -99,7 +99,7 @@
                                 {{ $per->descricao }}</p>
                         </div>
 
-                        <p class="font-extrabold text-xl pb-3">SEUS DADOS</p>
+                        <p class="font-bold text-xl pb-3">SEUS DADOS</p>
                         <p class="border-t border-slate-500 "></p>
 
 
