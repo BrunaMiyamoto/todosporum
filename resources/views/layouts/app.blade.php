@@ -23,7 +23,7 @@
         <!-- Page Heading -->
         @isset($header)
             <header class="bg-[#05668d] shadow-[0px_0px_6px_rgba(0,0,0,0.5)]">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 ">
+                <div class="max-w-7xl mx-auto py-6 px-4  sm:px-6 lg:px-8 ">
                     {{ $header }}
                 </div>
             </header>
