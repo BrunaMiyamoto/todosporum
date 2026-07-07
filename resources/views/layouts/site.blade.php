@@ -27,11 +27,13 @@
     @vite(['resources/css/app.css'])
 </head>
 
+{{--  bg-[#9ec1e9] cor de teste fundo cabeçalho, fer gostou!! --}}
+
 <body class="bg-[#ebf2fa] text-neutral-800">
     <header class="shadow-[0px_0px_6px_rgba(0,0,0,0.5)]">
-        <div class="max-w-7xl mx-auto flex justify-between p-2 items-center ">
-            <div class="font-bold text-xl"> <img class="max-w-14" src="{{ asset('assets/img/fundo transparente.png') }}"
-                    alt="Logo do projeto" width="100" height="60" /></div>
+        <div class="max-w-7xl mx-auto flex justify-between p-3 items-center ">
+            <div class="font-bold text-xl"> <img class="max-w-16" src="{{ asset('assets/img/logo branco.png') }}"
+                    alt="Logo do projeto" /></div>
 
             <div class="flex justify-end py-4 px-50 in-w-screen items-center max-w-7xl">
                 <nav class="menu" id="menu" class="hover:text-blue-700 justify-end">
@@ -40,23 +42,23 @@
                     </a>
                     <ul id="menu" class="flex gap-10">
                         <li><a href="{{ route('home') }} "
-                                class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2 ">Inicio</a>
+                                class="text-orange-500 font-bold text-sm hover:text-bg-sky-700 py-2 ">Inicio</a>
                         </li>
                         <li><a
-                                href="{{ route('forumProjetos') }}"class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Fórum</a>
+                                href="{{ route('forumProjetos') }}"class="text-orange-500 font-bold text-sm hover:text-bg-sky-700 py-2">Fórum</a>
                         </li>
                         <li><a
-                                href="{{ route('sobreNos') }}"class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Sobre
+                                href="{{ route('sobreNos') }}"class="text-orange-500 font-bold text-sm hover:text-bg-sky-700 py-2">Sobre
                                 Nós</a></li>
                         <li><a
-                                href="{{ route('aprendaSobre') }}"class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Aprenda
+                                href="{{ route('aprendaSobre') }}"class="text-orange-500 font-bold text-sm hover:text-bg-sky-700 py-2">Aprenda
                                 Sobre</a></li>
                         <li><a
-                                href="{{ route('contato') }}"class="text-orange-500 font-bold text-xs hover:text-bg-sky-700 py-2">Contato</a>
+                                href="{{ route('contato') }}"class="text-orange-500 font-bold text-sm hover:text-bg-sky-700 py-2">Contato</a>
                         </li>
                     </ul>
                     <a href="{{ route('login') }}" class="btn-login"
-                        class="bg-orange-500 text-blue-50 py-7 px-8 rounded-s text-xs font-bold hidden"><i
+                        class="bg-orange-500 text-blue-50 py-7 px-8 rounded-s text-sm font-bold hidden"><i
                             class="fa-solid fa-right-from-bracket"></i>Login/Registre-se</a>
                 </nav>
             </div>

@@ -7,7 +7,7 @@
         </h2>
     </x-slot> --}}
 @section('conteudo')
-    <div class="bg-[#ebf2fa] py-12 max-w-4xl text-sm grid grid-cols-1 px-8 sm:grid-cols-[auto_1fr] mx-auto gap-9">
+    <div class="bg-[#ebf2fa] py-12 max-w-4xl text-sm grid grid-cols-1 px-8 sm:grid-cols-[auto_1fr] mx-auto gap-9 mt-1">
 
         <div class="sm:max-w-60 ">
             <div class="bg-white overflow-hidden shadow-[0px_0px_6px_rgba(0,0,0,0.5)] rounded-lg sm:rounded-lg px-4 h-full ">

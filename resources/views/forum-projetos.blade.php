@@ -3,12 +3,12 @@
 @section('conteudo')
     <div class="bg-white shadow-[0px_0px_6px_rgba(0,0,0,0.5)] max-w-80 rounded-md py-2 my-5 mx-auto">
         <ul class="flex justify-center gap-5 text-[#e9702a] font-semibold ">
-            <li><a href="forum-projetos.html">Projetos</a></li>
+            <li><a href="{{ route('forumProjetos') }}">Projetos</a></li>
             <li>
-                <a href="forum-reclamacoes.html">Reclamações</a>
+                <a href="{{ route('forumReclamacoes') }}">Reclamações</a>
             </li>
             <li>
-                <a href="forum-duvidas.html">Dúvidas</a>
+                <a href="{{ route('forumDuvidas') }}">Dúvidas</a>
             </li>
         </ul>
     </div>
@@ -74,18 +74,17 @@
         </div>
 
         <div class="">
-            <div class=" py-5 flex gap-4">
+            <div class=" py-5 flex grid-cols-2 sm:grid-cols-[1fr_auto] gap-4 mx-auto ">
                 <form>
-                    <input class="bg-[#ebf2fa] rounded-lg text-xs w-72" type="text" name="pesquisarPublicacao"
+                    <input class="bg-[#ebf2fa] min-w-96 rounded-lg text-xs" type="text" name="pesquisarPublicacao"
                         id="pesquisarPublicacao" placeholder="Pesquisar por uma publicação..." />
                 </form>
-
-                <br />
-                <button id="abreModal" class="bg-[#629643] text-white rounded-lg px-4 py-1 ">
+                <a href="{{ route('admin.postagem.cadastrar') }}" id="abreModal"
+                    class="bg-[#629643] text-white rounded-lg px-4 py-1">
                     Faça uma publicação
-                </button>
+                </a>
 
-                <div id="modal" class="hidden">
+                {{-- <div id="modal" class="hidden">
                     <div class="conteudoModal">
                         <span id="fechaModal" class="fechaModal">x</span>
                         <h2 id="modalTitulo">FAÇA SUA PUBLICAÇÃO</h2>
@@ -170,7 +169,7 @@
                             </div>
                         </form>
                     </div>
-                </div>
+                </div> --}}
             </div>
 
             <div>
