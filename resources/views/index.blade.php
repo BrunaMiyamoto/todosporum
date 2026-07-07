@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('conteudo')
-    <div class="relative bg-cover bg-no-repeat bg-center min-h-64 "
+    <div class="relative bg-cover bg-no-repeat bg-center max-h-[900px] min-h-80 "
         style="background-image: url('{{ asset('assets/img/pexels-cytonn-955389.jpg') }}')">
         <div class="absolute inset-0 bg-gradient-to-r from-sky-900 to-slate-500 mix-blend-multiply"></div>
 
@@ -88,7 +88,7 @@
 
     <section class="entendarapido">
         <h2 class="text-[#05668d] text-center mb-8 font-bold text-3xl ">ENTENDA RÁPIDO</h2>
-        <div class="text-center">
+        <div class="text-center  ">
             <video class="video" poster="assets/img/capa2.png" controls>
                 <source src="assets/img/gato-teste.mp4" type="video/mp4" />
             </video>
@@ -99,43 +99,44 @@
                 <source src="assets/img/gato-teste.mp4" type="video/mp4" />
             </video>
         </div>
-        <br />
+
         <a href="aprenda-videos.html"
             class="bg-[#629643] text-white py-1 px-2 rounded-md block text-center   m-auto w-64">Veja
             mais vídeos explicativos</a>
     </section>
 
-    <section class="flex flex-row items-center justify-center gap-10 py-14 px-5 max-w-6xl  box-border m-auto mt-7">
-
-        <div class="flex-1 min-w-auto text-justify justify-center  ">
-            <h2 class="text-[#05668d] mb-2 font-bold text-3xl ">CONHEÇA MAIS SOBRE NÓS</h2>
-            <p class="paragrafo">
-                O projeto “Todos Por Um” consiste em uma plataforma digital
-                independente e sem fins lucrativos, destinada à população de
-                Marília. Por meio do nosso website, os cidadãos poderão propor
-                ideias, levantar questões sociais e apresentar projetos com
-                potencial de impacto positivo na comunidade. O objetivo central é
-                encaminhar essas propostas à Câmara Municipal para apreciação e
-                eventual votação.
-            </p>
-            <p class="paragrafo">
-                Nossa iniciativa busca combater a baixa participação política da
-                população, promovendo maior engajamento cívico e fortalecendo o
-                vínculo entre os moradores e as decisões tomadas no âmbito
-                legislativo municipal. Além disso, almejamos democratizar o acesso
-                ao conhecimento político, estimular o debate público e contribuir
-                para o desenvolvimento coletivo da cidade.
-            </p>
-            <p class="paragrafo">
-                Por meio do “Todos Por Um”, acreditamos que é possível construir uma
-                Marília mais participativa, transparente e inclusiva.
-            </p>
-            <a href="sobre-nos.html" class="sobrenosbotao">Saiba mais sobre Todos Por Um</a>
-            <a href="contato.html" class="sobrenosbotao">Entre em contato conosco</a>
-        </div>
-        <div class=" max-w-full h-auto">
-            <img src="assets/img/pexels-polina-tankilevitch-8203158-scaled.jpg" alt="Mulher gritando em um megafone"
-                width="600" height="400" class="rounded-2xl" />
+    <section class="grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-5 py-14 px-5 max-w-7xl mx-auto mt-7">
+        <div class="sm:flex gap-6 ">
+            <div class=" text-justify sm:gap-3">
+                <h2 class="text-[#05668d] mb-2 font-bold text-3xl ">CONHEÇA MAIS SOBRE NÓS</h2>
+                <p class="paragrafo">
+                    O projeto “Todos Por Um” consiste em uma plataforma digital
+                    independente e sem fins lucrativos, destinada à população de
+                    Marília. Por meio do nosso website, os cidadãos poderão propor
+                    ideias, levantar questões sociais e apresentar projetos com
+                    potencial de impacto positivo na comunidade. O objetivo central é
+                    encaminhar essas propostas à Câmara Municipal para apreciação e
+                    eventual votação.
+                </p>
+                <p class="paragrafo">
+                    Nossa iniciativa busca combater a baixa participação política da
+                    população, promovendo maior engajamento cívico e fortalecendo o
+                    vínculo entre os moradores e as decisões tomadas no âmbito
+                    legislativo municipal. Além disso, almejamos democratizar o acesso
+                    ao conhecimento político, estimular o debate público e contribuir
+                    para o desenvolvimento coletivo da cidade.
+                </p>
+                <p class="paragrafo">
+                    Por meio do “Todos Por Um”, acreditamos que é possível construir uma
+                    Marília mais participativa, transparente e inclusiva.
+                </p>
+                <a href="sobre-nos.html" class="sobrenosbotao">Saiba mais sobre</a>
+                <a href="contato.html" class="sobrenosbotao">Entre em contato conosco</a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-[auto_1fr]">
+                <img src="{{ asset('assets/img/pexels-polina-tankilevitch-8203158-scaled.jpg') }}"
+                    alt="Mulher gritando em um megafone" class="rounded-2xl" />
+            </div>
         </div>
     </section>
 @endsection
