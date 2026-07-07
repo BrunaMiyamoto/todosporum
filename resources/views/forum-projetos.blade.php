@@ -1,8 +1,8 @@
 @extends('layouts.site')
 
 @section('conteudo')
-    <div class="navegacaoForum">
-        <ul>
+    <div class="bg-white shadow-[0px_0px_6px_rgba(0,0,0,0.5)] max-w-80 rounded-md py-2 my-5 mx-auto">
+        <ul class="flex justify-center gap-5 text-[#e9702a] font-semibold ">
             <li><a href="forum-projetos.html">Projetos</a></li>
             <li>
                 <a href="forum-reclamacoes.html">Reclamações</a>
@@ -13,12 +13,12 @@
         </ul>
     </div>
 
-    <div class="conteudoForum">
-        <div class="filtros">
+    <div class="max-w-7xl grid grid-cols-1 sm:grid-cols-[auto_1fr] py-10 gap-7 px-8 mx-auto ">
+        <div class="bg-white rounded-lg shadow-[0px_0px_6px_rgba(0,0,0,0.5)] p-5">
             <form>
-                <h2>FILTROS</h2>
-                <br />
-                <h3>TAGS</h3>
+                <h2 class="font-bold text-[#05668d] text-xl pb-4">FILTROS</h2>
+
+                <h3 class="text-[#e9702a] font-bold pb-1">TAGS</h3>
 
                 <input type="checkbox" name="tagEducacao" id="Tageducacao" />
                 <label>Educação</label><br />
@@ -63,7 +63,7 @@
                 <label>Planejamento e Orçamento</label><br />
 
                 <br />
-                <h3>POPULARIDADE</h3>
+                <h3 class="text-[#e9702a] font-bold pb-1">POPULARIDADE</h3>
 
                 <input type="checkbox" name="TagMaisVotos" id="TagMaisVotos" />
                 <label>Mais Votos</label><br />
@@ -73,19 +73,19 @@
             </form>
         </div>
 
-        <div class="organizacao">
-            <div class="interacaoForum">
+        <div class="">
+            <div class=" py-5 flex gap-4">
                 <form>
-                    <input type="text" name="pesquisarPublicacao" id="pesquisarPublicacao"
-                        placeholder="Pesquisar por uma publicação..." />
+                    <input class="bg-[#ebf2fa] rounded-lg text-xs w-72" type="text" name="pesquisarPublicacao"
+                        id="pesquisarPublicacao" placeholder="Pesquisar por uma publicação..." />
                 </form>
 
                 <br />
-                <button id="abreModal" class="botaoFazerpubli">
+                <button id="abreModal" class="bg-[#629643] text-white rounded-lg px-4 py-1 ">
                     Faça uma publicação
                 </button>
 
-                <div id="modal" class="modal someModal">
+                <div id="modal" class="hidden">
                     <div class="conteudoModal">
                         <span id="fechaModal" class="fechaModal">x</span>
                         <h2 id="modalTitulo">FAÇA SUA PUBLICAÇÃO</h2>
@@ -174,17 +174,17 @@
             </div>
 
             <div>
-                <section class="destaque">
-                    <div class="cabeca">
-                        <div class="tagsDestaque">
-                            <ul>
-                                <li>Infraestrutura</li>
-                                <li>Natureza</li>
+                <section class="bg-white rounded-lg shadow-[0px_0px_6px_rgba(0,0,0,0.5)] mb-6 p-5 ">
+                    <div class="flex justify-between py-1">
+                        <div class="">
+                            <ul class="flex gap-3 pb-3">
+                                <li class="bg-[#629643] text-white font-semibold  rounded-lg px-2 py-1">Infraestrutura</li>
+                                <li class="bg-[#629643] text-white font-semibold  rounded-lg px-2 py-1">Natureza</li>
                             </ul>
                         </div>
-                        <div class="usuarioDestaque">Projeto por: Usuário00003</div>
+                        <div class="text-[#333333]">Projeto por: Usuário00003</div>
                     </div>
-                    <h3>Projeto “Praça Viva” - Revitalização de Espaços Públicos</h3>
+                    <h3 class="text-[#e9702a] font-bold pb-1">Projeto “Praça Viva” - Revitalização de Espaços Públicos</h3>
                     <p>
                         <strong>Objetivo:</strong> Transformar praças abandonadas ou
                         pouco utilizadas em espaços comunitários ativos, com
@@ -192,23 +192,23 @@
                         verde, brinquedos para crianças e espaços para atividades
                         culturais e esportivas.
                     </p>
-                    <div class="interacoes">
-                        <img src="img/palm-of-hand.png" width="25" /> 43
-                        <img src="img/chat (1).png" width="25" /> 12
+                    <div class="flex gap-2 pt-3 justify-end">
+                        <img src="{{ asset('assets/img/palm-of-hand.png') }}" width="20" /> 43
+                        <img src="{{ asset('assets/img/chat (1).png') }}" width="20" /> 12
                     </div>
                 </section>
 
-                <section class="destaque">
-                    <div class="cabeca">
-                        <div class="tagsDestaque">
-                            <ul>
-                                <li>Infraestrutura</li>
-                                <li>Natureza</li>
+                <section class="bg-white rounded-lg shadow-[0px_0px_6px_rgba(0,0,0,0.5)] mb-6 p-5 ">
+                    <div class="flex justify-between py-1">
+                        <div class="">
+                            <ul class="flex gap-3 pb-3">
+                                <li class="bg-[#629643] text-white font-semibold  rounded-lg px-2 py-1">Infraestrutura</li>
+                                <li class="bg-[#629643] text-white font-semibold  rounded-lg px-2 py-1">Natureza</li>
                             </ul>
                         </div>
-                        <div class="usuarioDestaque">Projeto por: Usuário00003</div>
+                        <div class="text-[#333333]">Projeto por: Usuário00003</div>
                     </div>
-                    <h3>Projeto “Praça Viva” - Revitalização de Espaços Públicos</h3>
+                    <h3 class="text-[#e9702a] font-bold pb-1">Projeto “Praça Viva” - Revitalização de Espaços Públicos</h3>
                     <p>
                         <strong>Objetivo:</strong> Transformar praças abandonadas ou
                         pouco utilizadas em espaços comunitários ativos, com
@@ -216,107 +216,15 @@
                         verde, brinquedos para crianças e espaços para atividades
                         culturais e esportivas.
                     </p>
-                    <div class="interacoes">
-                        <img src="img/palm-of-hand.png" width="25" /> 43
-                        <img src="img/chat (1).png" width="25" /> 12
+                    <div class="flex gap-2 pt-3 justify-end">
+                        <img src="{{ asset('assets/img/palm-of-hand.png') }}" width="20" /> 43
+                        <img src="{{ asset('assets/img/chat (1).png') }}" width="20" /> 12
                     </div>
                 </section>
 
-                <section class="destaque">
-                    <div class="cabeca">
-                        <div class="tagsDestaque">
-                            <ul>
-                                <li>Infraestrutura</li>
-                                <li>Natureza</li>
-                            </ul>
-                        </div>
-                        <div class="usuarioDestaque">Projeto por: Usuário00003</div>
-                    </div>
-                    <h3>Projeto “Praça Viva” - Revitalização de Espaços Públicos</h3>
-                    <p>
-                        <strong>Objetivo:</strong> Transformar praças abandonadas ou
-                        pouco utilizadas em espaços comunitários ativos, com
-                        infraestrutura básica (bancos, iluminação, lixeiras), área
-                        verde, brinquedos para crianças e espaços para atividades
-                        culturais e esportivas.
-                    </p>
-                    <div class="interacoes">
-                        <img src="img/palm-of-hand.png" width="25" /> 43
-                        <img src="img/chat (1).png" width="25" /> 12
-                    </div>
-                </section>
 
-                <section class="destaque">
-                    <div class="cabeca">
-                        <div class="tagsDestaque">
-                            <ul>
-                                <li>Infraestrutura</li>
-                                <li>Natureza</li>
-                            </ul>
-                        </div>
-                        <div class="usuarioDestaque">Projeto por: Usuário00003</div>
-                    </div>
-                    <h3>Projeto “Praça Viva” - Revitalização de Espaços Públicos</h3>
-                    <p>
-                        <strong>Objetivo:</strong> Transformar praças abandonadas ou
-                        pouco utilizadas em espaços comunitários ativos, com
-                        infraestrutura básica (bancos, iluminação, lixeiras), área
-                        verde, brinquedos para crianças e espaços para atividades
-                        culturais e esportivas.
-                    </p>
-                    <div class="interacoes">
-                        <img src="img/palm-of-hand.png" width="25" /> 43
-                        <img src="img/chat (1).png" width="25" /> 12
-                    </div>
-                </section>
 
-                <section class="destaque">
-                    <div class="cabeca">
-                        <div class="tagsDestaque">
-                            <ul>
-                                <li>Infraestrutura</li>
-                                <li>Natureza</li>
-                            </ul>
-                        </div>
-                        <div class="usuarioDestaque">Projeto por: Usuário00003</div>
-                    </div>
-                    <h3>Projeto “Praça Viva” - Revitalização de Espaços Públicos</h3>
-                    <p>
-                        <strong>Objetivo:</strong> Transformar praças abandonadas ou
-                        pouco utilizadas em espaços comunitários ativos, com
-                        infraestrutura básica (bancos, iluminação, lixeiras), área
-                        verde, brinquedos para crianças e espaços para atividades
-                        culturais e esportivas.
-                    </p>
-                    <div class="interacoes">
-                        <img src="img/palm-of-hand.png" width="25" /> 43
-                        <img src="img/chat (1).png" width="25" /> 12
-                    </div>
-                </section>
 
-                <section class="destaque">
-                    <div class="cabeca">
-                        <div class="tagsDestaque">
-                            <ul>
-                                <li>Infraestrutura</li>
-                                <li>Natureza</li>
-                            </ul>
-                        </div>
-                        <div class="usuarioDestaque">Projeto por: Usuário00003</div>
-                    </div>
-                    <h3>Projeto “Praça Viva” - Revitalização de Espaços Públicos</h3>
-                    <p>
-                        <strong>Objetivo:</strong> Transformar praças abandonadas ou
-                        pouco utilizadas em espaços comunitários ativos, com
-                        infraestrutura básica (bancos, iluminação, lixeiras), área
-                        verde, brinquedos para crianças e espaços para atividades
-                        culturais e esportivas.
-                    </p>
-                    <div class="interacoes">
-                        <img src="img/palm-of-hand.png" width="25" /> 43
-                        <img src="img/chat (1).png" width="25" /> 12
-                    </div>
-                </section>
             </div>
         </div>
     </div>

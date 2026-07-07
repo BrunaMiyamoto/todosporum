@@ -66,63 +66,79 @@
                 </div>
             </div>
 
-            <form action="#" method="post" enctype="multipart/form-data">
-                <div
-                    class="bg-white overflow-hidden shadow-[0px_0px_6px_rgba(0,0,0,0.5)] rounded-lg sm:rounded-lg py-10 px-14 mx-auto">
+            <div
+                class="bg-white overflow-hidden shadow-[0px_0px_6px_rgba(0,0,0,0.5)] rounded-lg sm:rounded-lg py-10 px-14 mx-auto">
 
-                    <p class="font-extrabold text-xl pb-3">SUAS POSTAGENS</p>
-                    <p class="border-t border-slate-500 "></p>
+                <div class="flex justify-between">
+                    <p class="font-extrabold text-xl pb-3">SUA PUBLICAÇÂO</p>
+                    <a href="{{ route('admin.postagem.cadastrar') }}"
+                        class="bg-[#629643] text-white p-2 mb-1 rounded-md">+</a>
 
-                    @forelse ($postagens as $p)
-                        <div class="abaAberta">
+                </div>
 
-                            <section class="destaque">
+                <p class="border-t border-slate-500 "></p>
 
-                                <div class="cabeca">
-                                    <div class="tagsDestaque">
-                                        <ul>
-                                            <li>Ensino</li>
-                                        </ul>
-                                    </div>
-                                    <div class="usuarioDestaque">
-                                        <ul class="flex gap-4">
-                                            <li><img src="{{ asset('assets/img/palm-of-hand.png') }}" width="20" />
-                                                {{ $p->likes }}
-                                            </li>
-                                            <li><img src="{{ asset('assets/img/chat (1).png') }}" width="20" /> 12
-                                            </li>
-                                            <li><img src="{{ asset('assets/img/edit.png') }}" width="20" /></li>
-                                            <li><img src="{{ asset('assets/img/trash-can.png') }}" width="20" />
-                                            </li>
-                                        </ul>
-                                    </div>
+                @forelse ($postagens as $p)
+                    <div>
+
+                        <section
+                            class="bg-wite max-w-[900px] mx-auto rounded-lg shadow-[0px_2px_6px_rgba(0,0,0,0.3)] p-5 my-7">
+
+                            <div class="flex gap-5">
+
+                                <div class="bg-[#629643] text-white font-bold rounded-lg px-2 py-1 max-h-7">
+                                    <ul>
+                                        <li>Ensino</li>
+                                    </ul>
                                 </div>
-                                <h3>
-                                    {{ $p->titulo }}
-                                </h3>
-                                <p>
-                                    <strong>Objetivo:</strong> {{ $p->conteudo }}
-                                </p>
-                            </section>
+                                <div class="">
+                                    <ul class="flex gap-4">
+                                        <li><img src="{{ asset('assets/img/palm-of-hand.png') }}" width="20" />
+                                            {{ $p->likes }}
+                                        </li>
+                                        <li><img src="{{ asset('assets/img/chat (1).png') }}" width="20" /> 12
+                                        </li>
+                                        <li><a href="{{ route('admin.postagem.editar', $p->id) }}"><img
+                                                    src="{{ asset('assets/img/edit.png') }}" width="20" /></a>
+                                        </li>
+                                        <li>
+                                            <form action="{{ route('admin.postagem.excluir', $p->id) }}" method="post">
 
-                        @empty
+                                                @method('delete')
+                                                @csrf
 
-                            <div>
-                                <div class="text-center text-slate-400"colspan="6">
-                                    <p>Nenhuma postagem cadastrada</p>
+                                                <button type="submit"
+                                                    onclick="return confirm('Deseja realmente excluir a publicação?')"
+                                                    width="20">
+                                                    <img src="{{ asset('assets/img/trash-can.png') }}" width="20" />
+                                                </button>
+
+                                            </form>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                    @endforelse
+                            <h3 class="text-[#e9702a] ''font-extrabold py-2">{{ $p->titulo }}</h3>
+                            <p class="text-gray-400 pb-2 text-sm">
+                                Publicado: {{ $p->created_at->format('d/m/Y H:i') }}
+                            </p>
+                            <p>
+                                <strong>Objetivo:</strong> {{ $p->conteudo }}
+                            </p>
+                        </section>
 
+                    @empty
 
-                    </section>
-                </div>
+                        <div>
+                            <div class="text-center text-slate-400"colspan="6">
+                                <p>Nenhuma postagem cadastrada</p>
+                            </div>
+                        </div>
+                @endforelse
+
+            </div>
         </div>
 
-        </div>
-
-        </div>
-        </div>
         </div>
     </x-app-layout>
 @endsection

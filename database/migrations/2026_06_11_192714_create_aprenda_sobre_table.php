@@ -13,13 +13,12 @@ return new class extends Migration
     {
         Schema::create('aprenda_sobres', function (Blueprint $table) {
             $table->id();
-            $table->timestamp("dt_publi");
             $table->string("autor", 100);
             $table->string("titulo");
             $table->mediumText("conteudo");
-            $table->string("capa");
+            $table->string("imagem")->nullable();
             $table->text("resumo");
-            $table->string("videos");
+            $table->string("videos")->nullable();
             $table->string("tipo", 45);
             $table->timestamps();
 

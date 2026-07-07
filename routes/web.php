@@ -55,18 +55,48 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
+    //ACESSIBILIDADE
+
+    Route::get("/dashboard/acessibilidade", [AcessibilidadeController::class, "index"])->name("admin.acessibilidade.index");
+
+
+
+    //POSTAGENS
+
     Route::get("/dashboard/postagens", [PostagemController::class, "index"])->name("admin.postagem.index");
+
+    Route::post("/dashboard/postagens/cadastrar", [PostagemController::class, "store"])->name("admin.postagem.armazenar");
+
+    Route::get("/dashboard/postagens/cadastrar", [PostagemController::class, "create"])->name("admin.postagem.cadastrar");
+
+    Route::get("/dashboard/postagens/editar/{id}", [PostagemController::class, "edit"])->name("admin.postagem.editar");
+
+    Route::put("/dashboard/postagens/atualizar/{id}", [PostagemController::class, "update"])->name("admin.postagem.atualizar");
+
+    Route::delete("/dashboard/postagens/excluir/{id}", [PostagemController::class, "destroy"])->name("admin.postagem.excluir");
+
+
+    //APRENDA SOBRE
+
     Route::get("/dashboard/aprendasobre", [AprendaSobreController::class, "index"])->name("admin.aprendaSobre.index");
 
+    Route::post("/dashboard/aprendasobre/cadastrar", [AprendaSobreController::class, "store"])->name("admin.aprendaSobre.armazenar");
 
+    Route::get("/dashboard/aprendasobre/cadastrar", [AprendaSobreController::class, "create"])->name("admin.aprendaSobre.cadastrar");
+
+    Route::get("/dashboard/aprendasobre/editar/{id}", [AprendaSobreController::class, "edit"])->name("admin.aprendaSobre.editar");
+
+    Route::put("/dashboard/aprendasobre/atualizar/{id}", [AprendaSobreController::class, "update"])->name("admin.aprendaSobre.atualizar");
+
+    Route::delete("/dashboard/aprendasobre/excluir/{id}", [AprendaSobreController::class, "destroy"])->name("admin.aprendaSobre.excluir");
+
+
+
+    //PERFIL
 
     Route::get("/dashboard/suaconta", [PerfilController::class, "index"])->name("admin.perfil.index");
     Route::get("/dashboard/suaconta/editar/{id}", [PerfilController::class, "edit"])->name("admin.perfil.editar");
     Route::put("/dashboard/suaconta/atualizar/{id}", [PerfilController::class, "update"])->name("admin.perfil.atualizar");
-
-
-
-    Route::get("/dashboard/acessibilidade", [AcessibilidadeController::class, "index"])->name("admin.acessibilidade.index");
 });
 
 require __DIR__ . '/auth.php';

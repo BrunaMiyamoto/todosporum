@@ -1,6 +1,6 @@
   @if ($errors->any())
 
-      <div class="mb-10 text-red-500">
+      <div class="mb-10 text-[#e9702a]">
           <p class="font-bold">Verifique os erros abaixo:</p>
           <ul>
               @foreach ($errors->all() as $erro)

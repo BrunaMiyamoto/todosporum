@@ -28,12 +28,12 @@
 </head>
 
 <body class="bg-[#ebf2fa] text-neutral-800">
-    <header class="border">
+    <header class="shadow-[0px_0px_6px_rgba(0,0,0,0.5)]">
         <div class="max-w-7xl mx-auto flex justify-between p-2 items-center ">
             <div class="font-bold text-xl"> <img class="max-w-14" src="{{ asset('assets/img/fundo transparente.png') }}"
                     alt="Logo do projeto" width="100" height="60" /></div>
 
-            <div class="menu-container" class="flex justify-end py-8 px-50 in-w-screen items-center max-w-7xl">
+            <div class="flex justify-end py-4 px-50 in-w-screen items-center max-w-7xl">
                 <nav class="menu" id="menu" class="hover:text-blue-700 justify-end">
                     <a href="javascript:;" id="fechar-menu" class="hidden">
                         <i class="fa-solid fa-xmark "></i>

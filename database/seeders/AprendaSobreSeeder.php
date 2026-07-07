@@ -15,11 +15,11 @@ class AprendaSobreSeeder extends Seeder
     {
         DB::table('aprenda_sobres')->insert([
             [
-                "dt_publi" => now(),
+
                 "autor" => "Ana Martins",
                 "titulo" => "Introdução à Participação Cidadã",
                 "conteudo" => "Plataformas digitais permitem que cidadãos acompanhem gastos públicos, projetos em andamento e indicadores governamentais. A transparência fortalece a confiança entre população e administração pública.",
-                "capa" => "capa.png",
+                "imagem" => "capa.png",
                 "resumo" => "Veja como a tecnologia pode aumentar a transparência na gestão pública.",
                 "videos" => "video.mp4",
                 "tipo" => "artigo",

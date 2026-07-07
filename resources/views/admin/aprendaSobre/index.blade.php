@@ -12,7 +12,7 @@
                     class="bg-white overflow-hidden shadow-[0px_0px_6px_rgba(0,0,0,0.5)] rounded-lg sm:rounded-lg px-4 h-full ">
 
                     <div id="blocos" class="flex py-4 px-6 ">
-                        <div class="abasConfig">
+                        <div>
                             <ul class="text-[#333333] font-bold ">
                                 <li class="flex gap-2 py-3 ">
                                     <img src="{{ asset('assets/img/user.png') }}" alt="Sua conta" width="30" /><x-nav-link
@@ -65,62 +65,82 @@
                 </div>
             </div>
 
-            <form action="#" method="post" enctype="multipart/form-data">
-                <div
-                    class="bg-white overflow-hidden shadow-[0px_0px_6px_rgba(0,0,0,0.5)] rounded-lg sm:rounded-lg py-10 px-14 mx-auto">
 
-                    <p class="font-extrabold text-xl pb-3">SEGURANÇA E PRIVACIDADE</p>
-                    <p class="border-t border-slate-500 "></p>
+            <div
+                class="bg-white overflow-hidden shadow-[0px_0px_6px_rgba(0,0,0,0.5)] rounded-lg sm:rounded-lg py-10 px-14 mx-auto">
 
-                    @forelse ($aprendaPost as $ap)
-                        <div class="abaAberta">
+                <div class="flex justify-between">
+                    <p class="font-extrabold text-xl pb-3">APRENDA SOBRE</p>
+                    <a href="{{ route('admin.aprendaSobre.cadastrar') }}"
+                        class="bg-[#629643] text-white p-2 mb-1 rounded-md">+</a>
+                </div>
 
-                            <section class="destaque">
-                                <div class="cabeca" class="">
-                                    <div class="tagsDestaque">
-                                        <ul>
-                                            <li>Cidadania</li>
-                                        </ul>
-                                    </div>
-                                    <div class="usuarioDestaque">
-                                        <ul class="flex gap-5">
-                                            <li><img src="{{ asset('assets/img/palm-of-hand.png') }}" width="20" /> 43
-                                            </li>
-                                            <li><img src="{{ asset('assets/img/chat (1).png') }}" width="20" />
-                                                12</li>
-                                            <a href="#"><img src="{{ asset('assets/img/edit.png') }}"
-                                                    width="20" /></a>
-                                            <a href="#"><img src="{{ asset('assets/img/trash-can.png') }}"
-                                                    width="20" />
+                <p class="border-t border-slate-500 "></p>
+
+                @forelse ($aprendaPost as $ap)
+                    <div>
+
+                        <section
+                            class="bg-wite max-w-[900px] mx-auto rounded-lg shadow-[0px_2px_6px_rgba(0,0,0,0.3)] p-5 my-7">
+                            <div class="flex justify-between">
+                                <div>
+                                    <h3 class="text-[#e9702a] font-bold">
+                                        {{ $ap->titulo }}
+                                    </h3>
+                                </div>
+
+                                <div class="">
+                                    <div class=" flex gap-5">
+
+                                        <a href="{{ route('admin.aprendaSobre.editar', $ap->id) }}"><img
+                                                src="{{ asset('assets/img/edit.png') }}" width="20" /></a>
+
+
+                                        <form action="{{ route('admin.aprendaSobre.excluir', $ap->id) }}" method="post">
+
+                                            @method('delete')
+                                            @csrf
+
+                                            <button type="submit"
+                                                onclick="return confirm('Deseja realmente excluir a publicação?')"
+                                                width="20">
+                                                <img src="{{ asset('assets/img/trash-can.png') }}" width="20" />
+                                            </button>
                                             </a>
-                                        </ul>
+                                        </form>
+
                                     </div>
                                 </div>
-                                <h3>
-                                    {{ $ap->titulo }}
-                                </h3>
+                            </div>
+                            <div>
                                 <p class="text-gray-400 pb-2 text-sm">
                                     Autor: {{ $ap->autor }}
                                 </p>
                                 <p class="text-gray-400 pb-2 text-sm">
-                                    Publicado: {{ $ap->dt_publi }}
+                                    Publicado: {{ $ap->created_at->format('d/m/Y H:i') }}
                                 </p>
                                 <p>
-                                    <strong>Objetivo:</strong>{{ $ap->conteudo }}
+                                    {{ $ap->conteudo }}
                                 </p>
-                            </section>
-                        @empty
-                            <div>
-                                <div class="text-center text-slate-400"colspan="6">
-                                    <p>Nenhuma noticia cadastrada</p>
-                                </div>
                             </div>
-                    @endforelse
+
+                        </section>
+                    </div>
 
 
-                </div>
+                @empty
+                    <div>
+                        <div class="text-center text-slate-400"colspan="6">
+                            <p>Nenhuma publicação cadastrada</p>
+                        </div>
+                    </div>
+                @endforelse
+
+
+            </div>
+
 
         </div>
-        </div>
+
     </x-app-layout>
 @endsection

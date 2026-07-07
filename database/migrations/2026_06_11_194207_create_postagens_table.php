@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('postagens', function (Blueprint $table) {
             $table->id();
-            $table->integer("likes");
+            $table->integer("likes")->nullable();
             $table->string("categorias", 50);
             $table->mediumText("conteudo");
             $table->string("titulo", 100);
