@@ -2,29 +2,30 @@
 
 @section('conteudo')
 
-<div id="menusPolitica ">
-  <div class="container-botoes">
-        <ul>
-          <li>
+<div  class="">
+  <div class="container-botoes ">
+        <ul class="flex justify-center text-white">
+          <li class="bg-[#629643] rounded-md my-8 mx-3 p-1.5 text-center">
             <a href="politica-privacidade.html" class="btn-privacidade">Política de Privacidade</a>
           </li>
-          <li>
+          <li class="bg-[#629643] rounded-md my-8 mx-3 p-1.5 text-center">
             <a href="cookies.html" class="btn-cookies" >Política de Cookies</a>
           </li>
-          <li>
+          <li class="bg-[#629643] rounded-md my-8 mx-3 p-1.5 text-center">
             <a href="termos-uso.html" class="btn-termos de uso">Termos de Uso</a>
           </li>
         </ul>
       </div>
       </div>
+      {{-- testando --}}
 
-      <div class="politica">
-        <h1>POLÍTICA DE PRIVACIDADE</h1>
-        <p id="dataPublicacao">Publicado em: 14/11/2025</p>
+      <div>
+        <h1 class="text-[#05668d] font-bold ml-8">POLÍTICA DE PRIVACIDADE</h1>
+        <p class="text-[#9DAAB9] ml-8">Publicado em: 14/11/2025</p>
         <br /><br />
         <hr />
         <br /><br />
-        <p id="politicaConteudo" class="politicaPrivacidade">
+        <p class="text-justify mb-24 p-8">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis
           massa tempus, porttitor odio et, eleifend neque. Quisque convallis
           ipsum id nunc accumsan porta. Nam mattis euismod eros ut pellentesque.

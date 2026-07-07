@@ -146,7 +146,7 @@ header {
   padding: 130px;
 } */
 
-#tituloBanner {
+/* #tituloBanner {
   color: #ffffff;
   font-weight: 600;
   text-align: center;
@@ -157,25 +157,9 @@ header {
   color: #ffffff;
   text-align: center;
   padding: 25px;
-}
+} */
 
-#botaoEscreva {
-  color: #e9702a;
-  text-decoration: none;
-  display: block;
-  text-align: center;
-  margin: auto;
-  max-width: 800px;
-  background-color: #ffffff;
-  padding: 10px;
-  border-radius: 10px;
-}
 
-#botaoExplore {
-  display: block;
-  text-align: center;
-  color: #99cef3;
-}
 
 /* h2 {
   color: #05668d;
@@ -227,7 +211,7 @@ header {
   padding: 2px 8px 2px 8px;
 } */
 
-.sobrenos {
+/* .sobrenos {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -237,19 +221,19 @@ header {
   max-width: 1200px;
   margin: 30px auto;
   box-sizing: border-box;
-}
+} */
 
-.sobrenos #textosobrenos {
+/* .sobrenos #textosobrenos {
   flex: 1;
   min-width: auto;
   text-align: justify;
-}
-
+} */
+/* 
 .sobrenos #textosobrenos p {
   margin-bottom: 15px;
-}
+} */
 
-.sobrenos #imagemsobrenos {
+/* .sobrenos #imagemsobrenos {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -259,9 +243,9 @@ header {
   border-radius: 15px;
   max-width: 100%;
   height: auto;
-}
+} */
 
-.sobrenosbotao {
+/* .sobrenosbotao {
   background-color: #629643;
   color: #ffffff;
   padding: 5px 8px 5px 8px;
@@ -270,9 +254,9 @@ header {
   display: inline-block;
   margin-right: 20px;
   margin-top: 10px;
-}
+} */
 
-#entendabotao {
+/* #entendabotao {
   background-color: #629643;
   color: #ffffff;
   padding: 5px 8px 5px 8px;
@@ -282,17 +266,17 @@ header {
   text-align: center;
   margin: 30px auto;
   width: 260px;
-}
+} */
 
-.video {
+/* .video {
   border-radius: 15px;
   display: inline-block;
   margin: 0px 10px;
-}
+} */
 
-#videocentro {
+/* #videocentro {
   text-align: center;
-}
+} */
 
 footer {
   background-color: #05668d;
@@ -373,7 +357,7 @@ footer {
 
   
 }
-.btn-privacidade {
+/* .btn-privacidade {
     display: flex;
     display: inline-flex;
     text-align: center;
@@ -432,9 +416,9 @@ footer {
   align-items: center;     
   gap: 20px;              
   padding: 40px;          
-  width: 100%;           
+  width: 100%;  
 }
-
+ */
 
 /* CSS INDEX */
 
@@ -456,8 +440,16 @@ footer {
 .linhalaranja{
   @apply text-[#e9702a] mt-2 mb-2 font-bold;
 }
+.paragrafo{
+  @apply mb-4;
+}
+.sobrenosbotao{
+  @apply bg-[#629643] text-white py-1 px-2 rounded-md inline-block mr-5 mt-2
+}
+.video{
+  @apply rounded-2xl inline-block mx-3;
+}
 
-/* testando se funciona */
 /* FIM CSS INDEX */
 
   /* CSS CONTATO */
