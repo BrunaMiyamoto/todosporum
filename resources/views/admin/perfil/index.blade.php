@@ -68,7 +68,7 @@
 
                 @foreach ($perfil as $per)
                     <div>
-                        <p class="font-extrabold text-xl pb-3">SEU PERFIL</p>
+                        <p class="font-bold text-xl pb-3">SEU PERFIL</p>
                         <p class="border-t border-slate-500 "></p>
 
                         <div class="items-center">
@@ -99,7 +99,7 @@
                                 {{ $per->descricao }}</p>
                         </div>
 
-                        <p class="font-extrabold text-xl pb-3">SEUS DADOS</p>
+                        <p class="font-bold text-xl pb-3">SEUS DADOS</p>
                         <p class="border-t border-slate-500 "></p>
 
 
@@ -156,7 +156,7 @@
                         <fieldset class="border border-slate-500 p-5 my-6">
                             <legend>DADOS DE ENDEREÇO</legend>
                             <div class="grid grid-cols-1 sm:grid-cols-2 ">
-                                <div>
+                                <div class="">
                                     <div class="grid">
                                         <label for="rua" class="text-[#05668d] font-bold text-sm">Rua:</label>
                                         <p class="text-[#333333] py-2.5 " name="rua" id="rua">

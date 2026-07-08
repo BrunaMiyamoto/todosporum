@@ -67,7 +67,7 @@
             class="bg-white overflow-hidden shadow-[0px_0px_6px_rgba(0,0,0,0.5)] rounded-lg sm:rounded-lg py-10 px-14 mx-auto">
 
             <div class="flex justify-between">
-                <p class="font-extrabold text-xl pb-3">SUA PUBLICAÇÂO</p>
+                <p class="font-bold text-xl pb-3">SUA PUBLICAÇÂO</p>
                 <a href="{{ route('admin.postagem.cadastrar') }}" class="bg-[#629643] text-white p-2 mb-1 rounded-md">+</a>
 
             </div>
