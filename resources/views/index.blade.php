@@ -13,7 +13,8 @@
                 Vote nas melhores iniciativas e ajude a transformar sua comunidade.
                 Exerça seu papel de cidadão e faça a diferença!
             </p>
-            <a href="login.html" class="text-[#e9702a] block text-center w-full max-w-3xl bg-white p-2 rounded-xl">Escreva
+            <a href="{{ route('admin.postagem.cadastrar') }}"
+                class="text-[#e9702a] block text-center w-full max-w-3xl bg-white p-2 rounded-xl">Escreva
                 aqui...</a>
             <br />
             <a href="{{ route('forumProjetos') }}" class="block text-center text-[#99cef3] ">Explore o Fórum</a>

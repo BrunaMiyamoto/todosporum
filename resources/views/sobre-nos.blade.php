@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('conteudo')
-    <div class="max-w-screen-md text-justify pt-10 pr-5 grid grid-cols-1 sm:grid-cols-[auto_1fr]">
+    <div class="grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-5 py-14 px-5 max-w-7xl mx-auto mt-7">
         <div class="sm:flex gap-6 ">
             <div class=" text-justify sm:gap-3">
                 <h1 class="text-[#05668d] text-start pb-10 mt-24 font-bold  text-3xl">SOBRE O PROJETO</h1>
@@ -41,10 +41,11 @@
         </div>
     </div>
 
-    <section class="text-center p-10">
+    <section class="text-center p-10 ">
         <h2 class="text-[#05668d] text-center pb-10 mt-24 font-bold  text-2xl">NOSSOS OBJETIVOS</h2>
 
-        <div class=" grid grid-cols-3 gap-7 max-w-4xl m-0 mx-auto text-center">
+        <div class=" grid grid-cols-3 gap-7 max-w-4xl m-0 mx-auto text-center  ">
+
 
             <div class="cards">
                 <h3 class="titulocard">Estimular</h3>
