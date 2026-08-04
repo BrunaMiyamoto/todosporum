@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('conteudo')
-    <div class="relative bg-cover bg-no-repeat bg-center max-h-[900px] min-h-80 "
+    <div class="relative bg-cover bg-no-repeat bg-center max-h-[900px] min-h-80"
         style="background-image: url('{{ asset('assets/img/pexels-cytonn-955389.jpg') }}')">
         <div class="absolute inset-0 bg-gradient-to-r from-sky-900 to-slate-500 mix-blend-multiply"></div>
 
@@ -13,7 +13,8 @@
                 Vote nas melhores iniciativas e ajude a transformar sua comunidade.
                 Exerça seu papel de cidadão e faça a diferença!
             </p>
-            <a href="login.html" class="text-[#e9702a] block text-center w-full max-w-3xl bg-white p-2 rounded-xl">Escreva
+            <a href="{{ route('admin.postagem.cadastrar') }}"
+                class="text-[#e9702a] block text-center w-full max-w-3xl bg-white p-2 rounded-xl">Escreva
                 aqui...</a>
             <br />
             <a href="{{ route('forumProjetos') }}" class="block text-center text-[#99cef3] ">Explore o Fórum</a>
@@ -130,6 +131,7 @@
                     Por meio do “Todos Por Um”, acreditamos que é possível construir uma
                     Marília mais participativa, transparente e inclusiva.
                 </p>
+
                 <a href="sobre-nos.html" class="sobrenosbotao">Saiba mais sobre</a>
                 <a href="contato.html" class="sobrenosbotao">Entre em contato conosco</a>
             </div>
