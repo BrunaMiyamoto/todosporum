@@ -39,7 +39,8 @@
 {{--  bg-[#9ec1e9] cor de teste fundo cabeçalho, fer gostou!! --}}
 
 <body class="bg-[#ebf2fa] text-neutral-800">
-    <header class="shadow-[0px_0px_6px_rgba(0,0,0,0.5)]">
+    <header
+        class="flex justify-between bg-[#ebf2fa] text-[#e9702a] p-2 items-center   shadow-[0px_0px_6px_rgba(0,0,0,0.5)] sticky top-0 z-[100] w-full">
         <div class="max-w-7xl mx-auto flex justify-between p-3 items-center ">
             <div class="font-bold text-xl"> <img class="max-w-16" src="{{ asset('assets/img/logo branco.png') }}"
                     alt="Logo do projeto" /></div>

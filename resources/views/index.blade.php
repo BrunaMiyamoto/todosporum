@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('conteudo')
-    <div class="relative bg-cover bg-no-repeat bg-center max-h-[900px] min-h-80 "
+    <div class="relative bg-cover bg-no-repeat bg-center max-h-[900px] min-h-80"
         style="background-image: url('{{ asset('assets/img/pexels-cytonn-955389.jpg') }}')">
         <div class="absolute inset-0 bg-gradient-to-r from-sky-900 to-slate-500 mix-blend-multiply"></div>
 
@@ -131,6 +131,7 @@
                     Por meio do “Todos Por Um”, acreditamos que é possível construir uma
                     Marília mais participativa, transparente e inclusiva.
                 </p>
+
                 <a href="sobre-nos.html" class="sobrenosbotao">Saiba mais sobre</a>
                 <a href="contato.html" class="sobrenosbotao">Entre em contato conosco</a>
             </div>
