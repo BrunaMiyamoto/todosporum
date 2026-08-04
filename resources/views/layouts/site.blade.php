@@ -88,21 +88,21 @@
 
 
     <footer>
-        <div class="rodape">
+        <div class="border-b text-white flex gap-28 max-w-7xl mx-auto pt-12 pb-7">
             <div id="logorodape">
                 <img id="logorodape" src="{{ asset('assets/img/logo branco.png') }}" alt="Logo Todos por Um"
                     width="170" height="90" />
             </div>
             <div id="responsivoRodape">
                 <ul>
-                    <li class="rodapetitulo">Fórum</li>
+                    <li class="text-[#99cef3]">Fórum</li>
                     <li>
                         <a href="{{ route('forumProjetos') }}">Posts em destaque</a>
                     </li>
                 </ul>
 
                 <ul>
-                    <li class="rodapetitulo">Sua área</li>
+                    <li class="text-[#99cef3]">Sua área</li>
                     <li>
                         <a href="sua-conta.html">Sua conta</a>
                     </li>
@@ -118,7 +118,7 @@
                 </ul>
 
                 <ul>
-                    <li class="rodapetitulo">Sobre nós</li>
+                    <li class="text-[#99cef3]">Sobre nós</li>
                     <li>
                         <a href="{{ route('sobreNos') }}">Sobre o projeto</a>
                     </li>
@@ -128,14 +128,14 @@
                 </ul>
 
                 <ul>
-                    <li class="rodapetitulo">Contato</li>
+                    <li class="text-[#99cef3]">Contato</li>
                     <li>
                         <a href="{{ route('contato') }}">Entre em contato</a>
                     </li>
                 </ul>
 
                 <ul>
-                    <li class="rodapetitulo">Aprenda Sobre</li>
+                    <li class="text-[#99cef3]">Aprenda Sobre</li>
                     <li>
                         <a href="{{ route('aprendaVideos') }}">Vídeos</a>
                     </li>
@@ -145,7 +145,7 @@
                 </ul>
 
                 <ul>
-                    <li class="rodapetitulo">Nossas políticas</li>
+                    <li class="text-[#99cef3]">Nossas políticas</li>
                     <li>
                         <a href="{{ route('politicaPrivacidade') }}">Políticas de privacidade</a>
                     </li>
@@ -158,22 +158,29 @@
                 </ul>
             </div>
         </div>
-        <hr id="linharodape" />
-        <div class="rodapebaixo" class="flex">
-            <p>Todos os direitos reservados</p>
-            <div class="flex">
-                <img src="{{ asset('assets/img/youtube-circle.png') }}" alt="Ícone Youtube" width="35"
-                    height="35" />
-                <img src="{{ asset('assets/img/twitter-alt-circle.png') }}" alt="Ícone Twitter" width="35"
-                    height="35" />
-                <img src="{{ asset('assets/img/whatsapp-circle.png') }}" alt="Ícone Whatsapp" width="35"
-                    height="35" />
-                <img src="{{ asset('assets/img/facebook (1).png') }}" alt="Ícone Facebook" width="35"
-                    height="35" />
-                <img src="{{ asset('assets/img/instagram-circle.png') }}" alt="Ícone Instagram" width="35"
-                    height="35" />
+
+
+        <div class="max-w-7xl pt-8 justify-between px-8 text-white grid grid-cols-1 sm:grid-cols-2 mx-auto ">
+            <div class="flex justify-center pb-6">
+                <p class="text-sm ">Todos os direitos reservados</p>
             </div>
+
+            <div class="flex gap-1 justify-center">
+                <img src="{{ asset('assets/img/youtube-circle.png') }}" alt="Ícone Youtube" width="35"
+                    height="30" />
+                <img src="{{ asset('assets/img/twitter-alt-circle.png') }}" alt="Ícone Twitter" width="35"
+                    height="30" />
+                <img src="{{ asset('assets/img/whatsapp-circle.png') }}" alt="Ícone Whatsapp" width="35"
+                    height="30" />
+                <img src="{{ asset('assets/img/facebook (1).png') }}" alt="Ícone Facebook" width="35"
+                    height="30" />
+                <img src="{{ asset('assets/img/instagram-circle.png') }}" alt="Ícone Instagram" width="35"
+                    height="30" />
+            </div>
+
         </div>
+
+
     </footer>
 
     <script src="js/forum-duvidas.js"></script>

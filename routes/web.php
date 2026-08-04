@@ -26,6 +26,12 @@ Route::get("/aprendasobre", [homeController::class, "aprendaSobre"])->name("apre
 
 Route::get("/paginaartigo", [homeController::class, "paginaArtigo"])->name("paginaArtigo");
 
+Route::get("/paginaartigo2", [homeController::class, "paginaArtigo2"])->name("paginaArtigo2");
+Route::get("/paginaartigo3", [homeController::class, "paginaArtigo3"])->name("paginaArtigo3");
+Route::get("/paginaartigo4", [homeController::class, "paginaArtigo4"])->name("paginaArtigo4");
+Route::get("/paginaartigo5", [homeController::class, "paginaArtigo5"])->name("paginaArtigo5");
+Route::get("/paginaartigo6", [homeController::class, "paginaArtigo6"])->name("paginaArtigo6");
+
 Route::get("/paginavideo", [homeController::class, "paginaVideo"])->name("paginaVideo");
 
 Route::get("/sobrenos", [homeController::class, "sobreNos"])->name("sobreNos");

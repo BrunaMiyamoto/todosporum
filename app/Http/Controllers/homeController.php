@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Aprenda_sobre;
 use Illuminate\Http\Request;
 
 class homeController extends Controller
@@ -32,8 +33,10 @@ class homeController extends Controller
 
     public function aprendaSobre()
     {
-
-        return view("aprenda-sobre");
+        $aprendaSobre = Aprenda_sobre::all();
+        return view("aprenda-sobre", [
+            "aprendaSobre" => $aprendaSobre
+        ]);
     }
 
     public function aprendaVideos()
@@ -42,11 +45,47 @@ class homeController extends Controller
         return view("aprenda-videos");
     }
 
+
+
+
     public function paginaArtigo()
     {
 
         return view("pagina-artigo");
     }
+
+    public function paginaArtigo2()
+    {
+
+        return view("pagina-artigo2");
+    }
+
+    public function paginaArtigo3()
+    {
+
+        return view("pagina-artigo3");
+    }
+
+    public function paginaArtigo4()
+    {
+
+        return view("pagina-artigo4");
+    }
+
+    public function paginaArtigo5()
+    {
+
+        return view("pagina-artigo5");
+    }
+
+    public function paginaArtigo6()
+    {
+
+        return view("pagina-artigo6");
+    }
+
+
+
     public function paginaVideo()
     {
 
