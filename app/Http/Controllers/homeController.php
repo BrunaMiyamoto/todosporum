@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Aprenda_sobre;
+use App\Models\Postagem;
 use Illuminate\Http\Request;
 
 class homeController extends Controller
@@ -21,8 +22,10 @@ class homeController extends Controller
 
     public function forumProjetos()
     {
-
-        return view("forum-projetos");
+        $forumProjeto = Postagem::all();
+        return view("forum-projetos", [
+            "forumProjeto" => $forumProjeto
+        ]);
     }
 
     public function forumReclamacoes()
