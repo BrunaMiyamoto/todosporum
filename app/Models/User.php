@@ -29,6 +29,7 @@ class User extends Authenticatable
         'cpf',
         'dt_nasc',
         'nome_social',
+        'contato',
         'perfil',
         'cep',
         'rua',

@@ -32,6 +32,24 @@ class UsuarioSeeder extends Seeder
                 "nome_usuario" => "nome usuario teste",
                 "created_at" => now(),
                 "updated_at" => now(),
+            ],
+             [
+                "nome" => "Fernanda",
+                "email" => "fernanda@senac.com",
+                "password" => Hash::make("12345678"),
+                "cpf" => "123.456.789-00",
+                "dt_nasc" => "1998-03-01",
+                "genero" => "feminino",
+                "contato" => "14999999999",
+                "perfil" => "moderador",
+                "cep" => "13214-120",
+                "rua" => "Rua das Palmeiras",
+                "bairro" => "Jardim Paulista",
+                "numero" => "245",
+                "cidade" => "Jundiaí",
+                "nome_usuario" => "nome usuario teste",
+                "created_at" => now(),
+                "updated_at" => now(),
             ]
         ]);
     }

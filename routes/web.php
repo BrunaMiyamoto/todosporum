@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\SegurPrivaController;
 use App\Http\Controllers\Admin\UsuarioController;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RegistroUsuarioController;
 use Illuminate\Support\Facades\Route;
 
 Route::get("/", [homeController::class, "home"])->name("home");
@@ -40,6 +41,10 @@ Route::get("/segurancaprivacidade", [homeController::class, "segurancaPrivacidad
 
 Route::get("/termosdeuso", [homeController::class, "termosUso"])->name("termosUso");
 
+
+Route::get("/registro", [RegistroUsuarioController::class, "create"])->name("registro");
+
+Route::post("/registro", [RegistroUsuarioController::class, "store"]);
 
 
 
