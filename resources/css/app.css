@@ -11,6 +11,11 @@
 body{
   font-family: 'Poppins', sans-serif;
 }
+.artigovideo{
+  @apply 
+
+
+}
 
 /* MENU RESPONSIVO MENU RESPONSIVO MENU RESPONSIVO  */
 
@@ -136,11 +141,12 @@ header {
   }
   .menu-show {
     right: 0;
-  }
-}
+  }          
+}                    
+                                                         
 /* MENU RESPONSIVO MENU RESPONSIVO MENU RESPONSIVO  */
 /* #banner {
-  background-image: linear-gradient(
+  background-image: linear-gradient(                                                                                                      
       to right,
       rgba(5, 102, 141, 0.8),
       rgba(4, 7, 9, 0.8)
@@ -468,6 +474,7 @@ footer {
 
 
 /* CSS SOBRE NOS */
+
 
 
 .cards{
