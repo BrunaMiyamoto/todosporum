@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\SegurPrivaController;
 use App\Http\Controllers\Admin\UsuarioController;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RegistroUsuarioController;
 use Illuminate\Support\Facades\Route;
 
 Route::get("/", [homeController::class, "home"])->name("home");
@@ -26,6 +27,12 @@ Route::get("/aprendasobre", [homeController::class, "aprendaSobre"])->name("apre
 
 Route::get("/paginaartigo", [homeController::class, "paginaArtigo"])->name("paginaArtigo");
 
+Route::get("/paginaartigo2", [homeController::class, "paginaArtigo2"])->name("paginaArtigo2");
+Route::get("/paginaartigo3", [homeController::class, "paginaArtigo3"])->name("paginaArtigo3");
+Route::get("/paginaartigo4", [homeController::class, "paginaArtigo4"])->name("paginaArtigo4");
+Route::get("/paginaartigo5", [homeController::class, "paginaArtigo5"])->name("paginaArtigo5");
+Route::get("/paginaartigo6", [homeController::class, "paginaArtigo6"])->name("paginaArtigo6");
+
 Route::get("/paginavideo", [homeController::class, "paginaVideo"])->name("paginaVideo");
 
 Route::get("/sobrenos", [homeController::class, "sobreNos"])->name("sobreNos");
@@ -40,6 +47,10 @@ Route::get("/segurancaprivacidade", [homeController::class, "segurancaPrivacidad
 
 Route::get("/termosdeuso", [homeController::class, "termosUso"])->name("termosUso");
 
+
+Route::get("/registro", [RegistroUsuarioController::class, "create"])->name("registro");
+
+Route::post("/registro", [RegistroUsuarioController::class, "store"]);
 
 
 

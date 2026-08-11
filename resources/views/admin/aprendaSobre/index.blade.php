@@ -115,7 +115,7 @@
                                 Publicado: {{ $ap->created_at->format('d/m/Y H:i') }}
                             </p>
                             <p>
-                                {{ $ap->conteudo }}
+                                {{ $ap->resumo }}
                             </p>
                         </div>
 

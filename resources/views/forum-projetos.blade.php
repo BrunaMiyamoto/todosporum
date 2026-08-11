@@ -74,13 +74,13 @@
         </div>
 
         <div class="">
-            <div class=" py-5 flex grid-cols-2 sm:grid-cols-[1fr_auto] gap-4 mx-auto ">
+            <div class=" py-5 sm:flex gap-4 mx-auto ">
                 <form>
-                    <input class="bg-[#ebf2fa] min-w-96 rounded-lg text-xs" type="text" name="pesquisarPublicacao"
-                        id="pesquisarPublicacao" placeholder="Pesquisar por uma publicação..." />
+                    <input class="bg-[#ebf2fa] rounded-lg text-xs sm:w-[720px] w-full my-4 sm:my-0.5 " type="text"
+                        name="pesquisarPublicacao" id="pesquisarPublicacao" placeholder="Pesquisar por uma publicação..." />
                 </form>
                 <a href="{{ route('admin.postagem.cadastrar') }}" id="abreModal"
-                    class="bg-[#629643] text-white rounded-lg px-4 py-1">
+                    class="bg-[#629643] text-white rounded-lg px-4 py-1 flex justify-center items-center">
                     Faça uma publicação
                 </a>
 
@@ -173,53 +173,34 @@
             </div>
 
             <div>
-                <section class="bg-white rounded-lg shadow-[0px_0px_6px_rgba(0,0,0,0.5)] mb-6 p-5 ">
-                    <div class="flex justify-between py-1">
-                        <div class="">
-                            <ul class="flex gap-3 pb-3">
-                                <li class="bg-[#629643] text-white font-semibold  rounded-lg px-2 py-1">Infraestrutura</li>
-                                <li class="bg-[#629643] text-white font-semibold  rounded-lg px-2 py-1">Natureza</li>
-                            </ul>
+                @forelse ($forumProjeto as $fp)
+                    <section class="bg-white rounded-lg shadow-[0px_0px_6px_rgba(0,0,0,0.5)] mb-6 p-5 ">
+                        <div class="flex justify-between py-1">
+                            <div class="">
+                                <ul class="flex gap-3 pb-3">
+                                    <li class="bg-[#629643] text-white font-semibold  rounded-lg px-2 py-1">Infraestrutura
+                                    </li>
+                                    <li class="bg-[#629643] text-white font-semibold  rounded-lg px-2 py-1">Natureza</li>
+                                </ul>
+                            </div>
+                            <div class="text-[#333333]">Projeto por: Usuário00003</div>
                         </div>
-                        <div class="text-[#333333]">Projeto por: Usuário00003</div>
-                    </div>
-                    <h3 class="text-[#e9702a] font-bold pb-1">Projeto “Praça Viva” - Revitalização de Espaços Públicos</h3>
-                    <p>
-                        <strong>Objetivo:</strong> Transformar praças abandonadas ou
-                        pouco utilizadas em espaços comunitários ativos, com
-                        infraestrutura básica (bancos, iluminação, lixeiras), área
-                        verde, brinquedos para crianças e espaços para atividades
-                        culturais e esportivas.
-                    </p>
-                    <div class="flex gap-2 pt-3 justify-end">
-                        <img src="{{ asset('assets/img/palm-of-hand.png') }}" width="20" /> 43
-                        <img src="{{ asset('assets/img/chat (1).png') }}" width="20" /> 12
-                    </div>
-                </section>
+                        <h3 class="text-[#e9702a] font-bold pb-1">{{ $fp->titulo }}
+                        </h3>
+                        <p>
+                            <strong>Objetivo:</strong> {{ $fp->conteudo }}
+                        </p>
+                        <div class="flex gap-2 pt-3 justify-end">
+                            <img src="{{ asset('assets/img/palm-of-hand.png') }}" width="20" /> 43
+                            <img src="{{ asset('assets/img/chat (1).png') }}" width="20" /> 12
+                        </div>
+                    </section>
+                @empty
 
-                <section class="bg-white rounded-lg shadow-[0px_0px_6px_rgba(0,0,0,0.5)] mb-6 p-5 ">
-                    <div class="flex justify-between py-1">
-                        <div class="">
-                            <ul class="flex gap-3 pb-3">
-                                <li class="bg-[#629643] text-white font-semibold  rounded-lg px-2 py-1">Infraestrutura</li>
-                                <li class="bg-[#629643] text-white font-semibold  rounded-lg px-2 py-1">Natureza</li>
-                            </ul>
-                        </div>
-                        <div class="text-[#333333]">Projeto por: Usuário00003</div>
-                    </div>
-                    <h3 class="text-[#e9702a] font-bold pb-1">Projeto “Praça Viva” - Revitalização de Espaços Públicos</h3>
-                    <p>
-                        <strong>Objetivo:</strong> Transformar praças abandonadas ou
-                        pouco utilizadas em espaços comunitários ativos, com
-                        infraestrutura básica (bancos, iluminação, lixeiras), área
-                        verde, brinquedos para crianças e espaços para atividades
-                        culturais e esportivas.
-                    </p>
-                    <div class="flex gap-2 pt-3 justify-end">
-                        <img src="{{ asset('assets/img/palm-of-hand.png') }}" width="20" /> 43
-                        <img src="{{ asset('assets/img/chat (1).png') }}" width="20" /> 12
-                    </div>
-                </section>
+                    <diV>
+                        Nenhuma publicação encontrada.
+                    </diV>
+                @endforelse
 
 
 
