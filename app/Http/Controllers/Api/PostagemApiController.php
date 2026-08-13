@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\Postagem;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostagemApiController extends Controller
 {
@@ -30,7 +31,30 @@ class PostagemApiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+
+            "titulo" => "required|min:10|max:255",
+            "categorias" => "required|max:50",
+            "conteudo" => "required",
+
+        ]);
+
+        $postagens = new Postagem();
+
+        $postagens->titulo = $request->titulo;
+        $postagens->conteudo = $request->conteudo;
+        $postagens->categorias = $request->categorias;
+        $postagens->usuario_id = Auth::user()->id;
+
+
+
+        $postagens->save();
+
+        return response()->json([
+            "mensagem" => "Postagem cadastrada com sucesso!",
+            "data" => $postagens
+
+        ], 201);
     }
 
     /**
@@ -55,7 +79,31 @@ class PostagemApiController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+
+            "titulo" => "required|min:10|max:255",
+            "categorias" => "required|max:50",
+            "conteudo" => "required",
+
+
+        ]);
+
+        $postagens = Postagem::findOrFail($id);
+
+        $postagens->titulo = $request->titulo;
+        $postagens->conteudo = $request->conteudo;
+        $postagens->categorias = $request->categorias;
+        $postagens->usuario_id = Auth::user()->id;
+
+
+
+        $postagens->save();
+
+        return response()->json([
+            "mensagem" => "Postagem atualizada com sucesso!",
+            "data" => $postagens
+
+        ]);
     }
 
     /**
@@ -63,6 +111,12 @@ class PostagemApiController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $postagens = Postagem::findOrFail($id);
+        $postagens->delete();
+
+        return response()->json([
+
+            "mensagem" => "Postagem removida com sucesso."
+        ]);
     }
 }

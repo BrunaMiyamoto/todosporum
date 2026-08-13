@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\PerfilController;
 use App\Http\Controllers\Admin\PerfilPublicoController;
 use App\Http\Controllers\Admin\SegurPrivaController;
 use App\Http\Controllers\Admin\UsuarioController;
+use App\Http\Controllers\CadastroUsuarioController;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegistroUsuarioController;
@@ -48,9 +49,9 @@ Route::get("/segurancaprivacidade", [homeController::class, "segurancaPrivacidad
 Route::get("/termosdeuso", [homeController::class, "termosUso"])->name("termosUso");
 
 
-Route::get("/registro", [RegistroUsuarioController::class, "create"])->name("registro");
+Route::get("/cadastro", [CadastroUsuarioController::class, "create"])->name("cadastro");
 
-Route::post("/registro", [RegistroUsuarioController::class, "store"]);
+Route::post("/cadastro", [CadastroUsuarioController::class, "store"]);
 
 
 

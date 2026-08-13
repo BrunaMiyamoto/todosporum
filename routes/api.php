@@ -12,4 +12,8 @@ Route::get('/user', function (Request $request) {
 
 
 Route::apiResource('postagens', PostagemApiController::class);
-Route::post('/login',[AuthApiController::class, "login"])->middleware("auth:sanctum");
+Route::post('/login', [AuthApiController::class, "login"]);
+Route::post('/logout', [AuthApiController::class, 'logout'])->middleware("auth:sanctum");
+
+Route::apiResource("postagens", PostagemApiController::class)->except(["index", "show"])->middleware("auth:sanctum");
+Route::apiResource("postagens", PostagemApiController::class)->only(["index", "show"]);

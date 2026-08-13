@@ -29,7 +29,7 @@ return new class extends Migration
             $table->string("numero")->nullable();
             $table->string("cidade", 100)->nullable();
             $table->string("imagem")->nullable();
-            $table->string("nome_usuario");
+            $table->string("nome_usuario")->nullable();
             $table->string("descricao")->nullable();
             $table->rememberToken();
             $table->timestamps();

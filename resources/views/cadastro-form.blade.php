@@ -17,7 +17,7 @@
                 marcados com (*) são obrigatórios. Suas informações são confidenciais
                 e poderão ser vistas apenas por você e pela equipe Todos Por Um.
             </div>
-            <form action="{{ route('registro') }}" method="POST">
+            <form action="{{ route('cadastro') }}" method="POST">
 
                 @csrf
                 <h2 class="text-[#e9702a] font-bold text-2xl pb-5 ">DADOS PESSOAIS</h2>
@@ -67,13 +67,13 @@
                     <div class="flex">
 
                         <div>
-                            <label for="senha" class="text-[#e9702a] font-bold">Senha*:</label>
-                            <input type="password" name="senha" id="senha" placeholder="Digite aqui.."
+                            <label for="password" class="text-[#e9702a] font-bold">Senha*:</label>
+                            <input type="password" name="password" id="password" placeholder="Digite aqui.."
                                 class="border-solid border-[1px] border-[#ccc] rounded-xl shadow-[0px_0px_10px_rgba(0,0,0,0.4)] bg-[#ebf2fa] my-5" />
                         </div>
                         <div>
-                            <label for="confirmarsenha" class="text-[#e9702a] font-bold">Confirme sua senha*:</label>
-                            <input type="password" name="confirmarsenha" id="confirmarsenha" placeholder="Digite aqui.."
+                            <label for="password_confirm" class="text-[#e9702a] font-bold">Confirme sua senha*:</label>
+                            <input type="password" name="password_confirm" id="password_confirm" placeholder="Digite aqui.."
                                 class="border-solid border-[1px] border-[#ccc] rounded-xl shadow-[0px_0px_10px_rgba(0,0,0,0.4)] bg-[#ebf2fa] my-5" />
                         </div>
                     </div>
@@ -94,7 +94,7 @@
 
                     <div id="registro" class="py-4">
                         <div>
-                            <a href="login.html">Já tem uma conta? <u>Faça login.</u></a>
+                            <a href="{{ route('login') }}">Já tem uma conta? <u>Faça login.</u></a>
                         </div>
                     </div>
                 </div>
@@ -106,7 +106,8 @@
                         Criar minha conta
                     </button>
                 </div>
+            </form>
         </div>
-        </form>
+
     </div>
 @endsection
