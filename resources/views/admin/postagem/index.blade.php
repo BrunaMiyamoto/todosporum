@@ -18,12 +18,33 @@
                                     Seu Perfil
                                 </x-nav-link>
                             </li>
+
+                            @if (auth()->user()->perfil === 'admin')
+                                <li class="flex gap-2 py-3">
+                                    <img src="{{ asset('assets/img/icons8-primeiro-plano-do-grupo-selecionado-60.png') }}"
+                                        alt="Usuários" width="30" />
+                                    <x-nav-link :href="route('admin.usuarios.index')" :active="request()->routeIs('admin.usuarios.index')">
+                                        Usuários
+                                    </x-nav-link>
+                                </li>
+                            @endif
+
                             <li class="flex gap-2 py-3 ">
                                 <img src="{{ asset('assets/img/comment.png') }}" alt="Suas postagens"
                                     width="30" /><x-nav-link :href="route('admin.postagem.index')" :active="request()->routeIs('admin.postagem.index')">
                                     Suas Postagens
                                 </x-nav-link>
                             </li>
+
+                            @if (auth()->user()->perfil === 'admin' || auth()->user()->perfil === 'moderador')
+                                <li class="flex gap-2 py-3">
+                                    <img src="{{ asset('assets/img/icons8-mensagens-96.png') }}" alt="Moderação"
+                                        width="30" />
+                                    <x-nav-link :href="route('admin.postagem.moderacao')" :active="request()->routeIs('admin.postagem.moderacao')">
+                                        Moderação
+                                    </x-nav-link>
+                                </li>
+                            @endif
                             <li class="flex gap-2 py-3 ">
                                 <img src="{{ asset('assets/img/icons8-conteúdo-96.png') }}" alt="Suas postagens"
                                     width="30" /><x-nav-link :href="route('admin.aprendaSobre.index')" :active="request()->routeIs('admin.aprendaSobre.index')">
@@ -44,6 +65,7 @@
                                     Acessibilidade
                                 </x-nav-link>
                             </li>
+
                             <li class="flex gap-2 py-3">
                                 <img src="{{ asset('assets/img/logout.png ') }}"alt="Sair" width="30" />
 
@@ -131,6 +153,9 @@
                     </div>
             @endforelse
 
+            <div class="flex justify-center items-center gap-1.5 ">
+                {{ $postagens->links() }}
+            </div>
         </div>
     </div>
 

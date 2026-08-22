@@ -2,7 +2,7 @@
 @extends('layouts.site')
 
 @section('conteudo')
-    <div class=" bg-[#ebf2fa] py-12 max-w-4xl text-sm grid grid-cols-1 px-8 sm:grid-cols-[auto_1fr] mx-auto gap-9 mt-1">
+    <div class=" bg-[#ebf2fa] pb-12 max-w-4xl text-sm grid grid-cols-1 px-8 sm:grid-cols-[auto_1fr] mx-auto gap-9 mt-10">
 
         <div class="sm:max-w-60 ">
             <div class="bg-white overflow-hidden shadow-[0px_0px_6px_rgba(0,0,0,0.5)] rounded-lg sm:rounded-lg px-4 h-full ">
@@ -16,12 +16,33 @@
                                     Seu Perfil
                                 </x-nav-link>
                             </li>
+
+                            @if (auth()->user()->perfil === 'admin')
+                                <li class="flex gap-2 py-3">
+                                    <img src="{{ asset('assets/img/icons8-primeiro-plano-do-grupo-selecionado-60.png') }}"
+                                        alt="Usuários" width="30" />
+                                    <x-nav-link :href="route('admin.usuarios.index')" :active="request()->routeIs('admin.usuarios.index')">
+                                        Usuários
+                                    </x-nav-link>
+                                </li>
+                            @endif
+
                             <li class="flex gap-2 py-3 ">
                                 <img src="{{ asset('assets/img/comment.png') }}" alt="Suas postagens"
                                     width="30" /><x-nav-link :href="route('admin.postagem.index')" :active="request()->routeIs('admin.postagem.index')">
                                     Suas Postagens
                                 </x-nav-link>
                             </li>
+
+                            @if (auth()->user()->perfil === 'admin' || auth()->user()->perfil === 'moderador')
+                                <li class="flex gap-2 py-3">
+                                    <img src="{{ asset('assets/img/icons8-mensagens-96.png') }}" alt="Moderação"
+                                        width="30" />
+                                    <x-nav-link :href="route('admin.postagem.moderacao')" :active="request()->routeIs('admin.postagem.moderacao')">
+                                        Moderação
+                                    </x-nav-link>
+                                </li>
+                            @endif
                             <li class="flex gap-2 py-3 ">
                                 <img src="{{ asset('assets/img/icons8-conteúdo-96.png') }}" alt="Suas postagens"
                                     width="30" /><x-nav-link :href="route('admin.aprendaSobre.index')" :active="request()->routeIs('admin.aprendaSobre.index')">
@@ -42,6 +63,7 @@
                                     Acessibilidade
                                 </x-nav-link>
                             </li>
+
                             <li class="flex gap-2 py-3">
                                 <img src="{{ asset('assets/img/logout.png ') }}"alt="Sair" width="30" />
 
@@ -60,6 +82,7 @@
                 </div>
             </div>
         </div>
+
 
         <form action="{{ route('admin.aprendaSobre.armazenar') }}" method="post" enctype="multipart/form-data">
             @csrf

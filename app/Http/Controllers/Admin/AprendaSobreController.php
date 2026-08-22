@@ -14,7 +14,7 @@ class AprendaSobreController extends Controller
      */
     public function index()
     {
-        $aprendaPost = Aprenda_sobre::all();
+        $aprendaPost = Aprenda_sobre::orderByDesc('update_at')->paginate(3);
         return view("admin.aprendaSobre.index", [
             "aprendaPost" => $aprendaPost
         ]);

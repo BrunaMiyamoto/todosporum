@@ -78,11 +78,17 @@
                 <form>
                     <input class="bg-[#ebf2fa] rounded-lg text-xs sm:w-[720px] w-full my-4 sm:my-0.5 " type="text"
                         name="pesquisarPublicacao" id="pesquisarPublicacao" placeholder="Pesquisar por uma publicação..." />
+
                 </form>
-                <a href="{{ route('admin.postagem.cadastrar') }}" id="abreModal"
-                    class="bg-[#629643] text-white rounded-lg px-4 py-1 flex justify-center items-center">
-                    Faça uma publicação
+                <a href="{{ route('admin.postagem.cadastrar') }}"
+                    class="bg-[#629643] text-white rounded-lg px-2 py-1 flex justify-center items-center mb-2 sm:mb-0">
+
+                    <img src="{{ asset('assets/img/icons8-pesquisar (1).svg') }}" />
                 </a>
+                <a href="{{ route('admin.postagem.cadastrar') }}"
+                    class="bg-[#629643] text-white rounded-lg px-4 py-1 flex justify-center items-center">
+                    + Criar Post</a>
+
 
                 {{-- <div id="modal" class="hidden">
                     <div class="conteudoModal">
@@ -173,17 +179,19 @@
             </div>
 
             <div>
-                @forelse ($forumProjeto as $fp)
+                @forelse ($forum as $fp)
                     <section class="bg-white rounded-lg shadow-[0px_0px_6px_rgba(0,0,0,0.5)] mb-6 p-5 ">
                         <div class="flex justify-between py-1">
                             <div class="">
                                 <ul class="flex gap-3 pb-3">
-                                    <li class="bg-[#629643] text-white font-semibold  rounded-lg px-2 py-1">Infraestrutura
+                                    <li class="bg-[#629643] text-white font-semibold  rounded-lg px-2 py-1">
+                                        Infraestrutura
                                     </li>
-                                    <li class="bg-[#629643] text-white font-semibold  rounded-lg px-2 py-1">Natureza</li>
+                                    <li class="bg-[#629643] text-white font-semibold  rounded-lg px-2 py-1">Natureza
+                                    </li>
                                 </ul>
                             </div>
-                            <div class="text-[#333333]">Projeto por: Usuário00003</div>
+                            <div class="text-[#333333]">Projeto por: {{ $fp->usuario_id }}</div>
                         </div>
                         <h3 class="text-[#e9702a] font-bold pb-1">{{ $fp->titulo }}
                         </h3>
@@ -203,7 +211,9 @@
                 @endforelse
 
 
-
+                <div class="flex justify-center items-center gap-1.5 ">
+                    {{ $forum->links() }}
+                </div>
 
             </div>
         </div>

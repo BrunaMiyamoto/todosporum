@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string("genero")->nullable();
             $table->string('contato', 20);
             $table->string("perfil", 20);
+            $table->boolean("suspenso")->default(false);
             $table->string("cep", 15)->nullable();
             $table->string("rua", 100)->nullable();
             $table->string("bairro", 100)->nullable();

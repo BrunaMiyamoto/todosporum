@@ -67,6 +67,25 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
+    Route::middleware(['auth', 'admin'])->group(function () {
+
+        Route::get("/dashboard/usuarios", [UsuarioController::class, "index"])->name("admin.usuarios.index");
+
+        Route::delete("/dashboard/usuarios/excluir/{id}", [UsuarioController::class, "destroy"])->name("admin.usuarios.excluir");
+
+        Route::put("/dashboard/usuarios/suspender/{id}", [UsuarioController::class, "suspender"])->name("admin.usuarios.suspender");
+
+        Route::put("/dashboard/usuarios/promover/{id}", [UsuarioController::class, "promover"])->name("admin.usuarios.promover");
+    });
+
+    Route::middleware(['auth', 'moderador'])->group(function () {
+
+        Route::get("/dashboard/moderacao", [PostagemController::class, "moderacao"])->name("admin.postagem.moderacao");
+    });
+
+
+
+
     //ACESSIBILIDADE
 
     Route::get("/dashboard/acessibilidade", [AcessibilidadeController::class, "index"])->name("admin.acessibilidade.index");

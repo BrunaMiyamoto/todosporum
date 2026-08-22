@@ -74,131 +74,55 @@
         </div>
 
         <div class="">
-            <div class=" py-5 flex gap-4">
+            <div class=" py-5 sm:flex gap-4 mx-auto ">
                 <form>
-                    <input class="bg-[#ebf2fa] rounded-lg text-xs w-72" type="text" name="pesquisarPublicacao"
-                        id="pesquisarPublicacao" placeholder="Pesquisar por uma publicação..." />
+                    <input class="bg-[#ebf2fa] rounded-lg text-xs sm:w-[720px] w-full my-4 sm:my-0.5 " type="text"
+                        name="pesquisarPublicacao" id="pesquisarPublicacao" placeholder="Pesquisar por uma publicação..." />
+
                 </form>
-                <a href="{{ route('admin.postagem.cadastrar') }}" id="abreModal"
-                    class="bg-[#629643] text-white rounded-lg px-4 py-1 ">
-                    Faça uma publicação
+                <a href="{{ route('admin.postagem.cadastrar') }}"
+                    class="bg-[#629643] text-white rounded-lg px-2 py-1 flex justify-center items-center mb-2 sm:mb-0">
+
+                    <img src="{{ asset('assets/img/icons8-pesquisar (1).svg') }}" />
                 </a>
+                <a href="{{ route('admin.postagem.cadastrar') }}"
+                    class="bg-[#629643] text-white rounded-lg px-4 py-1 flex justify-center items-center">
+                    + Criar Post</a>
 
-                {{-- <div id="modal" class="modal someModal">
-                    <div class="conteudoModal">
-                        <span id="fechaModal" class="fechaModal">x</span>
-                        <h2 id="modalTitulo">FAÇA SUA PUBLICAÇÃO</h2>
-                        <hr id="linha" />
-                        <p>
-                            <strong>Leia atentamente antes de publicar no nosso fórum.</strong><br /><br />
-
-                            Preencha corretamente os campos solicitados e certifique-se de
-                            que sua reclamação esteja em conformidade com as regras da
-                            plataforma Todos por Um. Lembre-se: qualquer conteúdo
-                            inadequado, malicioso ou que viole nossas diretrizes será
-                            removido. O usuário responsável poderá receber um strike ou
-                            até perder o acesso à conta.
-                        </p>
-                        <hr id="linha" />
-                        <form>
-                            <label for="tituloPublicacao" class="titulo">Título da reclamação</label>
-                            <br />
-                            <input type="text" name="tituloPublicacao" id="tituloPublicacao" class="campo" />
-
-                            <br /><br />
-                            <label class="titulo">Conteúdo da reclamação</label>
-                            <br />
-                            <textarea name="conteudoPublicacao" id="conteudoPublicacao" class="campo" rows="5" cols="100"></textarea>
-
-                            <br /><br />
-                            <input type="checkbox" name="cienteBotao" id="cienteBotao" class="tagOpcao" />
-                            <label>Estou ciente das regras do site Todos por Um em relação a
-                                postagems e tomo qualquer responsabilidade sobre minha
-                                postagem.</label>
-
-                            <div id="botaoPosicao">
-                                <br /><br />
-                                <button type="submit" class="botaoConfirmar">
-                                    Publicar
-                                </button>
-                                <button type="reset" class="botaoConfirmar">Limpar</button>
-                            </div>
-                        </form>
-                    </div>
-                </div> --}}
             </div>
 
             <div>
-                <section class="bg-white rounded-lg shadow-[0px_0px_6px_rgba(0,0,0,0.5)] mb-6 p-5 ">
-                    <div class="flex justify-between py-1">
-                        <div class="">
-                            <ul class="flex gap-3 pb-3">
-                                <li class="bg-red-700 text-white font-semibold  rounded-lg px-2 py-1">Aberto</li>
-                            </ul>
+                @forelse ($forum as $fp)
+                    <section class="bg-white rounded-lg shadow-[0px_0px_6px_rgba(0,0,0,0.5)] mb-6 p-5 ">
+                        <div class="flex justify-between py-1">
+                            <div class="">
+                                <ul class="flex gap-3 pb-3">
+                                    <li class="bg-[#629643] text-white font-semibold  rounded-lg px-2 py-1">Infraestrutura
+                                    </li>
+                                    <li class="bg-[#629643] text-white font-semibold  rounded-lg px-2 py-1">Natureza</li>
+                                </ul>
+                            </div>
+                            <div class="text-[#333333]">Projeto por: Usuário00003</div>
                         </div>
-                        <div class="text-[#333333]">Projeto por: Usuário00003</div>
-                    </div>
-                    <h3 class="text-[#e9702a] font-bold pb-1">
-                        Como faço para levar minha ideia para a câmara pessoalmente?
-                    </h3>
-                    <p>
-                        <strong>Descrição:</strong> Queria sair para levar minha ideia
-                        até a câmara, mas não sei quais os documentos preciso ou se
-                        preciso marcar um horário. Como funciona o atendimento lá e como
-                        devo me preparar?
-                    </p>
-                    <div class="flex gap-2 pt-3 justify-end">
-                        <img src="{{ asset('assets/img/palm-of-hand.png') }}" width="20" /> 43
-                        <img src="{{ asset('assets/img/chat (1).png') }}" width="20" /> 12
-                    </div>
-                </section>
-                <section class="bg-white rounded-lg shadow-[0px_0px_6px_rgba(0,0,0,0.5)] mb-6 p-5 ">
-                    <div class="flex justify-between py-1">
-                        <div class="">
-                            <ul class="flex gap-3 pb-3">
-                                <li class="bg-red-700 text-white font-semibold  rounded-lg px-2 py-1">Aberto</li>
-                            </ul>
+                        <h3 class="text-[#e9702a] font-bold pb-1">{{ $fp->titulo }}
+                        </h3>
+                        <p>
+                            <strong>Objetivo:</strong> {{ $fp->conteudo }}
+                        </p>
+                        <div class="flex gap-2 pt-3 justify-end">
+                            <img src="{{ asset('assets/img/palm-of-hand.png') }}" width="20" /> 43
+                            <img src="{{ asset('assets/img/chat (1).png') }}" width="20" /> 12
                         </div>
-                        <div class="text-[#333333]">Projeto por: Usuário00003</div>
-                    </div>
-                    <h3 class="text-[#e9702a] font-bold pb-1">
-                        Como faço para levar minha ideia para a câmara pessoalmente?
-                    </h3>
-                    <p>
-                        <strong>Descrição:</strong> Queria sair para levar minha ideia
-                        até a câmara, mas não sei quais os documentos preciso ou se
-                        preciso marcar um horário. Como funciona o atendimento lá e como
-                        devo me preparar?
-                    </p>
-                    <div class="flex gap-2 pt-3 justify-end">
-                        <img src="{{ asset('assets/img/palm-of-hand.png') }}" width="20" /> 43
-                        <img src="{{ asset('assets/img/chat (1).png') }}" width="20" /> 12
-                    </div>
-                </section>
-                <section class="bg-white rounded-lg shadow-[0px_0px_6px_rgba(0,0,0,0.5)] mb-6 p-5 ">
-                    <div class="flex justify-between py-1">
-                        <div class="">
-                            <ul class="flex gap-3 pb-3">
-                                <li class="bg-red-700 text-white font-semibold  rounded-lg px-2 py-1">Aberto</li>
-                            </ul>
-                        </div>
-                        <div class="text-[#333333]">Projeto por: Usuário00003</div>
-                    </div>
-                    <h3 class="text-[#e9702a] font-bold pb-1">
-                        Como faço para levar minha ideia para a câmara pessoalmente?
-                    </h3>
-                    <p>
-                        <strong>Descrição:</strong> Queria sair para levar minha ideia
-                        até a câmara, mas não sei quais os documentos preciso ou se
-                        preciso marcar um horário. Como funciona o atendimento lá e como
-                        devo me preparar?
-                    </p>
-                    <div class="flex gap-2 pt-3 justify-end">
-                        <img src="{{ asset('assets/img/palm-of-hand.png') }}" width="20" /> 43
-                        <img src="{{ asset('assets/img/chat (1).png') }}" width="20" /> 12
-                    </div>
-                </section>
+                    </section>
+                @empty
 
+                    <diV>
+                        Nenhuma publicação encontrada.
+                    </diV>
+                @endforelse
+                <div class="flex justify-center items-center gap-1.5 ">
+                    {{ $forum->links() }}
+                </div>
 
             </div>
         </div>

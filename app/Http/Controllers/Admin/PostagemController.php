@@ -14,7 +14,7 @@ class PostagemController extends Controller
      */
     public function index()
     {
-        $postagens = Postagem::all();
+        $postagens = Postagem::where("usuario_id", Auth::id())->orderByDesc('updated_at')->paginate(3);
         return view("admin.postagem.index", [
             "postagens" => $postagens
         ]);
@@ -72,6 +72,10 @@ class PostagemController extends Controller
     {
         $postagens = Postagem::findOrFail($id);
 
+        if ($postagens->usuario_id !== Auth::id() && !in_array(Auth::user()->perfil, ['moderador', 'admin'])) {
+            abort(403, 'Você não tem permissão para editar esta postagem');
+        }
+
         return view("admin.postagem.editar", [
             "postagens" => $postagens
         ]);
@@ -93,10 +97,14 @@ class PostagemController extends Controller
 
         $postagens = Postagem::findOrFail($id);
 
+        if ($postagens->usuario_id !== Auth::id() && !in_array(Auth::user()->perfil, ['moderador', 'admin'])) {
+            abort(403, 'Você não tem permissão para editar esta postagem');
+        }
+
         $postagens->titulo = $request->titulo;
         $postagens->conteudo = $request->conteudo;
         $postagens->categorias = $request->categorias;
-        $postagens->usuario_id = Auth::user()->id;
+        // $postagens->usuario_id = Auth::user()->id;
 
 
 
@@ -111,7 +119,21 @@ class PostagemController extends Controller
     public function destroy(string $id)
     {
         $postagens = Postagem::findOrFail($id);
+
+        if ($postagens->usuario_id !== Auth::id() && !in_array(Auth::user()->perfil, ['moderador', 'admin'])) {
+            abort(403, 'Você não tem permissão para deletar esta postagem');
+        }
         $postagens->delete();
         return redirect()->route("admin.postagem.index");
+    }
+
+    public function moderacao()
+    {
+
+        $postagens = Postagem::orderByDesc('updated_at')->paginate(10);
+
+        return view("admin.postagem.moderacao", [
+            "postagens" => $postagens
+        ]);
     }
 }

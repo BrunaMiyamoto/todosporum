@@ -1,5 +1,3 @@
-{{-- @dd($aprendaPost) --}}
-
 @extends('layouts.site')
 
 @section('conteudo')
@@ -84,10 +82,62 @@
             </div>
         </div>
 
+        <div
+            class="bg-white overflow-hidden shadow-[0px_0px_6px_rgba(0,0,0,0.5)] rounded-lg sm:rounded-lg py-10 px-14 mx-auto">
 
-        <form action="{{ route('admin.postagem.armazenar') }}" method="post">
-            @csrf
-            @include('admin.postagem._form')
-        </form>
+            <p class="font-bold text-xl pb-3">MODERAÇÃO DE POSTAGENS</p>
+            <p class="border-t border-slate-500 "></p>
+
+            @forelse ($postagens as $p)
+                <div>
+                    <section class="bg-wite max-w-[900px] mx-auto rounded-lg shadow-[0px_2px_6px_rgba(0,0,0,0.3)] p-5 my-7">
+
+                        <div class="flex gap-5">
+                            <div class="bg-[#629643] text-white font-bold rounded-lg px-2 py-1 max-h-7">
+                                <ul>
+                                    <li>Ensino</li>
+                                </ul>
+                            </div>
+                            <div class="">
+                                <ul class="flex gap-4">
+
+                                    <li><a href="{{ route('admin.postagem.editar', $p->id) }}"><img
+                                                src="{{ asset('assets/img/edit.png') }}" width="20" /></a>
+                                    </li>
+                                    <li>
+                                        <form action="{{ route('admin.postagem.excluir', $p->id) }}" method="post">
+                                            @method('delete')
+                                            @csrf
+                                            <button type="submit"
+                                                onclick="return confirm('Deseja realmente excluir a publicação?')"
+                                                width="20">
+                                                <img src="{{ asset('assets/img/trash-can.png') }}" width="20" />
+                                            </button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <h3 class="text-[#e9702a] ''font-extrabold py-2">{{ $p->titulo }}</h3>
+                        <p class="text-gray-400 pb-2 text-sm">
+                            Autor: {{ $p->usuario->nome ?? 'Desconhecido' }} —
+                            Publicado: {{ $p->created_at->format('d/m/Y H:i') }}
+                        </p>
+                        <p>
+                            <strong>Objetivo:</strong> {{ $p->conteudo }}
+                        </p>
+                    </section>
+                @empty
+                    <div>
+                        <div class="text-center text-slate-400">
+                            <p>Nenhuma postagem cadastrada</p>
+                        </div>
+                    </div>
+            @endforelse
+
+            <div class="flex justify-center items-center gap-1.5 ">
+                {{ $postagens->links() }}
+            </div>
+        </div>
     </div>
 @endsection

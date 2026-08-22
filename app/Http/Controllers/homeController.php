@@ -16,22 +16,26 @@ class homeController extends Controller
 
     public function forumDuvidas()
     {
-
-        return view("forum-duvidas");
+        $forum = Postagem::where('categorias', 'duvida')->orderByDesc('update_at')->paginate(3);
+        return view("forum-duvidas", [
+            "forum" => $forum
+        ]);
     }
 
     public function forumProjetos()
     {
-        $forumProjeto = Postagem::all();
+        $forum = Postagem::where('categorias', 'projeto')->orderByDesc('update_at')->paginate(3);
         return view("forum-projetos", [
-            "forumProjeto" => $forumProjeto
+            "forum" => $forum
         ]);
     }
 
     public function forumReclamacoes()
     {
-
-        return view("forum-reclamacoes");
+        $forum = Postagem::where('categorias', 'reclamacao')->orderByDesc('update_at')->paginate(3);
+        return view("forum-reclamacoes", [
+            "forum" => $forum
+        ]);
     }
 
     public function aprendaSobre()
