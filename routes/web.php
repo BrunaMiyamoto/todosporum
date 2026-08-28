@@ -9,9 +9,11 @@ use App\Http\Controllers\Admin\PerfilPublicoController;
 use App\Http\Controllers\Admin\SegurPrivaController;
 use App\Http\Controllers\Admin\UsuarioController;
 use App\Http\Controllers\CadastroUsuarioController;
+use App\Http\Controllers\ComentarioController;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegistroUsuarioController;
+use App\Models\Postagem;
 use Illuminate\Support\Facades\Route;
 
 Route::get("/", [homeController::class, "home"])->name("home");
@@ -83,7 +85,11 @@ Route::middleware('auth')->group(function () {
         Route::get("/dashboard/moderacao", [PostagemController::class, "moderacao"])->name("admin.postagem.moderacao");
     });
 
+    Route::put("/postagens/curtir/{id}", [PostagemController::class, "curtir"])->name("postagem.curtir");
 
+    Route::post("/comentarios", [ComentarioController::class, "store"])->name("comentario.armazenar");
+
+    Route::delete("/comentarios/excluir/{id}", [ComentarioController::class, "destroy"])->name("comentario.excluir");
 
 
     //ACESSIBILIDADE

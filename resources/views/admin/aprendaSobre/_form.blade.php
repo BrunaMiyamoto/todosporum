@@ -64,12 +64,14 @@
       </div>
 
       <div class=" py-3 grid">
-
-          <label for="tipo" class="text-[#05668d] font-bold text-sm pb-3">Tipo (Artigo ou Video):</label>
-          <input type="text" name="tipo" id="tipo"
-              class="bg-[#ebf2fa] border-none rounded-2xl text-[#333333] p-2" value="{{ $aprendaPost->tipo }}" />
+          <label for="tipo" class="text-[#05668d] font-bold text-sm pb-3">Tipo:</label>
+          <select name="tipo" id="tipo" class="bg-[#ebf2fa] border-none rounded-2xl text-[#333333] p-2"
+              required>
+              <option value="">Selecione...</option>
+              <option value="artigo" {{ $aprendaPost->tipo === 'artigo' ? 'selected' : '' }}>Artigo</option>
+              <option value="video" {{ $aprendaPost->tipo === 'video' ? 'selected' : '' }}>Vídeo</option>
+          </select>
       </div>
-
       <div class="py-3 grid">
           <label for="titulo" class="text-[#05668d] font-bold text-sm  pb-3">Titulo*:</label>
           <input class="bg-[#ebf2fa] border-none rounded-2xl text-[#333333] p-2" type="text" name="titulo"

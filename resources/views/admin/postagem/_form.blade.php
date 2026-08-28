@@ -40,6 +40,19 @@
       </div>
 
       <div class="py-3 grid">
+          <label class="text-[#05668d] font-bold text-sm pb-3">Tags*:</label>
+          <div class="flex flex-wrap gap-3">
+              @foreach ($tags as $tag)
+                  <label class="flex items-center gap-1 bg-[#ebf2fa] px-3 py-1 rounded-full cursor-pointer">
+                      <input type="checkbox" name="tags[]" value="{{ $tag->id }}"
+                          @if ($postagens->tags->contains($tag->id)) checked @endif>
+                      {{ $tag->nome }}
+                  </label>
+              @endforeach
+          </div>
+      </div>
+
+      <div class="py-3 grid">
           <label for="titulo" class="text-[#05668d] font-bold text-sm  pb-3">Titulo*:</label>
           <input class="bg-[#ebf2fa] border-none rounded-2xl text-[#646464] p-2" type="text" name="titulo"
               id="titulo" value="{{ $postagens->titulo }}" />

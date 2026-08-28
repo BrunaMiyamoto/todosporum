@@ -93,10 +93,12 @@
                     <section class="bg-wite max-w-[900px] mx-auto rounded-lg shadow-[0px_2px_6px_rgba(0,0,0,0.3)] p-5 my-7">
 
                         <div class="flex gap-5">
-                            <div class="bg-[#629643] text-white font-bold rounded-lg px-2 py-1 max-h-7">
-                                <ul>
-                                    <li>Ensino</li>
-                                </ul>
+                            <div class="flex flex-wrap gap-1 items-center">
+                                @foreach ($p->tags as $tag)
+                                    <span class="bg-[#629643] text-white font-bold rounded-lg px-2 py-1 text-sm ">
+                                        {{ $tag->nome }}
+                                    </span>
+                                @endforeach
                             </div>
                             <div class="">
                                 <ul class="flex gap-4">

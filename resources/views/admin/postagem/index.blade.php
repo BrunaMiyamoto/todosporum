@@ -103,18 +103,32 @@
 
                         <div class="flex gap-5">
 
-                            <div class="bg-[#629643] text-white font-bold rounded-lg px-2 py-1 max-h-7">
-                                <ul>
-                                    <li>Ensino</li>
-                                </ul>
+                            <div class="flex flex-wrap gap-1 items-center">
+                                @foreach ($p->tags as $tag)
+                                    <span class="bg-[#629643] text-white font-bold rounded-lg px-2 py-1 text-sm ">
+                                        {{ $tag->nome }}
+                                    </span>
+                                @endforeach
                             </div>
                             <div class="">
                                 <ul class="flex gap-4">
-                                    <li><img src="{{ asset('assets/img/palm-of-hand.png') }}" width="20" />
-                                        {{ $p->likes }}
+                                    <li>
+
+                                        <form action="{{ route('postagem.curtir', $p->id) }}" method="post">
+                                            @method('put')
+                                            @csrf
+                                            <button type="submit" class="flex gap-1 items-center">
+                                                <img src="{{ asset('assets/img/palm-of-hand.png') }}" width="20"
+                                                    class="{{ $p->curtidas->contains(auth()->id()) ? 'opacity-100' : 'opacity-40' }}" />
+                                                {{ $p->curtidas->count() }}
+                                            </button>
+                                        </form>
+
+
                                     </li>
-                                    <li><img src="{{ asset('assets/img/chat (1).png') }}" width="20" /> 12
-                                    </li>
+                                    <li class="flex gap-1"><img src="{{ asset('assets/img/chat (1).png') }}"
+                                            width="20" />
+                                        12</li>
                                     <li><a href="{{ route('admin.postagem.editar', $p->id) }}"><img
                                                 src="{{ asset('assets/img/edit.png') }}" width="20" /></a>
                                     </li>

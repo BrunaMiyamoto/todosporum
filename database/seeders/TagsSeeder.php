@@ -57,12 +57,6 @@ class TagsSeeder extends Seeder
             ],
             [
                 'nome' => 'Planejamento',
-            ],
-            [
-                'nome' => 'MaisVotos'
-            ],
-            [
-                'nome' => 'MaisComentados'
             ]
         ]);
     }

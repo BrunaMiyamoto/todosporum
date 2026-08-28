@@ -2,174 +2,179 @@
 
 @section('conteudo')
     <div id="banner"
-        class="min-w-screen bg-[#05668D] text-center p-24 bg-cover shadow-[0px_0px_10px_rgba(0, 0, 0, 0.2)] text-white">
-        <h1 class="py-3 px-5 font-bold text-3xl">APRENDA SOBRE</h1>
-        <p class="max-w-900 text-xs font-normal">
+        class="bg-[#05668d] text-white text-center mx-auto shadow-[0px_0px_10px_rgba(0,0,0,0.2)] p-[90px] bg-cover">
+        <h1 class="py-[20px] px-[10px] font-bold text-xl md:text-2xl">APRENDA SOBRE</h1>
+        <p class="w-auto mx-auto max-w-[900px] text-center text-xs font-normal leading-relaxed">
             Compreenda o cenário político de forma clara e acessível. Explore a
             página e tenha acesso a vídeos e artigos que auxiliam na sua
             compreensão e posicionamento diante do contexto atual.
         </p>
     </div>
-    <div id="artigovideo" class="max-w-3xl mx-auto">
-        <ul id="menu2" class="flex justify-center pt-7 pb-2 gap-7">
+
+    <div id="artigovideo" class="max-w-[768px] mx-auto">
+        <ul id="menu2" class="flex flex-wrap justify-center list-none text-center py-[20px] mx-auto w-auto gap-[40px]">
             <li>
-                <a href="{{ route('aprendaSobre') }}" class="text-orange-500 font-bold text-sl hover:text-sky-700">Artigos</a>
+                <a href="{{ route('aprendaSobre') }}"
+                    class="text-[#e9702a] font-bold text-[16px] no-underline hover:text-[#05668d] transition-colors">Artigos</a>
             </li>
             <li>
                 <a href="{{ route('aprendaVideos') }}"
-                    class="text-orange-500 font-bold text-sl hover:text-sky-700">Videos</a>
-
+                    class="text-[#e9702a] font-bold text-[16px] no-underline hover:text-[#05668d] transition-colors">Vídeos</a>
             </li>
         </ul>
     </div>
-    <div class="font-sans px-5 ">
-        <div class="titulosecao">
-            <h2 class="text-start text-[#05668D] py-7 font-bold  text-xl max-w-7xl mx-auto">DESTAQUES</h2>
-        </div>
-        <p>
+
+    <div class="titulosecao px-[20px] md:px-0">
+        <h2 class="pt-[20px] mx-auto text-start text-[#05668d] text-[16px] max-w-[950px] font-bold">DESTAQUES</h2>
+        <p class="pt-[10px] pb-[20px] my-[10px] mx-auto text-start text-[#333] text-[12px] max-w-[950px]">
             Vídeos curtos e objetivos, desenvolvidos para quem busca uma
             compreensão rápida e acessível sobre temas políticos.
         </p>
     </div>
-    <!-- CARROSSEL DE VIDEOS CARROSSEL DE VIDEOS -->
-    <div class="carrossel">
-        <div id="faixa">
-            <div class="videoplay">
-                <video class="video" poster="img/pexels-pixabay-269077.jpg" alt="Imagem de fachada de prédio" controls>
-                    <source src="img/6918112_Motion_Graphics_Motion_Graphic_1080x1920.mp4" type="video/mp4" />
-                </video>
-                <div class="play">
-                    <img src="img/play-button.png" alt="botao de play" />
-                </div>
-            </div>
-            <div class="videoplay">
-                <video class="video" poster="img/pexels-pixabay-269077.jpg" alt="Imagem de fachada de prédio" controls>
-                    <source src="#" type="video/mp4" />
-                </video>
-                <div class="play">
-                    <img src="img/play-button.png" alt="botao de play" />
-                </div>
-            </div>
-            <div class="videoplay">
-                <video class="video" poster="img/pexels-pixabay-269077.jpg" alt="Imagem de fachada de prédio" controls>
-                    <source src="#" type="video/mp4" />
-                </video>
-                <div class="play">
-                    <img src="img/play-button.png" alt="botao de play" />
-                </div>
-            </div>
-            <div class="videoplay">
-                <video class="video" poster="img/pexels-pixabay-269077.jpg" alt="Imagem de fachada de prédio" controls>
-                    <source src="#" type="video/mp4" />
-                </video>
-                <div class="play">
-                    <img src="img/play-button.png" alt="botao de play" />
-                </div>
-            </div>
-            <div class="videoplay">
-                <video class="video" poster="img/pexels-pixabay-269077.jpg" alt="Imagem de fachada de prédio" controls>
-                    <source src="#" type="video/mp4" />
-                </video>
-                <div class="play">
-                    <img src="img/play-button.png" alt="botao de play" />
-                </div>
-            </div>
-            <div class="videoplay">
-                <video class="video" poster="img/pexels-pixabay-269077.jpg" alt="Imagem de fachada de prédio" controls>
-                    <source src="#" type="video/mp4" />
-                </video>
-                <div class="play">
-                    <img src="img/play-button.png" alt="botao de play" />
-                </div>
+
+
+    <div
+        class="flex items-center justify-center w-full max-w-[1100px] mx-auto my-[10px] px-[10px] gap-[10px] md:gap-[20px]">
+
+
+
+        <button
+            class="bg-transparent text-[#05668d] hover:text-[#e9702a] border-none cursor-pointer text-[40px] md:text-[60px] transition-colors z-10"
+            onclick="mudarvideo(-1)">&#10094;</button>
+
+
+
+
+        <div class="carrossel w-[950px] max-w-[calc(100vw-120px)] overflow-hidden rounded-[10px]">
+            <div id="faixa" class="flex flex-nowrap transition-transform duration-500 ease-in-out gap-[25px]">
+                @foreach ($videos->take(6) as $video)
+                    <div class="videoplay relative w-[340px] h-[500px] shrink-0">
+                        <video class="video w-full h-full object-cover rounded-[8px]"
+                            poster="{{ $video->imagem ? asset('storage/' . $video->imagem) : '' }}"
+                            alt="{{ $video->titulo }}" controls>
+                            <source src="{{ asset('storage/' . $video->videos) }}" type="video/mp4" />
+                        </video>
+
+
+
+                        <div class="play absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[60px] cursor-pointer z-10 transition-transform hover:scale-110"
+                            onclick="tocarVideo(this)">
+                            <img src="{{ asset('assets/img/play-button.png') }}" alt="botao de play" class="w-[60px]" />
+                        </div>
+                    </div>
+                @endforeach
             </div>
         </div>
 
-        <button class="botaocarrossel anterior" onclick="mudarvideo(-3)">
-            &#10094;
-        </button>
-        <button class="botaocarrossel proximo" onclick="mudarvideo(3)">
-            &#10095;
-        </button>
+
+
+
+        <button
+            class="bg-transparent text-[#05668d] hover:text-[#e9702a] border-none cursor-pointer text-[40px] md:text-[60px] transition-colors z-10"
+            onclick="mudarvideo(1)">&#10095;</button>
     </div>
-    <!-- COLUNA VIDEO COLUNA VIDEOS COLUNA VIDEO -->
-    <div class="titulosecao">
-        <h2>VÍDEOS</h2>
-        <p>
+
+
+
+
+    <div class="titulosecao px-[20px] md:px-0">
+        <h2 class="pt-[20px] mx-auto text-start text-[#05668d] text-[16px] max-w-[950px] font-bold">VÍDEOS</h2>
+        <p class="pt-[10px] pb-[20px] my-[10px] mx-auto text-start text-[#333] text-[12px] max-w-[950px]">
             Nossos vídeos oferecem análises aprofundadas e explicações
             detalhadas sobre temas políticos de relevância nacional e
-            internacional. Com uma abordagem clara e fundamentada, o conteúdo
-            busca ampliar a compreensão do público, explorando contextos
-            históricos, conceitos teóricos e implicações práticas que auxiliam
-            na formação de uma visão crítica e informada sobre o cenário
-            político contemporâneo.
+            internacional.
         </p>
     </div>
 
-    <div class="videoscoluna">
-        <div class="colunaesquerda">
-            <div class="videosesquerda">
-                <video class="video" poster="img/pexels-kelly-2928232.jpg" alt="Imagem de uma pilha de papeis" controls>
-                    <source src="img/6918112_Motion_Graphics_Motion_Graphic_1080x1920.mp4" type="video/mp4" />
-                </video>
-                <h3>video 1 video 1 video 1</h3>
-                <div class="play2">
-                    <img src="img/play-button.png" alt="botao de play" />
-                </div>
-            </div>
+    <div class="videoscoluna mx-auto my-[10px] flex flex-col md:flex-row gap-[20px] w-[950px] max-w-full px-[20px] md:px-0">
+        <div class="colunaesquerda flex-1 flex flex-col gap-[10px]">
+            @foreach ($videos->slice(0, ceil($videos->count() / 2)) as $video)
+                <div class="videosesquerda relative w-full md:w-[490px] h-[340px]">
+                    <video class="video w-[450px] max-w-full h-[277px] object-cover rounded-[15px]"
+                        poster="{{ $video->imagem ? asset('storage/' . $video->imagem) : '' }}" alt="{{ $video->titulo }}"
+                        controls>
+                        <source src="{{ asset('storage/' . $video->videos) }}" type="video/mp4" />
+                    </video>
+                    <h3 class="text-[#404040] text-[16px] font-bold text-start my-[10px] mx-auto">{{ $video->titulo }}</h3>
 
-            <div class="videosesquerda">
-                <video class="video" poster="img/pexels-kelly-2928232.jpg" alt="Imagem de uma pilha de papeis" controls>
-                    <source src="#" type="video/mp4" />
-                </video>
-                <h3>video 2 video 2 video 2</h3>
-                <div class="play2">
-                    <img src="img/play-button.png" />
-                </div>
-            </div>
 
-            <div class="videosesquerda">
-                <video class="video" poster="img/pexels-kelly-2928232.jpg" alt="Imagem de uma pilha de papeis" controls>
-                    <source src="#" type="video/mp4" />
-                </video>
-                <h3>video 2 video 2 video 2</h3>
-                <div class="play2">
-                    <img src="img/play-button.png" />
+
+                    <div class="play2 absolute top-[138px] left-1/2 -translate-x-1/2 -translate-y-1/2 text-[60px] cursor-pointer z-10 transition-transform hover:scale-110"
+                        onclick="tocarVideo(this)">
+                        <img src="{{ asset('assets/img/play-button.png') }}" alt="botao de play" class="w-[60px]" />
+                    </div>
                 </div>
-            </div>
+            @endforeach
         </div>
 
-        <!-- AVIDEO DIREITA VIDEO DIREITA  -->
-        <div class="colunadireita">
-            <div class="videosdireita">
-                <video class="video" poster="img/pexels-kelly-2928232.jpg" alt="Imagem de uma pilha de papeis" controls>
-                    <source src="#" type="video/mp4" />
-                </video>
-                <h3>video 4 video 4 video 4</h3>
-                <div class="play2">
-                    <img src="img/play-button.png" alt="botao de play" />
-                </div>
-            </div>
+        <div class="colunadireita flex-1 flex flex-col gap-[10px]">
+            @foreach ($videos->slice(ceil($videos->count() / 2)) as $video)
+                <div class="videosdireita relative w-full md:w-[490px] h-[340px]">
+                    <video class="video w-[450px] max-w-full h-[277px] object-cover rounded-[15px]"
+                        poster="{{ $video->imagem ? asset('storage/' . $video->imagem) : '' }}" alt="{{ $video->titulo }}"
+                        controls>
+                        <source src="{{ asset('storage/' . $video->videos) }}" type="video/mp4" />
+                    </video>
+                    <h3 class="text-[#404040] text-[16px] font-bold text-start my-[10px] mx-auto">{{ $video->titulo }}</h3>
 
-            <div class="videosdireita">
-                <video class="video" poster="img/pexels-kelly-2928232.jpg" alt="Imagem de uma pilha de papeis" controls>
-                    <source src="#" type="video/mp4" />
-                </video>
-                <h3>video 4 video 4 video 4</h3>
-                <div class="play2">
-                    <img src="img/play-button.png" alt="botao de play" />
-                </div>
-            </div>
 
-            <div class="videosdireita">
-                <video class="video" poster="img/pexels-kelly-2928232.jpg" alt="Imagem de uma pilha de papeis" controls>
-                    <source src="#" type="video/mp4" />
-                </video>
-                <h3>video 4 video 4 video 4</h3>
-                <div class="play2">
-                    <img src="img/play-button.png" alt="botao de play" />
+                    <div class="play2 absolute top-[138px] left-1/2 -translate-x-1/2 -translate-y-1/2 text-[60px] cursor-pointer z-10 transition-transform hover:scale-110"
+                        onclick="tocarVideo(this)">
+                        <img src="{{ asset('assets/img/play-button.png') }}" alt="botao de play" class="w-[60px]" />
+                    </div>
                 </div>
-            </div>
+            @endforeach
         </div>
     </div>
-    </div>
+    <script>
+        let indiceAtual = 0;
+
+        function mudarvideo(direcao) {
+            const faixa = document.getElementById('faixa');
+            const totalVideos = faixa.children.length;
+
+            indiceAtual += direcao;
+
+
+            let maxIndice = totalVideos - 3;
+
+
+            if (window.innerWidth < 768) {
+                maxIndice = totalVideos - 1;
+            }
+
+            if (indiceAtual > maxIndice) indiceAtual = maxIndice;
+            if (indiceAtual < 0) indiceAtual = 0;
+
+
+            const larguraItem = 365;
+            faixa.style.transform = `translateX(-${indiceAtual * larguraItem}px)`;
+        }
+
+
+        function tocarVideo(botao) {
+
+            const container = botao.parentElement;
+            const video = container.querySelector('video');
+
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        }
+
+
+        document.querySelectorAll('video').forEach(video => {
+            video.addEventListener('play', function() {
+                const btnPlay = this.parentElement.querySelector('.play, .play2');
+                if (btnPlay) btnPlay.style.display = 'none';
+            });
+
+            video.addEventListener('pause', function() {
+                const btnPlay = this.parentElement.querySelector('.play, .play2');
+                if (btnPlay) btnPlay.style.display = 'block';
+            });
+        });
+    </script>
 @endsection
