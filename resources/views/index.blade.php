@@ -87,25 +87,35 @@
         </div>
     </div>
 
-    <section class="entendarapido">
-        <h2 class="text-[#05668d] text-center mb-8 font-bold text-3xl ">ENTENDA RÁPIDO</h2>
-        <div class="text-center  ">
-            <video class="video" poster="assets/img/capa2.png" controls>
-                <source src="assets/img/gato-teste.mp4" type="video/mp4" />
+    <section class="entendarapido py-8">
+        <h2 class="text-[#05668d] text-center mb-8 font-bold text-3xl">ENTENDA RÁPIDO</h2>
+
+        <!-- Container com Grid Responsivo: 1 coluna em telas pequenas, 3 em telas médias/grandes -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
+
+            <!-- Vídeo 1 -->
+            <video class="video w-full rounded-lg shadow-lg" poster="{{ asset('assets/img/capa2.png') }}" controls>
+                <source src="{{ asset('assets/img/apresentacaoprojeto.mp4?v=1') }}" type="video/mp4" />
             </video>
-            <video class="video" poster="assets/img/capa2.png" controls>
-                <source src="assets/img/gato-teste.mp4" type="video/mp4" />
+
+            <!-- Vídeo 2 -->
+            <video class="video w-full rounded-lg shadow-lg" poster="{{ asset('assets/img/capa2.png') }}" controls>
+                <source src="{{ asset('assets/img/apresentacaoprojeto.mp4?v=2') }}" type="video/mp4" />
             </video>
-            <video class="video" poster="assets/img/capa2.png" controls>
-                <source src="assets/img/gato-teste.mp4" type="video/mp4" />
+
+            <!-- Vídeo 3 -->
+            <video class="video w-full rounded-lg shadow-lg" poster="{{ asset('assets/img/capa2.png') }}" controls>
+                <source src="{{ asset('assets/img/apresentacaoprojeto.mp4?v=3') }}" type="video/mp4" />
             </video>
+
         </div>
 
-        <a href="aprenda-videos.html"
-            class="bg-[#629643] text-white py-1 px-2 rounded-md block text-center   m-auto w-64">Veja
-            mais vídeos explicativos</a>
+        <!-- Botão com efeito Hover e espaçamento ajustado -->
+        <a href="{{ route('aprendaVideos') }}"
+            class="bg-[#629643] hover:bg-[#4d7634] transition-colors duration-300 text-white py-2 px-4 rounded-md block text-center m-auto w-64 mt-8 font-medium">
+            Veja mais vídeos explicativos
+        </a>
     </section>
-
     <section class="grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-5 py-14 px-5 max-w-7xl mx-auto mt-7">
         <div class="sm:flex gap-6 ">
             <div class=" text-justify sm:gap-3">
@@ -132,8 +142,8 @@
                     Marília mais participativa, transparente e inclusiva.
                 </p>
 
-                <a href="sobre-nos.html" class="sobrenosbotao">Saiba mais sobre</a>
-                <a href="contato.html" class="sobrenosbotao">Entre em contato conosco</a>
+                <a href="{{ route('sobreNos') }}" class="sobrenosbotao">Saiba mais sobre</a>
+                <a href="{{ route('contato') }}" class="sobrenosbotao">Entre em contato conosco</a>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-[auto_1fr]">
                 <img src="{{ asset('assets/img/pexels-polina-tankilevitch-8203158-scaled.jpg') }}"
