@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Postagem;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -14,7 +15,7 @@ class PostagemController extends Controller
      */
     public function index()
     {
-        $postagens = Postagem::all();
+        $postagens = Postagem::where("usuario_id", Auth::id())->with("tags", "curtidas")->orderByDesc('updated_at')->paginate(3);
         return view("admin.postagem.index", [
             "postagens" => $postagens
         ]);
@@ -26,7 +27,8 @@ class PostagemController extends Controller
     public function create()
     {
         return view("admin.postagem.cadastrar", [
-            "postagens" => new Postagem()
+            "postagens" => new Postagem(),
+            "tags" => Tag::all()
         ]);
     }
 
@@ -40,6 +42,7 @@ class PostagemController extends Controller
             "titulo" => "required|min:10|max:255",
             "categorias" => "required|max:50",
             "conteudo" => "required",
+            "tags" => "required|array|min:1",
 
         ]);
 
@@ -53,6 +56,8 @@ class PostagemController extends Controller
 
 
         $postagens->save();
+
+        $postagens->tags()->sync($request->tags ?? []);
 
         return redirect()->route("admin.postagem.index");
     }
@@ -72,8 +77,13 @@ class PostagemController extends Controller
     {
         $postagens = Postagem::findOrFail($id);
 
+        if ($postagens->usuario_id !== Auth::id() && !in_array(Auth::user()->perfil, ['moderador', 'admin'])) {
+            abort(403, 'Você não tem permissão para editar esta postagem');
+        }
+
         return view("admin.postagem.editar", [
-            "postagens" => $postagens
+            "postagens" => $postagens,
+            "tags" => Tag::all()
         ]);
     }
 
@@ -87,20 +97,27 @@ class PostagemController extends Controller
             "titulo" => "required|min:10|max:255",
             "categorias" => "required|max:50",
             "conteudo" => "required",
+            "tags" => "required|array|min:1",
 
 
         ]);
 
         $postagens = Postagem::findOrFail($id);
 
+        if ($postagens->usuario_id !== Auth::id() && !in_array(Auth::user()->perfil, ['moderador', 'admin'])) {
+            abort(403, 'Você não tem permissão para editar esta postagem');
+        }
+
         $postagens->titulo = $request->titulo;
         $postagens->conteudo = $request->conteudo;
         $postagens->categorias = $request->categorias;
-        $postagens->usuario_id = Auth::user()->id;
+        // $postagens->usuario_id = Auth::user()->id;
 
 
 
         $postagens->save();
+
+        $postagens->tags()->sync($request->tags ?? []);
 
         return redirect()->route("admin.postagem.index");
     }
@@ -111,7 +128,38 @@ class PostagemController extends Controller
     public function destroy(string $id)
     {
         $postagens = Postagem::findOrFail($id);
+
+        if ($postagens->usuario_id !== Auth::id() && !in_array(Auth::user()->perfil, ['moderador', 'admin'])) {
+            abort(403, 'Você não tem permissão para deletar esta postagem');
+        }
+
+        $postagens->tags()->detach();
         $postagens->delete();
+
+
         return redirect()->route("admin.postagem.index");
+    }
+
+    public function moderacao()
+    {
+
+        $postagens = Postagem::with("tags", "usuario", "curtidas")->orderByDesc('updated_at')->paginate(10);
+
+        return view("admin.postagem.moderacao", [
+            "postagens" => $postagens
+        ]);
+    }
+
+
+    public function curtir(string $id)
+    {
+        $postagem = Postagem::findOrFail($id);
+
+        if ($postagem->curtidas()->where("usuario_id", Auth::id())->exists()) {
+            $postagem->curtidas()->detach(Auth::id());
+        } else {
+            $postagem->curtidas()->attach(Auth::id());
+        }
+        return back();
     }
 }

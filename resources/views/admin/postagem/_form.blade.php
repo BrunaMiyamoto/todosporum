@@ -27,20 +27,41 @@
 
           <label for="categorias" class="text-[#05668d] font-bold text-sm pb-3">Categoria (Projeto, reclamação ou
               dúvida):</label>
-          <input type="text" name="categorias" id="categorias"
-              class="bg-[#ebf2fa] border-none rounded-2xl text-[#333333] p-2" value="{{ $postagens->categorias }}" />
+          <select name="categorias" id="categorias" class="bg-[#ebf2fa] border-none rounded-2xl text-[#646464] p-2"
+              required>
+              <option value="">Selecione uma categoria...</option>
+              <option value="projeto">Projeto</option>
+              <option value="reclamacao">Reclamação</option>
+              <option value="duvida">Dúvida</option>
+
+
+              {{-- value="{{ $postagens->categorias }}" --}}
+          </select>
+      </div>
+
+      <div class="py-3 grid">
+          <label class="text-[#05668d] font-bold text-sm pb-3">Tags*:</label>
+          <div class="flex flex-wrap gap-3">
+              @foreach ($tags as $tag)
+                  <label class="flex items-center gap-1 bg-[#ebf2fa] px-3 py-1 rounded-full cursor-pointer">
+                      <input type="checkbox" name="tags[]" value="{{ $tag->id }}"
+                          @if ($postagens->tags->contains($tag->id)) checked @endif>
+                      {{ $tag->nome }}
+                  </label>
+              @endforeach
+          </div>
       </div>
 
       <div class="py-3 grid">
           <label for="titulo" class="text-[#05668d] font-bold text-sm  pb-3">Titulo*:</label>
-          <input class="bg-[#ebf2fa] border-none rounded-2xl text-[#333333] p-2" type="text" name="titulo"
+          <input class="bg-[#ebf2fa] border-none rounded-2xl text-[#646464] p-2" type="text" name="titulo"
               id="titulo" value="{{ $postagens->titulo }}" />
       </div>
 
 
       <div class="py-5 grid">
           <label for="conteudo" class="text-[#05668d] font-bold text-sm  pb-3">Conteudo:</label>
-          <textarea class="bg-[#ebf2fa] border-none rounded-md text-[#333333] " name="conteudo" id="conteudo" rows="3">{{ $postagens->conteudo }}</textarea>
+          <textarea class="bg-[#ebf2fa] border-none rounded-md text-[#646464] " name="conteudo" id="conteudo" rows="3">{{ $postagens->conteudo }}</textarea>
       </div>
 
       <div class="py-3 flex justify-end items-center gap-2">

@@ -28,6 +28,17 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
+        if (Auth::user()->suspenso) {
+            Auth::logout();
+
+            $request->session()->invalidate();
+            $request->session()->regenerateToken();
+
+            return redirect()->route("login")->withErrors([
+                'email' => "Sua conta está suspensa. Entre em contato com o suporte."
+            ]);
+        }
+
         return redirect()->intended(route('dashboard', absolute: false));
     }
 

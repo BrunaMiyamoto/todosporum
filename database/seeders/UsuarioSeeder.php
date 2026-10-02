@@ -23,7 +23,7 @@ class UsuarioSeeder extends Seeder
                 "dt_nasc" => "1998-03-01",
                 "genero" => "feminino",
                 "contato" => "14999999999",
-                "perfil" => "usuário",
+                "perfil" => "admin",
                 "cep" => "13214-120",
                 "rua" => "Rua das Palmeiras",
                 "bairro" => "Jardim Paulista",
@@ -33,7 +33,7 @@ class UsuarioSeeder extends Seeder
                 "created_at" => now(),
                 "updated_at" => now(),
             ],
-             [
+            [
                 "nome" => "Fernanda",
                 "email" => "fernanda@senac.com",
                 "password" => Hash::make("12345678"),

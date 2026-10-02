@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Pest\Support\View;
 
@@ -15,7 +16,7 @@ class PerfilController extends Controller
      */
     public function index()
     {
-        $perfil = User::all();
+        $perfil = Auth::user();
         return view("admin.perfil.index", [
             "perfil" => $perfil
         ]);

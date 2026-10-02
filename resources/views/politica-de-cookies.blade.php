@@ -1,139 +1,116 @@
 @extends('layouts.site')
 
 @section('conteudo')
-    <div class="mt-24">
-        <ul class="m-0 p-0 list-none flex justify-center align-items-center">
-          <li class="bg-[#629643] rounded m-8 mx-3- py-1 px-2">
-            <a href="politica-privacidade.html">Política de Privacidade</a>
-          </li>
-          <li class="bg-[#629643] rounded m-8 mx-3- py-1 px-2"><a href="cookies.html">Política de Cookies</a></li>
-          <li class="bg-[#629643] rounded m-8 mx-3- py-1 px-2">
-            <a href="termos-uso.html" >Termos de Uso</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="container-botoes ">
-        <h1 >POLÍTICA DE COOKIES</h1>
-        <p id="dataPublicacao">Publicado em: 14/11/2025</p>
-        <br /><br />
-        <hr />
-        <br /><br />
-        <p id="politicaConteudo">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis
-          massa tempus, porttitor odio et, eleifend neque. Quisque convallis
-          ipsum id nunc accumsan porta. Nam mattis euismod eros ut pellentesque.
-          Integer sodales enim a est mollis, quis dictum libero porta.
-          Pellentesque feugiat nec dui ut sollicitudin. Donec placerat nisi
-          vitae augue varius vestibulum in sit amet libero. Aliquam condimentum
-          nisl nec massa eleifend imperdiet.<br /><br />
-
-          In nec erat vel tellus accumsan rhoncus non eu ipsum. Donec tempus,
-          quam vel aliquet vestibulum, erat augue cursus metus, et venenatis
-          nulla ante non est. Vestibulum nisl sapien, sollicitudin in ultricies
-          nec, luctus sit amet sapien. Fusce diam ex, viverra sed tristique
-          vitae, vestibulum eu eros. Pellentesque habitant morbi tristique
-          senectus et netus et malesuada fames ac turpis egestas. Cras a tempor
-          nulla. Morbi lacinia dui nisi, at suscipit massa ornare eu. Nullam
-          vulputate vehicula magna nec interdum. Nam venenatis ligula at odio
-          dictum, nec congue sapien vulputate. Cras aliquam erat velit, sed
-          lacinia nunc pellentesque vitae. Vestibulum facilisis dolor nulla, a
-          dignissim leo pulvinar in.<br /><br />
-
-          Maecenas mattis scelerisque nisi, et vestibulum ante aliquam non.
-          Curabitur libero sem, suscipit sit amet velit a, ornare ornare orci.
-          Phasellus ultrices porttitor dui, eu porta nisl dapibus et. Phasellus
-          eget elementum nunc, quis commodo nisl. In hac habitasse platea
-          dictumst. Duis pellentesque erat enim, at pulvinar lorem viverra vel.
-          Duis vel congue magna, vel vestibulum neque. Proin eu auctor orci. Ut
-          quis tristique sapien, eget finibus sapien. Sed ultricies quam eget
-          leo auctor scelerisque. Nullam tellus nisi, dictum sit amet ultrices
-          a, rhoncus a nisl. Phasellus at quam sed sem varius fringilla vel non
-          leo. Suspendisse vel accumsan turpis. Nulla feugiat fermentum odio.
-          Donec congue eu turpis non vehicula.<br /><br />
-
-          Praesent augue diam, vehicula a feugiat tempus, fermentum non leo. Ut
-          volutpat, turpis a ullamcorper dapibus, magna quam vulputate libero,
-          sit amet maximus ex neque vel ipsum. Sed vitae gravida elit. Nunc
-          facilisis tristique magna a dictum. Praesent vitae nisi in dui semper
-          pellentesque id sed velit. Morbi faucibus fringilla libero, sed rutrum
-          velit maximus eu. Etiam eget viverra lectus. Pellentesque ut arcu in
-          sem congue consequat vel eget erat. Aliquam diam orci, pretium sit
-          amet dignissim quis, iaculis et magna. Etiam consequat neque id lacus
-          rutrum fringilla. Integer sem ex, efficitur a vulputate at, aliquam
-          eget lorem. Aliquam porttitor diam nulla, in lobortis ligula
-          vestibulum et. Suspendisse lobortis justo sit amet malesuada
-          faucibus.<br /><br />
-
-          Morbi hendrerit tristique vehicula. Vestibulum pellentesque, massa eu
-          varius hendrerit, dui enim condimentum orci, ut vulputate purus turpis
-          egestas sapien. Fusce porta, purus faucibus vestibulum hendrerit,
-          lectus libero mattis tortor, ut interdum diam mauris vel magna.
-          Maecenas risus elit, mattis ut aliquam et, mollis quis quam. Maecenas
-          ipsum urna, ornare ut iaculis sed, feugiat in libero. In et arcu id
-          tellus mattis pulvinar. In rutrum cursus elit, id commodo quam. Nullam
-          non consectetur ante, nec posuere justo. Maecenas eu mauris interdum,
-          placerat metus in, gravida leo. Phasellus tortor velit, molestie
-          ornare pellentesque ac, vulputate vitae nisi. Donec iaculis pharetra
-          arcu. Aenean volutpat ultricies porta. Duis vitae tempus turpis.<br /><br />
-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis
-          massa tempus, porttitor odio et, eleifend neque. Quisque convallis
-          ipsum id nunc accumsan porta. Nam mattis euismod eros ut pellentesque.
-          Integer sodales enim a est mollis, quis dictum libero porta.
-          Pellentesque feugiat nec dui ut sollicitudin. Donec placerat nisi
-          vitae augue varius vestibulum in sit amet libero. Aliquam condimentum
-          nisl nec massa eleifend imperdiet.<br /><br />
-
-          In nec erat vel tellus accumsan rhoncus non eu ipsum. Donec tempus,
-          quam vel aliquet vestibulum, erat augue cursus metus, et venenatis
-          nulla ante non est. Vestibulum nisl sapien, sollicitudin in ultricies
-          nec, luctus sit amet sapien. Fusce diam ex, viverra sed tristique
-          vitae, vestibulum eu eros. Pellentesque habitant morbi tristique
-          senectus et netus et malesuada fames ac turpis egestas. Cras a tempor
-          nulla. Morbi lacinia dui nisi, at suscipit massa ornare eu. Nullam
-          vulputate vehicula magna nec interdum. Nam venenatis ligula at odio
-          dictum, nec congue sapien vulputate. Cras aliquam erat velit, sed
-          lacinia nunc pellentesque vitae. Vestibulum facilisis dolor nulla, a
-          dignissim leo pulvinar in.<br /><br />
-
-          Maecenas mattis scelerisque nisi, et vestibulum ante aliquam non.
-          Curabitur libero sem, suscipit sit amet velit a, ornare ornare orci.
-          Phasellus ultrices porttitor dui, eu porta nisl dapibus et. Phasellus
-          eget elementum nunc, quis commodo nisl. In hac habitasse platea
-          dictumst. Duis pellentesque erat enim, at pulvinar lorem viverra vel.
-          Duis vel congue magna, vel vestibulum neque. Proin eu auctor orci. Ut
-          quis tristique sapien, eget finibus sapien. Sed ultricies quam eget
-          leo auctor scelerisque. Nullam tellus nisi, dictum sit amet ultrices
-          a, rhoncus a nisl. Phasellus at quam sed sem varius fringilla vel non
-          leo. Suspendisse vel accumsan turpis. Nulla feugiat fermentum odio.
-          Donec congue eu turpis non vehicula.<br /><br />
-
-          Praesent augue diam, vehicula a feugiat tempus, fermentum non leo. Ut
-          volutpat, turpis a ullamcorper dapibus, magna quam vulputate libero,
-          sit amet maximus ex neque vel ipsum. Sed vitae gravida elit. Nunc
-          facilisis tristique magna a dictum. Praesent vitae nisi in dui semper
-          pellentesque id sed velit. Morbi faucibus fringilla libero, sed rutrum
-          velit maximus eu. Etiam eget viverra lectus. Pellentesque ut arcu in
-          sem congue consequat vel eget erat. Aliquam diam orci, pretium sit
-          amet dignissim quis, iaculis et magna. Etiam consequat neque id lacus
-          rutrum fringilla. Integer sem ex, efficitur a vulputate at, aliquam
-          eget lorem. Aliquam porttitor diam nulla, in lobortis ligula
-          vestibulum et. Suspendisse lobortis justo sit amet malesuada
-          faucibus.<br /><br />
-
-          Morbi hendrerit tristique vehicula. Vestibulum pellentesque, massa eu
-          varius hendrerit, dui enim condimentum orci, ut vulputate purus turpis
-          egestas sapien. Fusce porta, purus faucibus vestibulum hendrerit,
-          lectus libero mattis tortor, ut interdum diam mauris vel magna.
-          Maecenas risus elit, mattis ut aliquam et, mollis quis quam. Maecenas
-          ipsum urna, ornare ut iaculis sed, feugiat in libero. In et arcu id
-          tellus mattis pulvinar. In rutrum cursus elit, id commodo quam. Nullam
-          non consectetur ante, nec posuere justo. Maecenas eu mauris interdum,
-          placerat metus in, gravida leo. Phasellus tortor velit, molestie
-          ornare pellentesque ac, vulputate vitae nisi. Donec iaculis pharetra
-          arcu. Aenean volutpat ultricies porta. Duis vitae tempus turpis.
-        </p>
+    <div class="max-w-7xl mx-auto">
+        <div class="container-botoes ">
+            <ul class="flex justify-center text-white">
+                <li class="bg-[#629643] rounded-md my-8 mx-3 p-1.5 text-center">
+                    <a href="{{ route('politicaPrivacidade') }}" class="btn-privacidade">Política de Privacidade</a>
+                </li>
+                <li class="bg-[#629643] rounded-md my-8 mx-3 p-1.5 text-center">
+                    <a href="{{ route('politicaCookies') }}" class="btn-cookies">Política de Cookies</a>
+                </li>
+                <li class="bg-[#629643] rounded-md my-8 mx-3 p-1.5 text-center">
+                    <a href="{{ route('termosUso') }}" class="btn-termos de uso">Termos de Uso</a>
+                </li>
+            </ul>
+        </div>
     </div>
+    {{-- testando --}}
 
+    <div class="max-w-7xl mx-auto">
+        <h1 class="text-[#05668d] font-bold ml-8">POLÍTICA DE COOKIES</h1>
+        <p class="text-[#9DAAB9] ml-8 border-b pb-4 mx-auto">Publicado em: 14/11/2025</p>
+
+        <p class="text-justify py-3 px-8">
+            Esta Política de Cookies explica como a plataforma Todos Por Um utiliza cookies e tecnologias semelhantes
+            para reconhecer, personalizar e melhorar sua experiência ao navegar em nosso site.
+
+        <p class="text-justify py-3 px-8">
+            <strong>1. O que são Cookies?</strong> Cookies
+            são pequenos arquivos de texto armazenados no seu computador ou dispositivo móvel quando você visita um site.
+            Eles são amplamente utilizados para fazer os sites funcionarem com mais eficiência, guardar preferências de
+            navegação e fornecer dados analíticos aos proprietários do sistema.
+        </p>
+        <p class="text-justify py-3 px-8">
+            <strong>2. Tipos de Cookies Utilizados:</strong>
+            Nossa
+            Plataforma utiliza as seguintes categorias de cookies:Cookies Estritamente Necessários: Fundamentais para a
+            navegação básica, autenticação de login, segurança e acesso à área restrita do assinante. Sem eles, o site não
+            funciona corretamente.Cookies Funcionais: Salvam suas preferências e configurações de navegação (como idioma ou
+            localização), evitando que você precise preenchê-las novamente a cada visita.Cookies Analíticos e de Desempenho:
+            Coletam informações anônimas sobre como os Usuários interagem com o site (ex: páginas mais visitadas, tempo de
+            permanência e taxa de erros). Utilizamos esses dados para otimizar a velocidade, estrutura e relevância do
+            conteúdo.Cookies de Terceiros e Marketing: Posicionados por parceiros de tecnologia (gateways de pagamento,
+            ferramentas de chat, redes sociais ou analytics) para permitir integração com ferramentas externas ou medir a
+            eficiência de nossas campanhas de comunicação.
+        </p>
+        <div class="text-justify py-3 px-8">
+            <strong>3. Tabela Resumida de Cookies</strong>
+
+            <table class="border-2 border-black">
+                <thead>
+                    <tr>
+                        <th>Categoria</th>
+                        <th>Função
+                            Principal</th>
+                        <th>Duração</th>
+                    </tr>
+                </thead>
+                <tbody class="">
+                    <tr class="">
+                        <td>Autenticação (Sessão)</td>
+                        <td>Manter o Usuário logado na área restrita durante a navegação.</td>
+                        <td>Sessão
+                            (deletado ao fechar o navegador)</td>
+                    </tr>
+                    <tr>
+                        <td> Segurança e Prevenção</td>
+                        <td> Proteger contra ataques maliciosos (ex: CSRF, abuso de
+                            formulários).</td>
+                        <td> Persistente (até 1 ano)</td>
+                    </tr>
+                    <tr>
+                        <td>Preferências</td>
+                        <td>Armazenar consentimentos de cookies e configurações
+                            locais.</td>
+                        <td> Persistente (até 1 ano)</td>
+                    </tr>
+                    <tr>
+                        <td>Análise (Ex: Google Analytics)</td>
+                        <td>Gerar relatórios estatísticos anônimos sobre uso
+                            da
+                            plataforma.</td>
+                        <td>Persistente (até 2 anos)</td>
+                    </tr>
+                    <tr>
+                        <td>Gateway de Pagamento</td>
+                        <td>Garantir a segurança na transação financeira e
+                            prevenção
+                            de fraudes.</td>
+                        <td>Sessão / Persistente</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+        </div>
+        <p class="text-justify py-3 px-8">
+            <strong>4. Como Gerenciar ou Desativar Cookies?</strong> Você pode alterar ou bloquear o uso de
+            cookies a qualquer momento diretamente nas configurações do seu navegador de internet.Abaixo estão os links para
+            o suporte dos principais navegadores:Google Chrome: Configurações > Privacidade e segurança > Cookies e outros
+            dados do siteMozilla Firefox: Opções > Privacidade e Segurança > Cookies e dados de sitesSafari: Preferências >
+            Privacidade > Bloquear todos os cookiesMicrosoft Edge: Configurações > Permissões do site > Cookies e dados do
+            siteAtenção: A desativação total dos cookies estritamente necessários pode impossibilitar o funcionamento de
+            recursos essenciais da área logada e o agendamento de serviços na Plataforma.
+
+        <p class="text-justify mb-24 py-3 px-8">
+            <strong>5. Dúvidas e Contato:</strong>
+            Se você tiver dúvidas sobre nossa Política de Cookies ou sobre o tratamento de dados pessoais na plataforma,
+            entre em contato
+            através do nosso canal de suporte:E-mail de Suporte: [seu-email@sua-empresa.com.br]Localização: Marília/SP -
+            Brasil
+        </p>
+
+    </div>
 @endsection

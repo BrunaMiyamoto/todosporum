@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Aprenda_sobre;
 use App\Models\Postagem;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 
 class homeController extends Controller
@@ -14,24 +15,85 @@ class homeController extends Controller
         return view("index");
     }
 
-    public function forumDuvidas()
+    public function forumDuvidas(Request $request)
     {
+        $forum = Postagem::where('categorias', 'duvida')->with("tags", "usuario", "curtidas");
 
-        return view("forum-duvidas");
-    }
 
-    public function forumProjetos()
-    {
-        $forumProjeto = Postagem::all();
-        return view("forum-projetos", [
-            "forumProjeto" => $forumProjeto
+        if ($request->filled("pesquisarPublicacao")) {
+            $busca = $request->pesquisarPublicacao;
+            $forum->where(function ($query) use ($busca) {
+                $query->where("titulo", "like", "%{$busca}%")->orWhere("conteudo", "like", "%{$busca}%");
+            });
+        }
+
+        if ($request->filled("tags")) {
+            $forum->whereHas("tags", function ($query) use ($request) {
+                $query->whereIn("tags.id", $request->tags);
+            });
+        }
+
+
+        $forum = $forum->orderByDesc('updated_at')->paginate(3)->withQueryString();
+
+        return view("forum-duvidas", [
+            "forum" => $forum,
+            "tags" => Tag::all()
         ]);
     }
 
-    public function forumReclamacoes()
+    public function forumProjetos(Request $request)
     {
+        $forum = Postagem::where('categorias', 'projeto')->with("tags", "usuario", "curtidas");
 
-        return view("forum-reclamacoes");
+        if ($request->filled("pesquisarPublicacao")) {
+            $busca = $request->pesquisarPublicacao;
+            $forum->where(function ($query) use ($busca) {
+                $query->where("titulo", "like", "%{$busca}%")->orWhere("conteudo", "like", "%{$busca}%");
+            });
+        }
+
+        if ($request->filled("tags")) {
+            $forum->whereHas("tags", function ($query) use ($request) {
+                $query->whereIn("tags.id", $request->tags);
+            });
+        }
+
+
+        $forum = $forum->orderByDesc('updated_at')->paginate(3)->withQueryString();
+
+
+        return view("forum-projetos", [
+            "forum" => $forum,
+            "tags" => Tag::all()
+        ]);
+    }
+
+    public function forumReclamacoes(Request $request)
+    {
+        $forum = Postagem::where('categorias', 'reclamacao')->with("tags", "usuario", "curtidas");
+
+
+        if ($request->filled("pesquisarPublicacao")) {
+            $busca = $request->pesquisarPublicacao;
+            $forum->where(function ($query) use ($busca) {
+                $query->where("titulo", "like", "%{$busca}%")->orWhere("conteudo", "like", "%{$busca}%");
+            });
+        }
+
+        if ($request->filled("tags")) {
+            $forum->whereHas("tags", function ($query) use ($request) {
+                $query->whereIn("tags.id", $request->tags);
+            });
+        }
+
+
+        $forum = $forum->orderByDesc('updated_at')->paginate(3)->withQueryString();
+
+        return view("forum-reclamacoes", [
+            "forum" => $forum,
+            "tags" => Tag::all()
+        ]);
     }
 
     public function aprendaSobre()
@@ -44,8 +106,11 @@ class homeController extends Controller
 
     public function aprendaVideos()
     {
+        $videos = Aprenda_sobre::where('tipo', 'video')->orderByDesc('created_at')->get();
 
-        return view("aprenda-videos");
+        return view("aprenda-videos", [
+            "videos" => $videos
+        ]);
     }
 
 

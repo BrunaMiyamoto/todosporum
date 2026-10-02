@@ -9,9 +9,11 @@ use App\Http\Controllers\Admin\PerfilPublicoController;
 use App\Http\Controllers\Admin\SegurPrivaController;
 use App\Http\Controllers\Admin\UsuarioController;
 use App\Http\Controllers\CadastroUsuarioController;
+use App\Http\Controllers\ComentarioController;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegistroUsuarioController;
+use App\Models\Postagem;
 use Illuminate\Support\Facades\Route;
 
 Route::get("/", [homeController::class, "home"])->name("home");
@@ -66,6 +68,29 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::middleware(['auth', 'admin'])->group(function () {
+
+        Route::get("/dashboard/usuarios", [UsuarioController::class, "index"])->name("admin.usuarios.index");
+
+        Route::delete("/dashboard/usuarios/excluir/{id}", [UsuarioController::class, "destroy"])->name("admin.usuarios.excluir");
+
+        Route::put("/dashboard/usuarios/suspender/{id}", [UsuarioController::class, "suspender"])->name("admin.usuarios.suspender");
+
+        Route::put("/dashboard/usuarios/promover/{id}", [UsuarioController::class, "promover"])->name("admin.usuarios.promover");
+    });
+
+    Route::middleware(['auth', 'moderador'])->group(function () {
+
+        Route::get("/dashboard/moderacao", [PostagemController::class, "moderacao"])->name("admin.postagem.moderacao");
+    });
+
+    Route::put("/postagens/curtir/{id}", [PostagemController::class, "curtir"])->name("postagem.curtir");
+
+    Route::post("/comentarios", [ComentarioController::class, "store"])->name("comentario.armazenar");
+
+    Route::delete("/comentarios/excluir/{id}", [ComentarioController::class, "destroy"])->name("comentario.excluir");
+
 
     //ACESSIBILIDADE
 
