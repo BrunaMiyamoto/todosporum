@@ -5,9 +5,9 @@
         style="background-image: url('{{ asset('assets/img/pexels-cytonn-955389.jpg') }}')">
         <div class="absolute inset-0 bg-gradient-to-r from-sky-900 to-slate-500 mix-blend-multiply"></div>
 
-        <div class="relative z-10 flex flex-col justify-center items-center py-12">
-            <h1 class="text-white font-semibold text-center text-3xl  ">ENVIE SUA IDEIA JÁ</h1>
-            <p class="text-white text-center p-6 ">
+        <div class="relative z-10 flex flex-col justify-center items-center py-12 px-4">
+            <h1 class="text-white font-semibold text-center text-2xl sm:text-3xl  ">ENVIE SUA IDEIA JÁ</h1>
+            <p class="text-white text-center py-6 sm:p-6 text-sm sm:text-base ">
                 Participe ativamente do debate público: envie projetos, proponha
                 pautas, registre reclamações e interaja com outros cidadãos. <br />
                 Vote nas melhores iniciativas e ajude a transformar sua comunidade.
@@ -21,10 +21,10 @@
         </div>
     </div>
 
-    <h2 class="text-[#05668d] text-center mt-20 font-bold text-3xl ">DESTAQUES DA COMUNIDADE</h2>
+    <h2 class="text-[#05668d] text-center mt-12 md:mt-20 font-bold text-2xl md:text-3xl ">DESTAQUES DA COMUNIDADE</h2>
 
-    <div class=" flex min-h-screen w-full items-center justify-center">
-        <div class="flex flex-col ">
+    <div class=" w-full px-4 py-10">
+        <div class="flex flex-col gap-8 max-w-3xl mx-auto ">
 
             <section class="destaque ">
                 <div class="cabeca">
