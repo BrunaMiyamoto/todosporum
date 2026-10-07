@@ -24,7 +24,7 @@
     <h2 class="text-[#05668d] text-center mt-12 md:mt-20 font-bold text-2xl md:text-3xl ">DESTAQUES DA COMUNIDADE</h2>
 
     <div class=" w-full px-4 py-10">
-        <div class="flex flex-col gap-8 max-w-3xl mx-auto ">
+        <div class="listaDestaque ">
 
             <section class="destaque ">
                 <div class="cabeca">
@@ -91,20 +91,20 @@
         <h2 class="text-[#05668d] text-center mb-8 font-bold text-3xl">ENTENDA RÁPIDO</h2>
 
         <!-- Container com Grid Responsivo: 1 coluna em telas pequenas, 3 em telas médias/grandes -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
+        <div class="listaVideos">
 
             <!-- Vídeo 1 -->
-            <video class="video w-full rounded-lg shadow-lg" poster="{{ asset('assets/img/capa2.png') }}" controls>
+            <video class="video" poster="{{ asset('assets/img/capa2.png') }}" controls>
                 <source src="{{ asset('assets/img/apresentacaoprojeto.mp4?v=1') }}" type="video/mp4" />
             </video>
 
             <!-- Vídeo 2 -->
-            <video class="video w-full rounded-lg shadow-lg" poster="{{ asset('assets/img/capa2.png') }}" controls>
+            <video class="video" poster="{{ asset('assets/img/capa2.png') }}" controls>
                 <source src="{{ asset('assets/img/apresentacaoprojeto.mp4?v=2') }}" type="video/mp4" />
             </video>
 
             <!-- Vídeo 3 -->
-            <video class="video w-full rounded-lg shadow-lg" poster="{{ asset('assets/img/capa2.png') }}" controls>
+            <video class="video" poster="{{ asset('assets/img/capa2.png') }}" controls>
                 <source src="{{ asset('assets/img/apresentacaoprojeto.mp4?v=3') }}" type="video/mp4" />
             </video>
 

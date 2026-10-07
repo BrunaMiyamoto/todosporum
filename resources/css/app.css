@@ -13,6 +13,20 @@ body{
 }
 
 
+/* LAYOUT */
+html.fonte-pequeno {
+    font-size: 14px;
+}
+ 
+html.fonte-medio {
+    font-size: 16px;
+}
+ 
+html.fonte-grande {
+    font-size: 20px;
+}
+/* LAYOUT */
+
 /* MENU RESPONSIVO MENU RESPONSIVO MENU RESPONSIVO  */
 
 /* * {
@@ -362,7 +376,24 @@ footer {
   box-sizing: border-box;
   }
 
-  
+  .listaDestaque:has(.destaque:nth-child(3)){
+    flex-direction: row;
+    gap: 20px;
+    overflow-x: auto;
+    max-width: 100%;
+    padding: 0 1rem 10px;
+  }
+
+    .listaVideos:has(.video:nth-child(3)){
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 0 1rem 10px;
+  }
+  .listaVideos:has(.video:nth-child(3)){
+     flex: 0 0 85%;
+    
+  }
 }
 /* .btn-privacidade {
     display: flex;
@@ -429,8 +460,16 @@ footer {
 
 /* CSS INDEX */
 
+ .listaDestaque{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+
 .destaque{
-  @apply bg-white p-5 max-w-4xl m-8 rounded-2xl shadow-[0_0px_6px_rgba(0,0,0,0.5)] ;
+  @apply bg-white p-5 max-w-4xl m-8 rounded-2xl shadow-[0_0px_6px_rgba(0,0,0,0.5)]  ;
 }
 .cabeca{
   @apply flex justify-between;
@@ -454,9 +493,17 @@ footer {
   @apply bg-[#629643] text-white py-1 px-2 rounded-md inline-block mr-5 mt-2
 }
 .video{
-  @apply rounded-2xl inline-block mx-3 sm:mb-5;
+  @apply rounded-2xl ;
 }
 
+.listaVideos{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
 /* FIM CSS INDEX */
 
   /* CSS CONTATO */
