@@ -83,7 +83,9 @@
             </div>
         </div>
 
-        <form action="#" method="post" enctype="multipart/form-data">
+        <form action="{{ route('admin.acessibilidade.armazenar') }}" method="post" enctype="multipart/form-data">
+
+            @csrf
             <div
                 class="bg-white overflow-hidden shadow-[0px_0px_6px_rgba(0,0,0,0.5)] rounded-lg sm:rounded-lg py-10 px-14 mx-auto">
 
@@ -96,9 +98,9 @@
                     <select name="tamanhofonte" id="tamanhofonte"
                         class="bg-[#ebf2fa] border-none rounded-md text-[#333333]">
                         <option value="">Selecione...</option>
-                        <option value="">Pequeno</option>
-                        <option value="">Médio</option>
-                        <option value="">Grande</option>
+                        <option value="pequeno">Pequeno</option>
+                        <option value="medio">Médio</option>
+                        <option value="grande">Grande</option>
                     </select>
                 </div>
 
@@ -106,7 +108,7 @@
 
 
                 <div class="py-6 flex justify-start">
-                    <a href="#" class="bg-[#629643] text-white p-1.5 rounded-md">Salvar Alterações</a>
+                    <button type="submit" class="bg-[#629643] text-white p-1.5 rounded-md">Salvar Alterações</button>
                 </div>
 
 

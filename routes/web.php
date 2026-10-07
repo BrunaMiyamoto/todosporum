@@ -96,6 +96,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get("/dashboard/acessibilidade", [AcessibilidadeController::class, "index"])->name("admin.acessibilidade.index");
 
+    Route::post("/dashboard/acessibilidade", [AcessibilidadeController::class, "store"])->name("admin.acessibilidade.armazenar");
 
 
     //POSTAGENS

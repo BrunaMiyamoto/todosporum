@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-br" class="fonte-{{ auth()->check() ? auth()->user()->tamanho_fonte : 'medio' }}">
 
 <head>
     <title>@yield('titulo', 'Todos Por Um')</title>
@@ -38,7 +38,7 @@
 
 {{--  bg-[#9ec1e9] cor de teste fundo cabeçalho, fer gostou!! --}}
 
-<body class="bg-[#ebf2fa] text-neutral-800">
+<body class="bg-[#ebf2fa] text-neutral-800 min-h-screen">
     <header
         class=" bg-[#ebf2fa] text-[#e9702a] p-2 items-center   shadow-[0px_0px_6px_rgba(0,0,0,0.5)] sticky top-0 z-[100] w-full">
         <div class="max-w-7xl mx-auto flex justify-between p-3 items-center ">

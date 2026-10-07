@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AcessibilidadeController extends Controller
 {
@@ -28,7 +29,15 @@ class AcessibilidadeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'tamanhofonte' => "required|in:pequeno,medio,grande",
+        ]);
+
+        $usuario = Auth::user();
+        $usuario->tamanho_fonte = $request->tamanhofonte;
+        $usuario->save();
+
+        return redirect()->route("admin.acessibilidade.index");
     }
 
     /**
