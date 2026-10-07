@@ -48,47 +48,47 @@
         <div class="text-justify py-3 px-8">
             <strong>3. Tabela Resumida de Cookies</strong>
 
-            <table class="border-2 border-black">
+            <table class="border-2 border-black my-4">
                 <thead>
-                    <tr>
-                        <th>Categoria</th>
-                        <th>Função
+                    <tr class="bg-[#05668d] text-white">
+                        <th class="px-4">Categoria</th>
+                        <th class="px-4">Função
                             Principal</th>
-                        <th>Duração</th>
+                        <th class="px-4">Duração</th>
                     </tr>
                 </thead>
                 <tbody class="">
-                    <tr class="">
-                        <td>Autenticação (Sessão)</td>
-                        <td>Manter o Usuário logado na área restrita durante a navegação.</td>
-                        <td>Sessão
+                    <tr class="border ">
+                        <td class="px-4">Autenticação (Sessão)</td>
+                        <td class="px-4">Manter o Usuário logado na área restrita durante a navegação.</td>
+                        <td class="px-4">Sessão
                             (deletado ao fechar o navegador)</td>
                     </tr>
                     <tr>
-                        <td> Segurança e Prevenção</td>
-                        <td> Proteger contra ataques maliciosos (ex: CSRF, abuso de
+                        <td class="px-4"> Segurança e Prevenção</td>
+                        <td class="px-4"> Proteger contra ataques maliciosos (ex: CSRF, abuso de
                             formulários).</td>
-                        <td> Persistente (até 1 ano)</td>
+                        <td class="px-4"> Persistente (até 1 ano)</td>
                     </tr>
                     <tr>
-                        <td>Preferências</td>
-                        <td>Armazenar consentimentos de cookies e configurações
+                        <td class="px-4">Preferências</td>
+                        <td class="px-4">Armazenar consentimentos de cookies e configurações
                             locais.</td>
-                        <td> Persistente (até 1 ano)</td>
+                        <td class="px-4"> Persistente (até 1 ano)</td>
                     </tr>
                     <tr>
-                        <td>Análise (Ex: Google Analytics)</td>
-                        <td>Gerar relatórios estatísticos anônimos sobre uso
+                        <td class="px-4">Análise (Ex: Google Analytics)</td>
+                        <td class="px-4">Gerar relatórios estatísticos anônimos sobre uso
                             da
                             plataforma.</td>
-                        <td>Persistente (até 2 anos)</td>
+                        <td class="px-4">Persistente (até 2 anos)</td>
                     </tr>
                     <tr>
-                        <td>Gateway de Pagamento</td>
-                        <td>Garantir a segurança na transação financeira e
+                        <td class="px-4">Gateway de Pagamento</td>
+                        <td class="px-4">Garantir a segurança na transação financeira e
                             prevenção
                             de fraudes.</td>
-                        <td>Sessão / Persistente</td>
+                        <td class="px-4">Sessão / Persistente</td>
                     </tr>
 
                 </tbody>

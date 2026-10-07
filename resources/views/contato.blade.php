@@ -21,7 +21,7 @@
 
         <div class="py-12  ">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 flex  justify-center items-center  m-16">
-                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm rounded-l-lg flex  ">
+                <div class="bg-white  overflow-hidden shadow-sm rounded-l-lg flex  ">
 
                     <div class="p-6  ">
 
@@ -69,7 +69,7 @@
 
                     </div>
 
-                    <div class="bg-[#05668d] dark:bg-gray-800 overflow-hidden shadow-sm rounded-r-lg text-white max-w-96 ">
+                    <div class="bg-[#05668d]  overflow-hidden shadow-sm rounded-r-lg text-white max-w-96 ">
                         <div class="p-6  ">
 
                             <div class="text-center mb-7">
