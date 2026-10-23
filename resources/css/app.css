@@ -165,11 +165,44 @@ footer {
 }
 
 @media (max-width: 768px) {
-  #responsivoRodape {
-    justify-content: flex-start;
-    flex-direction: column;
-    gap: 40px;
-  }
+   footer > div:first-child {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+
+    /* Logo centralizada e menor */
+    #logorodape {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #logorodape img {
+        width: 120px;
+        height: auto;
+    }
+
+    /* Links em duas colunas */
+    #responsivoRodape {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 20px;
+        width: 100%;
+    }
+
+    #responsivoRodape ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        min-width: 0;
+    }
+
+    #responsivoRodape a {
+        overflow-wrap: anywhere;
+    }
 
   .sobrenos {
   display: flex;
@@ -298,6 +331,96 @@ footer {
 .form-control{
   @apply w-full px-4 border rounded-lg text-sm;
 }  
+
+
+/* CONTATO: estrutura responsiva */
+
+.contato-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 24rem;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.contato-formulario {
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contato-formulario form {
+    width: 100%;
+}
+
+.contato-formulario input,
+.contato-formulario select,
+.contato-formulario textarea {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+}
+
+.contato-info {
+    min-width: 0;
+    box-sizing: border-box;
+    background-color: #05668d;
+    color: #ffffff;
+}
+
+.contato-info p,
+.contato-info label {
+    color: #ffffff;
+}
+
+.contato-info img {
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+    .contato-card {
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contato-formulario,
+    .contato-info {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .contato-formulario {
+        padding: 20px;
+    }
+
+    .contato-info {
+        padding: 0;
+    }
+
+    .contato-info > .p-6 {
+        padding: 24px 20px;
+    }
+
+    .contato-info hr {
+        margin-top: 32px;
+    }
+
+    .contato-info .flex {
+        min-width: 0;
+    }
+
+    .contato-info p {
+        overflow-wrap: anywhere;
+    }
+}
+
 /* FIM CSS CONTATO */
 
 

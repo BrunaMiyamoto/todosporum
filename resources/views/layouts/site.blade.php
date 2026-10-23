@@ -144,7 +144,7 @@
         </div>
 
 
-        <div class="max-w-7xl pt-8 justify-between px-8 text-white grid grid-cols-1 sm:grid-cols-2 mx-auto ">
+        <div class="max-w-7xl pt-8 justify-between px-8 text-white grid grid-cols-1 sm:grid-cols-2 mx-auto pb-10">
             <div class="flex justify-center pb-6">
                 <p class="text-sm ">Todos os direitos reservados</p>
             </div>

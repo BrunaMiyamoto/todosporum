@@ -19,11 +19,11 @@
 
 
 
-        <div class="py-12  ">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 flex  justify-center items-center  m-16">
-                <div class="bg-white  overflow-hidden shadow-sm rounded-l-lg flex  ">
+        <div class="contato-formulario p-6">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center items-center py-6 ">
+                <div class="contato-card ">
 
-                    <div class="p-6  ">
+                    <div class="p-6 w-full min-w-0 md:flex-1 ">
 
                         <form action="#" method="POST">
                             <div class="mb-5">
@@ -69,7 +69,7 @@
 
                     </div>
 
-                    <div class="bg-[#05668d]  overflow-hidden shadow-sm rounded-r-lg text-white max-w-96 ">
+                    <div class="contato-info text-white">
                         <div class="p-6  ">
 
                             <div class="text-center mb-7">
@@ -90,7 +90,7 @@
                             <div class="bg-[#427aa1] flex text-start gap-7 py-3 px-5 mb-7  items-center rounded-md ">
                                 <img src="assets/img/email.png" alt="email" width="30">
                                 <div>
-                                    <label for="email" class="">E-mail</label>
+                                    <label for="email" class="break-all">E-mail</label>
                                     <p>todosporum@gmail.com</p>
                                 </div>
 
