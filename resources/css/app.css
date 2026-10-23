@@ -27,60 +27,6 @@ html.fonte-grande {
 }
 /* LAYOUT */
 
-/* MENU RESPONSIVO MENU RESPONSIVO MENU RESPONSIVO  */
-
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  background-color: #ebf2fa;
-  font-family: "Poppins", "Prompt";
-  color: #333333;
-}
-header {
-  display: flex;
-  justify-content: space-between;
-  background-color: #ebf2fa;
-  color: #e9702a;
-  padding: 10px;
-  align-items: center;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
-}
-
- header{
-    position: fixed;
-    width: 100%;
-    z-index: 100;
-    top: 0;
-  }  */
-/* #fechar-menu {
-  display: none;
-} */
-/* 
-.menu-container {
-  display: flex;
-  justify-content: flex-end;
-  padding: 10px 50px;
-  flex: 1;
-} */
-
-/* .menu :hover {
-  color: #05668d;
-} */
-
-/* .menu ul {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-}
-.menu ul a {
-  color: #e9702a;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 12px;
-} */
 .btn-login {
   background-color: #e9702a;
   color: #ebf2fa;
@@ -103,6 +49,9 @@ header {
 }
 /* regras para mobile */
 @media (max-width: 768px) {
+
+ 
+
   #fechar-menu {
     display: block;
     color: #e9702a;
@@ -155,149 +104,7 @@ header {
 }                    
                                                          
 /* MENU RESPONSIVO MENU RESPONSIVO MENU RESPONSIVO  */
-/* #banner {
-  background-image: linear-gradient(                                                                                                      
-      to right,
-      rgba(5, 102, 141, 0.8),
-      rgba(4, 7, 9, 0.8)
-    ),
-    url("../img/pexels-cytonn-955389.jpg");
-  background-size: cover;
-  background-position: 30%;
-  padding: 130px;
-} */
 
-/* #tituloBanner {
-  color: #ffffff;
-  font-weight: 600;
-  text-align: center;
-  font-family: "Prompt";
-}
-
-#textoBanner {
-  color: #ffffff;
-  text-align: center;
-  padding: 25px;
-} */
-
-
-
-/* h2 {
-  color: #05668d;
-  text-align: center;
-  margin-top: 80px;
-  margin-bottom: 30px;
-  font-family: "Prompt";
-  font-weight: 600;
-  font-size: 30px;
-} */
-
-/* .destaque {
-  background-color: #ffffff;
-  padding: 20px;
-  max-width: 900px;
-  margin: 30px auto;
-  border-radius: 15px;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
-} */
-
-/* .destaque h3 {
-  color: #e9702a;
-  margin-top: 8px;
-  margin-bottom: 8px;
-} */
-
-/* .cabeca {
-  display: flex;
-  justify-content: space-between;
-} */
-
-/* .tagsDestaque {
-  color: #ffffff;
-  display: inline-block;
-} */
-
-/* .tagsDestaque ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  gap: 2px;
-} */
-
-/* .tagsDestaque li {
-  background-color: #629643;
-  border-radius: 5px;
-  margin-right: 10px;
-  padding: 2px 8px 2px 8px;
-} */
-
-/* .sobrenos {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: 30px auto;
-  box-sizing: border-box;
-} */
-
-/* .sobrenos #textosobrenos {
-  flex: 1;
-  min-width: auto;
-  text-align: justify;
-} */
-/* 
-.sobrenos #textosobrenos p {
-  margin-bottom: 15px;
-} */
-
-/* .sobrenos #imagemsobrenos {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.sobrenos #imagemsobrenos img {
-  border-radius: 15px;
-  max-width: 100%;
-  height: auto;
-} */
-
-/* .sobrenosbotao {
-  background-color: #629643;
-  color: #ffffff;
-  padding: 5px 8px 5px 8px;
-  border-radius: 5px;
-  text-decoration: none;
-  display: inline-block;
-  margin-right: 20px;
-  margin-top: 10px;
-} */
-
-/* #entendabotao {
-  background-color: #629643;
-  color: #ffffff;
-  padding: 5px 8px 5px 8px;
-  border-radius: 5px;
-  text-decoration: none;
-  display: block;
-  text-align: center;
-  margin: 30px auto;
-  width: 260px;
-} */
-
-/* .video {
-  border-radius: 15px;
-  display: inline-block;
-  margin: 0px 10px;
-} */
-
-/* #videocentro {
-  text-align: center;
-} */
 
 footer {
   background-color: #05668d;
@@ -384,6 +191,46 @@ footer {
     padding: 0 1rem 10px;
   }
 
+  .listaDestaque .destaque{
+    box-sizing: border-box;
+    flex: 0 0 320px;
+    width: 350px;
+    height: 350px;
+    max-width: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .listaDestaque .cabeca{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .listaDestaque .destaqueUl{
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .listaDestaque .usuarioDestaque{
+    flex: 1 1 100px;
+    min-width: 0;
+    overflow-wrap: anywhere ;
+  }
+
+  .listaDestaque .linhalaranja, .listaDestaque .destaque p {
+    line-height: 1.5;
+    overflow-wrap: break-word;
+  }
+  }
+
+  .sobrenosbotao{
+    margin-bottom: 16px;
+  }
+
     .listaVideos:has(.video:nth-child(3)){
     display: flex;
     gap: 20px;
@@ -394,69 +241,7 @@ footer {
      flex: 0 0 85%;
     
   }
-}
-/* .btn-privacidade {
-    display: flex;
-    display: inline-flex;
-    text-align: center;
-    text-decoration: none; 
-    padding: 1px 24px;
-    border-radius: 8px;
-    background-color: #629543; 
-    color: #FFFFFF; 
-    font-size: 16px;
-    font-weight: normal;
-    transition: background-color 0.3s ease;
-}
-.btn-privacidade:hover {
-    background-color: #537f39; 
-}
 
-.btn-cookies {
-   display: iinline-flex;
-    text-align: center;
-    text-decoration: none; 
-    padding: 1px 24px;
-    border-radius: 8px;
-    background-color: #629543; 
-    color: #FFFFFF; 
-    font-size: 16px;
-    font-weight: normal;
-    transition: background-color 0.3s ease;
-}
-.btn-cookies:hover {
-    background-color: #537f39; 
-}
-.btn-termos {
-    
-    display: inline-flex;
-    text-align: center;
-    text-decoration: none; 
-    padding: 
-    2px 24px;
-    border-radius: 8px;
-    background-color: #629543; 
-    color: #FFFFFF; 
-    font-size: 16px;
-    font-weight: normal;
-    transition: background-color 0.3s ease;
-    gap: 20px;  
-     width: 100%;    
-     align-items: center;  
-     justify-content: center; 
-}
-.btn-termos:hover {
-    background-color: #537f39; 
-}
-.container-botoes {
-  display: flex;          
-  justify-content: center; 
-  align-items: center;     
-  gap: 20px;              
-  padding: 40px;          
-  width: 100%;  
-}
- */
 
 /* CSS INDEX */
 
