@@ -1,15 +1,15 @@
 @extends('layouts.site')
 
 @section('conteudo')
-    <div class="flex gap-5 max-w-7xl m-auto font-sans">
-        <div class="relative ">
+    <div class="flex flex-col lg:flex-row gap-5 max-w-7xl m-auto font-sans">
+        <div class="relative hidden lg:block">
             <img src="assets/img/conceito-de-diversidade-com-as-maos.jpg" alt="Imagem de mão unidas"
                 class="min-h-full min-w-[640px]" />
             <div class="absolute inset-0 bg-gradient-to-r from-sky-900 to-slate-500 mix-blend-multiply">
 
             </div>
         </div>
-        <div class="p-5 m-4  min-w-[640px]">
+        <div class="box-border p-6  w-full min-w-0 lg:min-w-[640px] lg:m-4">
             <h1 class="text-[#e9702a] font-bold text-2xl border-b-2 border-[#e9702a] ">FAÇA SEU CADASTRO</h1>
 
             <div id="paragrafo1" class="py-5 text-sm ">
@@ -21,7 +21,7 @@
 
                 @csrf
                 <h2 class="text-[#e9702a] font-bold text-2xl pb-5 ">DADOS PESSOAIS</h2>
-                <div class="flex gap-9 ">
+                <div class="flex flex-col sm:flex-grow gap-9 ">
                     <div class="">
 
                         <div class="grid">
@@ -62,19 +62,19 @@
 
 
                 </div>
-                <fieldset class="border-solid border-[1px] border-[#ccc] rounded-xl p-6">
+                <fieldset class="border-solid border-[1px] border-[#ccc] rounded-xl p-4 sm:p-6">
                     <legend>DADOS DO PERFIL</legend>
-                    <div class="flex">
+                    <div class="flex flex-col gap-3">
 
                         <div>
                             <label for="password" class="text-[#e9702a] font-bold">Senha*:</label>
                             <input type="password" name="password" id="password" placeholder="Digite aqui.."
-                                class="border-solid border-[1px] border-[#ccc] rounded-xl shadow-[0px_0px_10px_rgba(0,0,0,0.4)] bg-[#ebf2fa] my-5" />
+                                class="w-full border-solid border-[1px] border-[#ccc] rounded-xl shadow-[0px_0px_10px_rgba(0,0,0,0.4)] bg-[#ebf2fa] my-5" />
                         </div>
                         <div>
                             <label for="password_confirm" class="text-[#e9702a] font-bold">Confirme sua senha*:</label>
                             <input type="password" name="password_confirm" id="password_confirm" placeholder="Digite aqui.."
-                                class="border-solid border-[1px] border-[#ccc] rounded-xl shadow-[0px_0px_10px_rgba(0,0,0,0.4)] bg-[#ebf2fa] my-5" />
+                                class="w-full border-solid border-[1px] border-[#ccc] rounded-xl shadow-[0px_0px_10px_rgba(0,0,0,0.4)] bg-[#ebf2fa] my-5" />
                         </div>
                     </div>
                 </fieldset>
