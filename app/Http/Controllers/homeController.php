@@ -15,6 +15,11 @@ class homeController extends Controller
         return view("index");
     }
 
+      public function faq()
+    {
+        return view('faq');
+    }
+
     public function forumDuvidas(Request $request)
     {
         $forum = Postagem::where('categorias', 'duvida')->with("tags", "usuario", "curtidas");

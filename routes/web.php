@@ -54,7 +54,7 @@ Route::get("/termosdeuso", [homeController::class, "termosUso"])->name("termosUs
 Route::get("/cadastro", [CadastroUsuarioController::class, "create"])->name("cadastro");
 
 Route::post("/cadastro", [CadastroUsuarioController::class, "store"]);
-
+Route::get("/faq", [homeController::class, "faq"])->name("faq");
 
 
 

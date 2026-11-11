@@ -46,6 +46,12 @@
                         <li><a
                                 href="{{ route('aprendaSobre') }}"class="text-orange-500 font-bold text-sm hover:text-bg-sky-700 py-2">Aprenda
                                 Sobre</a></li>
+                        <li>
+                            <a href="{{ route('faq') }}"
+                                class="text-orange-500 font-bold text-sm hover:text-bg-sky-700 py-2">
+                                FAQ
+                            </a>
+                        </li>
                         <li><a
                                 href="{{ route('contato') }}"class="text-orange-500 font-bold text-sm hover:text-bg-sky-700 py-2">Contato</a>
                         </li>
