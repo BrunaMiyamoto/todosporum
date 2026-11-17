@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\AprendaApiController;
 use App\Http\Controllers\Api\AuthApiController;
 use App\Http\Controllers\Api\PostagemApiController;
 use Illuminate\Http\Request;
@@ -17,3 +18,6 @@ Route::post('/logout', [AuthApiController::class, 'logout'])->middleware("auth:s
 
 Route::apiResource("postagens", PostagemApiController::class)->except(["index", "show"])->middleware("auth:sanctum");
 Route::apiResource("postagens", PostagemApiController::class)->only(["index", "show"]);
+
+Route::apiResource("aprendaSobre", AprendaApiController::class)->except(["index", "show"])->middleware("auth:sanctum");
+Route::apiResource("aprendaSobre", AprendaApiController::class)->only(["index", "show"]);
